@@ -175,31 +175,31 @@ display: block; float: right; width: 227px; margin: 0; padding: 10px 0 11px 10px
 /* Page head spot illustrations */
 /* FIXME: use correct class names */
 #main-content.store {
-	background: url(../../store-id.png) no-repeat 0px 0;
+	background: url(images/ident/store-id.png) no-repeat 0px 0;
 }
 
 #main-content.supporters {
-	background: url(../../supporters-id.png) no-repeat 0px 0;
+	background: url(images/ident/supporters-id.png) no-repeat 0px 0;
 }
 
 #main-content.video {
-	background: url(../../video-id.png) no-repeat 0px 0;
+	background: url(images/ident/video-id.png) no-repeat 0px 0;
 }
 
 #main-content.commoners {
-	background: url(../../commoner-id.png) no-repeat 0px 0;
+	background: url(images/ident/commoner-id.png) no-repeat 0px 0;
 }
 
 #main-content.give {
-	background: url(../../give-id.png) no-repeat 0px 0;
+	background: url(images/ident/give-id.png) no-repeat 0px 0;
 }
 
 #main-content.letters {
-	background: url(../../letters-id.png) no-repeat 0px 0;
+	background: url(images/ident/letters-id.png) no-repeat 0px 0;
 }
 
 #main-content.build {
-	background: url(../../build.png) no-repeat 98% 3%;
+	background: url(images/ident/build.png) no-repeat 98% 3%;
 }
 
 
