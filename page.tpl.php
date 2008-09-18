@@ -2,7 +2,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php global $base_url; $theme_path = $base_url .'/'. path_to_theme(); ?>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?php print $language ?>" xml:lang="<?php print $language ?>">
-<head>
+ <head>
   <title><?php print $head_title ?></title>
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <script src="http://creativecommons.org/includes/icommons.js" type="text/javascript"></script>
@@ -16,7 +16,7 @@
   <![endif]-->
   
 </head>
-<body <?php print theme("onload_attribute"); ?>>
+ <body class="yui-skin-sam" <?php print theme("onload_attribute"); ?>>
 
   <div id="header-wrapper">
     <div id="header" class="box">
@@ -40,17 +40,7 @@
 
   <div class="clear"></div>
   <div class="box">
-   <div id="wrapper-ie">
-    <div id="title" class="<?php if($title == "Support the Commons") { print "home"; } else { print "head" . (rand(0,2) + 1); } ?>">
-     <div class="background">
-       <? if (strtolower($node->taxonomy[1]->name) == "gift") { ?>
-       <h3><a href="/store">Store</a></h3>
-       <? } ?>
-       <h2><?php print $title ?></h2>
-     </div>
-    </div>
-    
-	  <div id="content" >
+    <div id="content" >
      <!-- div id="splash">
       <?php if ($node->field_title_image[0]['fid']) { ?>
       <div class="title-image">
@@ -60,17 +50,20 @@
 		  <h2><?php print $title ?></h2>
       <?php } ?>
      </div -->
-	   <div id="main-content">
-	    <?php if ($features != "") { ?>
+	   <div id="main-content" class="">
+         <div id="title">
+            <? if (strtolower($node->taxonomy[1]->name) == "gift") { ?>
+            <h3><a href="/store">Store</a></h3>
+            <? } ?>
+            <h2><?php print $title ?></h2>
+         </div>
+       
+<?php if ($features != "") { ?>
       <div id="main-content-primary" class="content-box">
-      <?php } ?>
-        <?php if ($tabs != ""): ?>
+<?php } ?>
+<?php if ($tabs != ""): ?>
           <?php print $tabs ?>
-        <?php endif; ?>
-        
-       <?php if ($mission != ""): ?>
-       <div id="mission"><?php print $mission ?></div>
-       <?php endif; ?>
+<?php endif; ?>
         
        <?php if ($help != ""): ?>
        <p id="help"><?php print $help ?></p>
@@ -84,10 +77,10 @@
        <?php print($content) ?>
        <!-- end main content -->
 
-		  <?php if ($features != "") { ?>
+<?php if ($features != "") { ?>
 		  </div>
       <div id="main-content-secondary" class="content-box"><?php print $features ?></div>
-      <?php } ?> 
+<?php } ?> 
      </div>
 
 	<!-- mainContent --> 
@@ -95,8 +88,8 @@
      <div class="content-box" id="sidebar-right"><?php print $sidebar_right ?></div>
      <?php endif; ?>
 	  </div>
-   </div>
   </div>
+
   <div class="clear">&nbsp;</div>
   <div id="footer">
    <?php if ($footer_message) : ?>
