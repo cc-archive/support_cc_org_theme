@@ -52,10 +52,12 @@
      </div -->
 	   <div id="main-content" class="">
          <div id="title" class="block">
+           <div class="title-labels">
+             <h1><?php print $title ?></h1>
             <? if (strtolower($node->taxonomy[1]->name) == "gift") { ?>
-            <h3><a href="/store">Store</a></h3>
+             <h3><a href="/store">Store</a></h3>
             <? } ?>
-            <h2><?php print $title ?></h2>
+           </div>
          </div>
        
 <?php if ($features != "") { ?>
