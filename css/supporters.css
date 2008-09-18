@@ -1,0 +1,15 @@
+/* SUPPORTERS */
+.block .col {
+	float: left;
+	width: 50%;
+}
+
+#gmapsmall {
+	margin: 20px 0;
+	background: url('gmap2.png') no-repeat -540px -15px;
+	height: 170px;
+	width: 93%;
+	border: 1px solid #aaa;
+}
+
+h2.thanks { font-size: 200%; }

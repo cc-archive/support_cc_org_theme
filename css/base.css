@@ -1,0 +1,75 @@
+/* BASE STYLES */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body { background-color: #fff; color: #333; font: 12px verdana, sans-serif !important; line-height: 1.5em !important; text-align: center; width: auto;}
+
+.box { text-align: left; margin: 0 auto; width: 91%; min-width: 765px; max-width: 1200px; } /* replaces #wrapper */
+.content-box { float: left;/* padding-top: 1.5em; border-top: 1px solid #ddd;*/ margin-right: 1%; overflow: hidden; }
+.content-box-right { float: right; /*padding-top: 1.5em; border-top: 1px solid #ddd;*/ margin-left: 1%; overflow: hidden; }
+.clear { height: 0px !important; clear: both; }
+.left { text-align: left; }
+.right { text-align: right; }
+
+.col {
+	float: left;
+	width: 49%;
+}
+
+h3 {
+	font-weight: bold !important;
+	font-size: 125% !important;
+}
+h1, h2, h3 {
+  line-height: 120%;
+  font-size: 180%;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-bottom: 1px;
+}
+h2 {
+  margin-top: 25px; margin-bottom: 12px; line-height: 140%; 
+}
+h4, .jurisdiction a:link, h4 a:link, h4 a:visited {
+  color: #773;
+  font-size: 105%;
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 10px;
+}
+blockquote {
+  padding: 5px;
+  margin: 5px;
+  font-style: normal;
+}
+pre {
+  background: #ddd;
+  border: 1px solid #aaa;
+  padding: 0.75em 1.5em;
+  font-size: 12px;
+}
+a, a:link {
+  text-decoration: none;
+  color: #00b;
+}
+a:hover {
+  text-decoration: underline;
+}
+form {
+  padding: 0;
+  margin: 0;
+}
+code {
+  font-size: 1em;
+  font-family: Profont, 'lucida console', 'Courier New', Monaco, monospace;
+}
+img { border: 0 !important; }
+ol, ul, dl { position: relative; }
+
+td {
+  vertical-align: top;
+}

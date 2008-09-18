@@ -51,7 +51,7 @@
       <?php } ?>
      </div -->
 	   <div id="main-content" class="">
-         <div id="title">
+         <div id="title" class="block">
             <? if (strtolower($node->taxonomy[1]->name) == "gift") { ?>
             <h3><a href="/store">Store</a></h3>
             <? } ?>

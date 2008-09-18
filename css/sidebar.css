@@ -1,0 +1,50 @@
+/* SIDEBRA */
+#sidebar-right {
+font-size: 0.85em; width: 15%; margin-right: 0 !important; margin-left:1%; padding-left: 5px; padding-bottom: 30px; /*background-color: #f9faf9;*/
+}
+#sidebar-right .block {
+  margin: 0;
+  padding: 0;
+}
+#sidebar-right .content {
+  margin-bottom: 1em;
+  padding-bottom: 0.7em;
+  border-bottom: 1px solid #e0e0e0;
+}
+#sidebar-right ul.menu,  
+#features ul {
+  list-style:  none;
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+#sidebar-right ul li, 
+#features ul li {
+  margin-bottom: 10px;
+}
+#sidebar-right img {
+  margin-bottom: -3px;
+}
+#sidebar-right li img {
+  margin-right: 3px;
+}
+
+#sidebar-right .block-user { margin-bottom: 0 !important; }
+#sidebar-right .block-user h4 { display: none; }
+
+
+#block-menu-2 h4 {
+  display: none;
+}
+#block-menu-2 a {
+  font-weight: bold;
+}
+
+span.international {
+	display: block;
+	text-align: right;
+	font-size: 90%;
+	margin-right: 10px;
+	padding: 0;
+}
+#international { width: 95%;}
+

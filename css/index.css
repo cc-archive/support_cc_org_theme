@@ -1,0 +1,118 @@
+/* Support Home stuff */
+.support-block {
+	float: left;
+	width: 27.5%;
+	border: 1px solid #ddd;
+	padding: 1% 2.9% 1% 1%;
+	margin-right: 1.5%;
+	margin-top: 0.75em;
+	height: 75px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+.extras {
+	width: 33%;
+	margin: 0 auto;
+}
+.extras .support-block {
+	-moz-border-radius: 5px;
+	width: 90%;
+	border-color: #ccc;
+}
+
+.extras .start {
+	border-right: none;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomright: 0;
+}
+
+.extras .end {
+	-moz-border-radius-topleft: 0.5px;
+	-moz-border-radius-bottomleft: 0.5px;
+}
+
+.head {
+	font-size: 130%;
+/*	background-color: #FEFAD7;
+	border: 2px solid #ECBE85;
+*/background-color: #fff;	
+border: 1px solid #e0e0e0;
+	padding: 1em 2.3em;
+	-moz-border-radius: 3px;
+}
+
+
+/*.block .first { padding-left: 0; }*/
+/*.block .last { /*border: none; padding-right: 0 !important; }
+*/.block .index-last { border-right: none; border-left: 1px solid #ddd; padding-right: 0 !important; margin-right: 0;}
+.block .thermo { border: none; }
+.block .twocol { border: none !important; }
+.block .smallpad { padding-bottom: 15px !important; }
+.block .left { border-right:none; border-left: 1px solid #ddd; }
+
+.support-block h2 {
+	margin-top: 0;
+margin: 0; padding: 0;
+margin-top: 14.75%;
+margin-left: -3%;
+line-height: 1em;
+font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+	font-size: 180%;
+	background-color: #fff;
+	padding: 2px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+
+.support-block h2.double {
+	margin-top: 7.42%;
+}
+
+.support-block img.f {
+	display: block;
+	/*height: 100px;*/
+	width: 80%;
+	margin: 0 auto;
+	padding: 0;
+}
+.support-block img + h2 {
+	color: #0f0 !important;
+}
+
+.support-block ul {
+	list-style: none !important;
+	padding: 0 !important; 
+	margin: 0 0 0 40%;
+}
+
+.support-block ul li { list-style: none !important; }
+
+
+.index .store {
+	background: #fff url(images/index/store-index.png) no-repeat -17px -22px;
+}
+
+.index .supporters {
+	background: #fff url(images/index/supporters-index.png) no-repeat -15px -22px;
+}
+
+.index .give {
+	background: #fff url(images/index/give-index.png) no-repeat -13px -9px;
+}
+
+.index .commoner {
+	background: #fff url(images/index/commoner-index.png) no-repeat -20px -13px;
+}
+
+.index .letters {
+	background: #fff url(images/index/letters-index.png) no-repeat -14px -8px;
+}
+
+.index .videos {
+	background: #fff url(images/index/video-index.png) no-repeat -15px -10px;
+}
+
+.index .matching {
+	background: #fff url(images/index/matching-index.png) no-repeat -15px -14px;
+}

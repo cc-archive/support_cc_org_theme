@@ -1,0 +1,217 @@
+/* donate */
+
+div.level {
+	position:relative;
+	border: 1px solid #ccc;
+	-moz-border-radius: 5px;
+	padding: 0;
+	padding-bottom: 1em;
+	margin-bottom: 2em;
+}
+
+div.level h2 {
+	margin: 0;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	background-color: #CCE5E7; /*225F9D*/
+	border-bottom: 1px solid #bbd4d6;
+	color: #446466;
+	padding: 0.5em;
+	padding-bottom: 0.4em;
+}
+
+
+div.level h3 {
+	position:absolute;
+	right: 1em;
+	top: -0.32em;
+	color: #663A12;
+}
+
+div.level ul {
+	list-style: none;
+	padding: 1em;
+	margin: 0;
+}
+
+div.level ul li {
+	float: left;
+	height: 25px;
+	margin: 0 0.5em;
+	margin-bottom: 0.75em;
+}
+
+div.level div.options {
+	position: relative;
+	clear: left;
+	border-top: 1px solid #ddd;
+/*	margin-top: 8.25em;*/
+	padding: 1em 1em 0 1em;
+	text-align: right;
+}
+
+a.join {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #4374B7;
+	color: #fff;
+	padding: 0 1em;
+	border:1px solid #4374b7;
+	font-size: 105%;
+}
+
+a.join:hover {
+	background-color: #DAEFF2;
+	color: #666;
+	text-decoration: none;
+}
+
+div.level div.options div.custom-amount {
+	position: absolute;
+	top: 0.6em;
+	left: 1em;
+	font-size: 125%;
+	color: #d33;
+}
+
+div.level div.options div.custom-amount input {
+	font-size: 100%;
+	margin-left: 3px;
+}
+
+div.level div.options div.custom-amount span {
+	color: #000;
+	font-size: 70%;
+}
+
+#donate-classes {
+	margin-bottom: 100px;
+}
+
+#donate-classes.index {
+	width: 100%;
+}
+
+#donate-classes ul.donate {
+	list-style: none !important;
+	margin: 0;
+	padding: 0;
+}
+
+#donate-classes li {
+	padding: 15px 0;
+	margin: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+#donate-classes li ul li { padding: 20px 25px; }
+
+#donate-classes li ul li { padding: 20px 25px; }
+
+#donate-classes ul.store li {
+	padding: 10px 0;
+}
+
+
+#donate-classes li img {
+	padding-top: 8px;
+	padding-right: 5px;
+}
+#donate-classes li strong {
+	/*padding-right: 30px;*/
+}
+
+#donate-classes .amount {
+	font-size: 125%;
+	font-weight: bold;
+	color: #c30;
+	width: 70px;
+	float: left;
+	padding-top: 10px;
+}
+
+#donate-classes .spread {
+	width: 100px;
+	height: 50px;
+	padding-top: 20px;
+}
+
+#donate-classes code {
+	display: block;
+	margin-top: 5px;
+}
+
+.fair {
+	font-size: 90%;
+	color: #666;
+	float: right;
+	padding-top: 10px;
+}
+
+.fair img {
+	padding: 0 !important;
+}
+.fair img.donate {
+	padding-bottom: 0.25em !important;
+}
+
+ul.rewards {
+	margin-bottom: 1em;
+}
+ul.rewards li {
+	margin-bottom: 1em;
+}
+
+
+
+
+ul.standard {
+	list-style-type: disc !important;
+	padding-left: 2em;
+}
+
+ul.standard li {
+	margin-bottom: 1em;
+}
+
+
+
+table.levels {
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+}
+
+table.levels td, table.levels th {
+	text-align: center;
+	margin: 0;
+}
+
+table.levels th {
+	padding-bottom: 0.5em;
+}
+
+table.levels th h3, .note {
+	color: #d33;
+}
+
+table.levels td {
+	padding: 0.5em 0;
+}
+
+table.levels td.first {
+	padding-right: 0.5em;
+	border-right: 4px double #fff;
+}
+
+table.levels td.first img {
+	margin: 1px 0;
+}
+
+table.levels td img {
+	border: none !important;
+}
+
+table.levels tr.alt {
+	background-color: #ddd;
+}
