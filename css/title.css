@@ -36,6 +36,10 @@
 	float:none;
 }
 
+#main-content.build #title .title-labels {
+	margin-left: 0;
+}
+
 #main-content.give #title .title-labels, #main-content.letters #title .title-labels {
 	margin-left: 5.9em;
 	padding-top: 0.5em;
