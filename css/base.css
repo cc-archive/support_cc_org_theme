@@ -20,8 +20,8 @@ body { background-color: #fff; color: #333; font: 12px verdana, sans-serif !impo
 }
 
 h3 {
-	font-weight: bold !important;
-	font-size: 125% !important;
+	font-weight: bold;
+	font-size: 125%;
 }
 h1, h2, h3 {
   line-height: 120%;
