@@ -1,6 +1,14 @@
 @import url('css/base.css');
-/*sidebar right */
+
+/* import main-content here*/
+/* @import url('css/main-content.css)*/
+
+/* TITLES */
+@import url('css/title.css');
+
+/* sidebar right */
 @import url('css/sidebar.css');
+
 /* HOMEPAGE STUFF */
 @import url('css/index.css');
 
@@ -286,57 +294,7 @@ display: block; float: right; width: 227px; margin: 0; padding: 10px 0 11px 10px
 #main-content .block .comments { margin: 35px 0; }
 
 
-/* page title header */
-#title .title-labels {
-	float: left;
-	margin-left: 0px;
-	margin-top: 1.25em;
 
-}
-
-#title {
-	border-bottom: none;
-}
-
-/* FIXME: correct main-content class names */
-#main-content.store #title .title-labels, #main-content.supporters #title .title-labels, #main-content.commoners #title .title-labels {
-	margin-left: 7.74em;
-	float:none;
-}
-
-#main-content.give #title .title-labels, #main-content.letters #title .title-labels {
-	margin-left: 5.9em;
-	padding-top: 0.5em;
-	float: none;
-}
-
-#main-content.video #title .title-labels {
-	margin-left: 6.5em;
-	float: none;
-}
-
-#main-content.video #title {
-	border: none;
-}
-
-#title .video {
-	margin-top: 2.5em;
-	margin-left: -0.5em;
-}
-
-#title .supporters {
-	margin-top: 2.5em;
-/*	margin-left: -0.5em;*/
-}
-
-#title .supporters h3 {
-	padding-left: 0.1em;
-}
-
-#title .store {
-	margin-top: 1.75em;
-	margin-left: -1em;
-}
 
 /* styles for content areas */
 
