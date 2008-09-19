@@ -1,9 +1,9 @@
 /* Support Home stuff */
 .support-block {
 	float: left;
-	width: 27.5%;
+	width: 30.5%;
 	border: 1px solid #ddd;
-	padding: 1% 2.9% 1% 1%;
+	padding: 1% 0% 1% 1%;
 	margin-right: 1.5%;
 	margin-top: 0.75em;
 	height: 75px;
@@ -83,36 +83,36 @@ font-family: "Helvetica Neue", helvetica, arial, sans-serif;
 .support-block ul {
 	list-style: none !important;
 	padding: 0 !important; 
-	margin: 0 0 0 40%;
+	margin: 0 0 0 40% !important;
 }
 
 .support-block ul li { list-style: none !important; }
 
 
 .index .store {
-	background: #fff url(images/index/store-index.png) no-repeat -17px -22px;
+	background: #fff url(../images/index/store-index.png) no-repeat -17px -22px;
 }
 
 .index .supporters {
-	background: #fff url(images/index/supporters-index.png) no-repeat -15px -22px;
+	background: #fff url(../images/index/supporters-index.png) no-repeat -15px -22px;
 }
 
 .index .give {
-	background: #fff url(images/index/give-index.png) no-repeat -13px -9px;
+	background: #fff url(../images/index/give-index.png) no-repeat -13px -9px;
 }
 
 .index .commoner {
-	background: #fff url(images/index/commoner-index.png) no-repeat -20px -13px;
+	background: #fff url(../images/index/commoner-index.png) no-repeat -20px -13px;
 }
 
 .index .letters {
-	background: #fff url(images/index/letters-index.png) no-repeat -14px -8px;
+	background: #fff url(../images/index/letters-index.png) no-repeat -14px -8px;
 }
 
 .index .videos {
-	background: #fff url(images/index/video-index.png) no-repeat -15px -10px;
+	background: #fff url(../images/index/video-index.png) no-repeat -15px -10px;
 }
 
 .index .matching {
-	background: #fff url(images/index/matching-index.png) no-repeat -15px -14px;
+	background: #fff url(../images/index/matching-index.png) no-repeat -15px -14px;
 }
