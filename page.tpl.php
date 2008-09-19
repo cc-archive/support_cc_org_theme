@@ -53,7 +53,8 @@
 	 <div id="main-content" class="<?php $classary = explode(" ", $title); print strtolower($classary[0]); ?>">
          <div id="title" class="block">
            <div class="title-labels">
-             <h1><?php print $title ?></h1>
+			 <h1><?php print $title ?></h1>
+			 <h3><?php print $node->teaser ?></h3>
             <? if (strtolower($node->taxonomy[1]->name) == "gift") { ?>
              <h3><a href="/store">Store</a></h3>
             <? } ?>
