@@ -196,38 +196,6 @@ display: block; float: right; width: 227px; margin: 0; padding: 10px 0 11px 10px
 #content { clear: both; padding: 5px 0; margin-bottom: 20px;}
 #main-content { float: left; width: 83%; padding-bottom: 35px; }
 
-/* Page head spot illustrations */
-/* FIXME: use correct class names */
-#main-content.store {
-	background: url(images/ident/store-id.png) no-repeat 0px 0;
-}
-
-#main-content.supporters {
-	background: url(images/ident/supporters-id.png) no-repeat 0px 0;
-}
-
-#main-content.video {
-	background: url(images/ident/video-id.png) no-repeat 0px 0;
-}
-
-#main-content.commoners {
-	background: url(images/ident/commoner-id.png) no-repeat 0px 0;
-}
-
-#main-content.give {
-	background: url(images/ident/give-id.png) no-repeat 0px 0;
-}
-
-#main-content.letters {
-	background: url(images/ident/letters-id.png) no-repeat 0px 0;
-}
-
-#main-content.build {
-	background: url(images/ident/build.png) no-repeat 98% 3%;
-}
-
-
-
 #main-content-primary {
   width: 67%;
 }

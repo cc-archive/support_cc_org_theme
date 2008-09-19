@@ -67,3 +67,32 @@
 	margin-top: 1.75em;
 	margin-left: -1em;
 }
+
+/* Page head spot illustrations */
+#main-content.store {
+	background: url(../images/ident/store-id.png) no-repeat 0px 0;
+}
+
+#main-content.supporters {
+	background: url(../images/ident/supporters-id.png) no-repeat 0px 0;
+}
+
+#main-content.call /*for videos*/ {
+	background: url(../images/ident/video-id.png) no-repeat 0px 0;
+}
+
+#main-content.join /*the cc network*/ {
+	background: url(../images/ident/commoner-id.png) no-repeat 0px 0;
+}
+
+#main-content.give {
+	background: url(../images/ident/give-id.png) no-repeat 0px 0;
+}
+
+#main-content.commons /*letters*/ {
+	background: url(../images/ident/letters-id.png) no-repeat 0px 0;
+}
+
+#main-content.build {
+	background: url(../images/ident/build.png) no-repeat 98% 3%;
+}
