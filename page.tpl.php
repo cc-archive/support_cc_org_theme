@@ -50,7 +50,7 @@
 		  <h2><?php print $title ?></h2>
       <?php } ?>
      </div -->
-	   <div id="main-content" class="">
+	 <div id="main-content" class="<?php $classary = explode(" ", $title); print strtolower($classary[0]); ?>">
          <div id="title" class="block">
            <div class="title-labels">
              <h1><?php print $title ?></h1>
