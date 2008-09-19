@@ -30,7 +30,8 @@
 }
 
 /* FIXME: correct main-content class names */
-#main-content.store #title .title-labels, #main-content.supporters #title .title-labels, #main-content.commoners #title .title-labels {
+/*#main-content.store #title .title-labels, #main-content.supporters #title .title-labels, #main-content.commoners #title .title-labels {*/
+#title .title-labels { 
 	margin-left: 7.74em;
 	float:none;
 }
@@ -42,20 +43,14 @@
 }
 
 #main-content.video #title .title-labels {
-	margin-left: 6.5em;
+/*	margin-left: 6.5em;*/
 	float: none;
-}
-
-#main-content.video #title {
 	border: none;
-}
-
-#title .video {
 	margin-top: 2.5em;
 	margin-left: -0.5em;
 }
 
-#title .supporters {
+#main-content.supporters #title .title-labels {
 	margin-top: 2.5em;
 /*	margin-left: -0.5em;*/
 }
@@ -64,7 +59,7 @@
 	padding-left: 0.1em;
 }
 
-#title .store {
+#main-content.store #title .title-labels {
 	margin-top: 1.75em;
 	margin-left: -1em;
 }
