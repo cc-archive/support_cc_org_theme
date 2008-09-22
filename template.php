@@ -6,7 +6,7 @@ function phptemplate_image_gallery($galleries, $images) {
 /**
  * Define regions for block placement
  */
-function ccidthemev2_regions() {
+function support2008_regions() {
   return array(
        'special_content' => t('special content'),
        'left' => t('left sidebar'),
