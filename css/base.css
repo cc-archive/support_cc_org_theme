@@ -70,6 +70,10 @@ code {
 img { border: 0 !important; }
 ol, ul, dl { position: relative; }
 
+table {
+  border-collapse: separate; 
+}
+
 td {
   vertical-align: top;
 }
