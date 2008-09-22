@@ -30,17 +30,19 @@
 }
 
 /* FIXME: correct main-content class names */
-/*#main-content.store #title .title-labels, #main-content.supporters #title .title-labels, #main-content.commoners #title .title-labels {*/
-#title .title-labels { 
+#main-content.store #title .title-labels, 
+#main-content.supporters #title .title-labels, 
+#main-content.join #title .title-labels {
 	margin-left: 7.74em;
 	float:none;
 }
 
-#main-content.build #title .title-labels {
+#main-content.help #title .title-labels {
 	margin-left: 0;
 }
 
-#main-content.give #title .title-labels, #main-content.letters #title .title-labels {
+#main-content.other #title .title-labels, 
+#main-content.commoner #title .title-labels {
 	margin-left: 5.9em;
 	padding-top: 0.5em;
 	float: none;
@@ -85,14 +87,14 @@
 	background: url(../images/ident/commoner-id.png) no-repeat 0px 0;
 }
 
-#main-content.give {
+#main-content.other /*ways to give */ {
 	background: url(../images/ident/give-id.png) no-repeat 0px 0;
 }
 
-#main-content.commons /*letters*/ {
+#main-content.commoner /*letters*/ {
 	background: url(../images/ident/letters-id.png) no-repeat 0px 0;
 }
 
-#main-content.build {
-	background: url(../images/ident/build.png) no-repeat 98% 3%;
+#main-content.help /*build the commons*/ {
+	background: url(../images/ident/build.png) no-repeat 100% 6%;
 }
