@@ -80,6 +80,10 @@
 	background: url(../images/ident/supporters-id.png) no-repeat 0px 0;
 }
 
+#main-content.spread /*the word*/ {
+	background: url(../images/ident/spread-id.png) no-repeat 0px 0;
+}
+
 #main-content.call /*for videos*/ {
 	background: url(../images/ident/video-id.png) no-repeat 0px 0;
 }
