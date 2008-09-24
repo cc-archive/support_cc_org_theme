@@ -33,7 +33,8 @@
 /* FIXME: correct main-content class names */
 #main-content.store #title .title-labels, 
 #main-content.supporters #title .title-labels, 
-#main-content.join #title .title-labels {
+#main-content.join #title .title-labels,
+#main-content.spread #title .title-labels {
 	margin-left: 7.74em;
 	float:none;
 }
