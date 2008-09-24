@@ -49,13 +49,13 @@
 	float: none;
 }
 
-#main-content.video #title .title-labels {
-/*	margin-left: 6.5em;*/
+#main-content.call #title .title-labels {
+	margin-left: 6.5em;
 	float: none;
 	border: none;
-	margin-top: 2.5em;
-	margin-left: -0.5em;
-}
+	margin-top: 2em;
+/*	margin-left: -0.5em;
+*/}
 
 #main-content.supporters #title .title-labels {
 	margin-top: 2.5em;
