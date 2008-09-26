@@ -69,6 +69,15 @@ font-family: "Helvetica Neue", helvetica, arial, sans-serif;
 	margin-top: 7.42%;
 }
 
+.support-block h4 {
+	color: #8E2F14;
+	background-color: #fff;
+	padding: 2px;
+	margin-left: -4px;
+	margin-top: -2px;
+	font-weight: normal;
+}
+
 .support-block img.f {
 	display: block;
 	/*height: 100px;*/
