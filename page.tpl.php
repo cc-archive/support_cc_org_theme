@@ -39,7 +39,7 @@
       <li class="inactive"><a href="http://creativecommons.org/about/" title="About"><span>About</span></a></li>      
       <li class="active"><a href="/" title="Support"><span>Support</span></a></li>
       <li class="inactive"><a href="http://creativecommons.org/projects/" title="Projects"><span>Projects</span></a></li>      
-      <li class="inactive"><a href="http://creativecommons.org/participate/" title="Participate"><span>Participate</span></a></li>      
+      <li class="inactive"><a href="http://wiki.creativecommons.org/" title="Participate"><span>Participate</span></a></li>      
       <li class="inactive"><a href="http://creativecommons.org/international/" title="International"><span>International</span></a></li>      
       <li class="inactive"><a href="http://creativecommons.org/contact/" title="Contact"><span>Contact</span></a></li>        
     </ul>
