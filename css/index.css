@@ -69,6 +69,15 @@ font-family: "Helvetica Neue", helvetica, arial, sans-serif;
 	margin-top: 7.42%;
 }
 
+.support-block h4 {
+	color: #8E2F14;
+	background-color: #fff;
+	padding: 2px;
+	margin-left: -4px;
+	margin-top: -2px;
+	font-weight: normal;
+}
+
 .support-block img.f {
 	display: block;
 	/*height: 100px;*/
@@ -81,16 +90,17 @@ font-family: "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
 .support-block ul {
+		font-size: 90%;
 	list-style: none !important;
 	padding: 0 !important; 
-	margin: 0 0 0 40% !important;
+	margin: 0 0 0 35% !important;
 }
 
 .support-block ul li { list-style: none !important; }
 
 
 .index .store {
-	background: #fff url(../images/index/store-index.png) no-repeat -17px -22px;
+	background: #fff url(../images/index/store-index.png) no-repeat -21px -22px;
 }
 
 .index .supporters {
@@ -106,7 +116,7 @@ font-family: "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
 .index .commoner {
-	background: #fff url(../images/index/commoner-index.png) no-repeat -20px -13px;
+	background: #fff url(../images/index/commoner-index.png) no-repeat -25px -17px;
 }
 
 .index .letters {
@@ -114,7 +124,7 @@ font-family: "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
 .index .videos {
-	background: #fff url(../images/index/video-index.png) no-repeat -15px -10px;
+	background: #fff url(../images/index/video-index.png) no-repeat -11px -9px;
 }
 
 .index .matching {

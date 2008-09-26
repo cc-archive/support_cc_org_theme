@@ -200,7 +200,8 @@ table.levels td {
 }
 
 table.levels td.first {
-	padding-right: 0.5em;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
 	border-right: 4px double #fff;
 }
 
