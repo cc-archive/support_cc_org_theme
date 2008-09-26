@@ -1,4 +1,28 @@
 /* STORE */
+h2.sub-section {
+	border-top: 1px solid #c0c0c0;
+	padding-top: 0.75em;
+	margin-top: 1.5em;
+}
+
+p.store-options { margin-left: 13.75em; }
+
+a.store-option {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #4374B7;
+	color: #fff;
+	padding: 0 1em;
+	border:1px solid #4374b7;
+}
+
+a.store-option:hover {
+	background-color: #DAEFF2;
+	color: #666;
+	text-decoration: none;
+}
+
 ul.item {
 	clear: both;
 	list-style: none;
