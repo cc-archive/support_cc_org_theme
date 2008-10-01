@@ -57,9 +57,9 @@ img {
 /*	width: 92%;
 */}
 
-#content {
- /*   width: 82%;
-*/}
+#main-content {
+    width: 80%;
+}
 
 #main-content-secondary {
 	width: 26.5%;
