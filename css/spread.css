@@ -1,0 +1,22 @@
+/* /spread/ */
+
+.spread-row {
+	height: 85px;
+	padding: 15px 30px;
+	border-bottom: 1px solid #ccc;
+}
+
+.spread-button-row {
+	height: 110px;
+}
+
+.spread-row .spread-col-one {
+	width: 52%;
+	float: left;
+}
+
+.spread-row .spread-col-two {
+	width: 48%;
+	float: left;
+}
+
