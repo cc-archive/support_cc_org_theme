@@ -56,9 +56,9 @@ a.join {
 	border-radius: 5px;
 	background-color: #4374B7;
 	color: #fff;
-	padding: 0 1em;
+	padding: 0 0.5em;
 	border:1px solid #4374b7;
-	font-size: 105%;
+	font-size: 100%;
 }
 
 a.join:hover {

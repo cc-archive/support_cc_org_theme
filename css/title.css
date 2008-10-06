@@ -58,7 +58,8 @@
 /*	margin-left: -0.5em;
 */}
 
-#main-content.supporters #title .title-labels {
+#main-content.supporters #title .title-labels,
+#main-content.spread #title .title-labels {
 	margin-top: 2.5em;
 /*	margin-left: -0.5em;*/
 }
