@@ -12,7 +12,7 @@
   <script type="text/javascript" src="http://yui.yahooapis.com/2.5.2/build/animation/animation-min.js"></script> 
   <script type="text/javascript" src="http://yui.yahooapis.com/2.5.2/build/container/container-min.js"></script> 
 
-  <script type="text/javascript" src="/js/join.js"></script>
+  <script type="text/javascript" src="/js/support.js"></script>
 
   <?php print $head ?>
   <?php print $styles ?>
