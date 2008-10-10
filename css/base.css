@@ -24,13 +24,16 @@ h3 {
 	font-size: 125%;
 }
 h1, h2, h3 {
-  line-height: 120%;
-  font-size: 180%;
-  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.1em;
+/*  font-size: 180%;
+*/  font-family: Helvetica, Arial, sans-serif;
   margin-bottom: 1px;
 }
 h2 {
-  margin-top: 25px; margin-bottom: 12px; line-height: 140%; 
+	font-size: 200%;
+	margin-top: 25px; 
+	margin-bottom: 1px; 
+	line-height: 140%; 
 }
 h4, .jurisdiction a:link, h4 a:link, h4 a:visited {
   color: #773;
@@ -69,6 +72,11 @@ code {
 }
 img { border: 0 !important; }
 ol, ul, dl { position: relative; }
+
+ol, ul {
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
 
 table {
   border-collapse: separate; 
