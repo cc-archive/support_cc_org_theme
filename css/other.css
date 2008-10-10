@@ -1,0 +1,49 @@
+/* Other CSS */
+
+#giving-program {
+	padding: 1em;
+	padding-top: 0.75em;
+	background-color: #eee;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+#giving-program h2 {
+		margin-top: 0;
+	}
+
+
+/** MATCHING GIFTS **/
+
+
+/** MATCHING GIFTS **/
+
+
+/** MATCHING GIFTS **/
+h2.q {
+   padding-top: 2em;
+   margin-top: 2em;
+   border-top: 1px solid #ccc;
+}
+
+ul.companies {
+   list-style: none;
+   background-color: #f0f0f0;
+   padding-top: 10px;
+   padding-left: 5%;
+   overflow: auto;
+   width: 85%;
+   margin: 0 auto;
+   -moz-border-radius: 10px;
+}
+ul.companies li {
+   display: block;
+   float: left;
+   width: 30%;
+   padding-bottom: 0.5em;
+}
+img.gifts {
+   float: right;
+}
+
