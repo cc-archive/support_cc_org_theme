@@ -142,13 +142,23 @@ YAHOO.cc.help.selectDonation = function() {
 	useAmountOther();
 	document.getElementById('amount_other').value = donation;
 
-	if (getQueryVariable("donation")=='1000') { useAmountFixed('201'); }
-	if (getQueryVariable("donation")=='500') { useAmountFixed('202'); }
-	if (getQueryVariable("donation")=='250') { useAmountFixed('203'); }
-	if (getQueryVariable("donation")=='100') { useAmountFixed('204'); }
-	if (getQueryVariable("donation")=='75') { useAmountFixed('205'); }
-	if (getQueryVariable("donation")=='50') { useAmountFixed('206'); }
-	if (getQueryVariable("donation")=='25') { useAmountFixed('207'); }
+// elements[2] - (elements[n].type == "text")
+// i = 2; i++ while elements[i].type != "text" (while type == radio)
+
+	var radios = Array();
+	var i = 2;
+	var form = document.Main.elements;
+	do {
+		radios.push(form[i]);
+		i++;
+	} while(form[i].type == 'radio');
+
+	if (donation == '1000') { useAmountFixed(radios[0].value); }
+	if (donation == '500') { useAmountFixed(radios[1].value); }
+	if (donation == '250') { useAmountFixed(radios[2].value); }
+	if (donation == '100') { useAmountFixed(radios[3].value); }
+	if (donation == '50') { useAmountFixed(radios[4].value); }
+	if (donation == '25') { useAmountFixed(radios[5].value); }
 
 	if (query["split"]) {
 		useAmountOther();
