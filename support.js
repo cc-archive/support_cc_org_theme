@@ -121,5 +121,58 @@ YAHOO.cc.help.selectOption = function() {
 
   selectPremium(premium);
 }
-YAHOO.util.Event.onDOMReady(YAHOO.cc.help.selectOption);
 
+function useAmountFixed(fixedamount) {
+  clearAmountOther();
+  for( i=0; i < document.Main.elements.length; i++) {
+    element = document.Main.elements[i];
+    if (element.type == 'radio' && element.name == 'amount') {
+      if (element.value == fixedamount ) {
+        element.checked = true;
+      } else {
+        element.checked = false;
+      }
+    }
+  }
+}
+
+YAHOO.cc.help.selectDonation = function() {
+	var query = parseQueryString();
+	var donation = query['donation'][0];
+	useAmountOther();
+	document.getElementById('amount_other').value = donation;
+
+	if (getQueryVariable("donation")=='1000') { useAmountFixed('201'); }
+	if (getQueryVariable("donation")=='500') { useAmountFixed('202'); }
+	if (getQueryVariable("donation")=='250') { useAmountFixed('203'); }
+	if (getQueryVariable("donation")=='100') { useAmountFixed('204'); }
+	if (getQueryVariable("donation")=='75') { useAmountFixed('205'); }
+	if (getQueryVariable("donation")=='50') { useAmountFixed('206'); }
+	if (getQueryVariable("donation")=='25') { useAmountFixed('207'); }
+
+	if (query["split"]) {
+		useAmountOther();
+		document.getElementById('amount_other').value = Math.round((donation/12)*100)/100;
+
+		for( i=0; i < document.Main.elements.length; i++) {
+			element = document.Main.elements[i];
+			if (element.type == 'radio' && element.name == 'is_recur') {
+				if (element.value == 1 ) {
+					element.checked = true;
+				} else {
+					element.checked = false;
+				}
+			}
+		}
+
+		document.getElementById('frequency_interval').value = 1;
+		document.getElementById('frequency_unit').value = 'month';
+		document.getElementById('installments').value = 12;
+	}
+  
+}
+
+if (location.href.substring("contribute/transact")) {
+	YAHOO.util.Event.onDOMReady(YAHOO.cc.help.selectOption);
+	YAHOO.util.Event.onDOMReady(YAHOO.cc.help.selectDonation);
+}
