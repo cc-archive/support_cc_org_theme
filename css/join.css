@@ -185,6 +185,7 @@ table.levels {
 table.levels td, table.levels th {
 	text-align: center;
 	margin: 0;
+	padding: 0;
 }
 
 table.levels th {
