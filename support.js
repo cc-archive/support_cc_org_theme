@@ -136,14 +136,30 @@ function useAmountFixed(fixedamount) {
   }
 }
 
+/**
+ * This will automatically check the appropriate radio button
+ * for the right premium when a user is on the contribution
+ * page. BE WARNED, that like the function that checks the
+ * right donation amount that this relies on database ID that
+ * can and will change as the database gets updated or changed.
+ */
+function setPremium(premiumId) {
+    var premiums = document.getElementsByName("selectProduct");
+    for( i=0; i < premiums.length; i++) {
+        if ( premiums[i].value == premiumId ) { 
+            premiums[i].checked = true;
+        }
+    }
+}
+
 YAHOO.cc.help.selectDonation = function() {
 	var query = parseQueryString();
 	var donation = query['donation'][0];
+	
 	useAmountOther();
 	document.getElementById('amount_other').value = donation;
 
-// elements[2] - (elements[n].type == "text")
-// i = 2; i++ while elements[i].type != "text" (while type == radio)
+	if ((query['id'][0] == '15') && (!query['split'])) { return; }
 
 	var radios = Array();
 	var i = 2;
@@ -153,16 +169,33 @@ YAHOO.cc.help.selectDonation = function() {
 		i++;
 	} while(form[i].type == 'radio');
 
-	if (donation == '1000') { useAmountFixed(radios[0].value); }
-	if (donation == '500') { useAmountFixed(radios[1].value); }
-	if (donation == '250') { useAmountFixed(radios[2].value); }
-	if (donation == '100') { useAmountFixed(radios[3].value); }
-	if (donation == '50') { useAmountFixed(radios[4].value); }
-	if (donation == '25') { useAmountFixed(radios[5].value); }
+	if (donation == '1000') {
+		useAmountFixed(radios[0].value);
+		setPremium(19);
+	}
+	if (donation == '500') {
+		useAmountFixed(radios[1].value);
+		setPremium(17);
+	}
+	if (donation == '250') {
+		useAmountFixed(radios[2].value);
+		setPremium(18);
+	}
+	if (donation == '100') {
+		useAmountFixed(radios[3].value);
+		setPremium(2);
+	}
+	if (donation == '50') {
+		useAmountFixed(radios[4].value);
+		setPremium(1);
+	}
+//	if (donation == '25') { useAmountFixed(radios[5].value); }
 
 	if (query["split"]) {
 		useAmountOther();
-		document.getElementById('amount_other').value = Math.round((donation/12)*100)/100;
+
+		split_value = Math.round((donation/12)*100)/100;
+		document.getElementById('amount_other').value = split_value.toFixed(2);
 
 		for( i=0; i < document.Main.elements.length; i++) {
 			element = document.Main.elements[i];
@@ -174,15 +207,66 @@ YAHOO.cc.help.selectDonation = function() {
 				}
 			}
 		}
-
-		document.getElementById('frequency_interval').value = 1;
-		document.getElementById('frequency_unit').value = 'month';
-		document.getElementById('installments').value = 12;
 	}
+	document.getElementById('frequency_interval').value = 1;
+	document.getElementById('frequency_unit').value = 'month';
+	document.getElementById('installments').value = 12;
+	
   
 }
 
 if (location.href.substring("contribute/transact")) {
 	YAHOO.util.Event.onDOMReady(YAHOO.cc.help.selectOption);
 	YAHOO.util.Event.onDOMReady(YAHOO.cc.help.selectDonation);
+}
+
+function is_recurring() {
+    if ( document.getElementById('split-custom').checked == true ) {
+        document.getElementById('id').value = '15';
+    } else {
+        document.getElementById('id').value = '1';
+    }
+}
+
+
+/**
+ * This will automatically update the the total amount listed for
+ * the recurring contribution if the user changes the value in the
+ * amount_other text box.
+ */
+YAHOO.util.Event.addListener("amount_other", "keyup",
+        function(e) {
+                var value = document.getElementById("amount_other").value;
+                var fld_ttl = document.getElementById("cc_total_amt");
+                if ( ! value.NaN && value > 0 ) {
+                        var new_ttl = value*12;
+                        fld_ttl.innerHTML = new_ttl.toFixed(2);
+                } else {
+                        fld_ttl.innerHTML = "<<span style='color: red'>0</span>>";
+                }
+        });
+
+
+/**
+ * This gets triggered when a user selects the open-ended recurring
+ * contribution option.  It simply adds an onsubmit attribute to the form.  If
+ * the user never clicks this button then we don't care about calculating 
+ * anything because the defaults will always be okay.
+ */
+function set_form_onsubmit() {
+        document.getElementById("Main").setAttribute('onsubmit', 'set_installments();');
+}
+
+/**
+ * This function should get run when the contribution form is submitted
+ * and if the user had selected an open-ended recurring contriubtion
+ * then it will set the installments accordingly, else installments are
+ * set to 12.
+ */
+function set_installments() {
+        if ( document.getElementById("open-ended").checked == true ) {
+                document.getElementById("installments").value = '';
+        } else {
+                document.getElementById("installments").value = '12';
+        }
 }
