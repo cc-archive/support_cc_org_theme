@@ -71,7 +71,7 @@ img {
 #sidebar-right { width: 16%; }
 
 /* I Hate IE */
-#mainmenu { padding-bottom: 0; }
+#mainmenu { padding-bottom: 0; height:2.3em;}
 ul#navbar { padding-bottom: 0; margin-bottom: -17px !important; }
 ul#navbar li { height: 2.1em; margin-bottom: 0;}
 ul#navbar li.active { padding-bottom: 0px; margin-top: 0; height: 2.1em; }
