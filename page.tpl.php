@@ -40,9 +40,9 @@
       <li class="inactive"><a href="http://wiki.creativecommons.org/FFAQ" title="FAQ"><span>FAQ</span></li>
       <li class="donate active"><a href="/" title="Donate"><span>Donate</span></a></li>
       <li class="inactive"><a href="http://wiki.creativecommons.org" title="Wiki"><span>Wiki</span></a></li>
-      <li class="inactive"><a href="/projects/" title="Projects"><span>Projects</span></a></li>
-      <li class="inactive"><a href="/international/" title="International"><span>International</span></a></li>
-      <li class="inactive"><a href="/contact/" title="Contact"><span>Contact</span></a></li>
+      <li class="inactive"><a href="http://creativecommons.org/projects/" title="Projects"><span>Projects</span></a></li>
+      <li class="inactive"><a href="http://creativecommons.org/international/" title="International"><span>International</span></a></li>
+      <li class="inactive"><a href="http://creativecommons.org/contact/" title="Contact"><span>Contact</span></a></li>
 	</ul>
     <div class="clear"></div>
   </div>
