@@ -28,6 +28,9 @@
 
 #title {
 	border-bottom: none;
+}
+
+#main-content.join #title {
     height: 5em;
 }
 
