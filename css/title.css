@@ -30,6 +30,10 @@
 	border-bottom: none;
 }
 
+#main-content.join #title {
+    height: 5em;
+}
+
 /* FIXME: correct main-content class names */
 #main-content.store #title .title-labels, 
 #main-content.supporters #title .title-labels, 
