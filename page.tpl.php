@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php global $base_url; $theme_path = $base_url .'/'. path_to_theme(); ?>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php print $language ?>" xml:lang="<?php print $language ?>">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php print $language->language ?>" xml:lang="<?php print $language->language ?>">
  <head>
   <title><?php print $head_title ?></title>
   <meta http-equiv="Content-Style-Type" content="text/css" />
@@ -63,13 +63,13 @@
          <div id="title" class="block">
            <div class="title-labels">
 			 <h1><?php print $title ?></h1>
-			 <h3><?php print $node->teaser ?></h3>
+			 <h3><?php print $node->field_subtitle[0]['view'] ?></h3>
             <? if (strtolower($node->taxonomy[1]->name) == "gift") { ?>
              <h3><a href="/store">Store</a></h3>
             <? } ?>
            </div>
          </div>
-       
+
 <?php if ($features != "") { ?>
       <div id="main-content-primary" class="content-box">
 <?php } ?>
@@ -96,17 +96,17 @@
      </div>
 
 	<!-- mainContent --> 
-	   <?php if ($sidebar_right != ""): ?>
-     <div class="content-box" id="sidebar-right"><?php print $sidebar_right ?></div>
+	   <?php #if ($sidebar_right != ""): ?>
+	   <?php if ($right != ""): ?>
+     <div class="content-box" id="sidebar-right"><?php print $right ?></div>
      <?php endif; ?>
 	  </div>
   </div>
 
   <div class="clear">&nbsp;</div>
   <div id="footer">
-   <?php if ($footer_message) : ?>
    <?php print $footer_message;?>
-   <?php endif; ?>
+   <?php print $footer; ?>
   </div>
 <!-- footer -->
  <?php print $closure;?>
