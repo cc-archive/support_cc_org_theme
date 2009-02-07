@@ -169,24 +169,35 @@ YAHOO.cc.help.selectDonation = function() {
 		i++;
 	} while(form[i].type == 'radio');
 
+
 	if (donation == '1000') {
-		useAmountFixed(radios[0].value);
+		if ( ! query['split'] ) {
+			useAmountFixed(radios[0].value);
+		}
 		setPremium(19);
 	}
 	if (donation == '500') {
-		useAmountFixed(radios[1].value);
+		if ( ! query['split'] ) {
+			useAmountFixed(radios[1].value);
+		}
 		setPremium(17);
 	}
 	if (donation == '250') {
-		useAmountFixed(radios[2].value);
+		if ( ! query['split'] ) {
+			useAmountFixed(radios[2].value);
+		}
 		setPremium(18);
 	}
 	if (donation == '100') {
-		useAmountFixed(radios[3].value);
+		if ( ! query['split'] ) {
+			useAmountFixed(radios[3].value);
+		}
 		setPremium(2);
 	}
 	if (donation == '50') {
-		useAmountFixed(radios[4].value);
+		if ( ! query['split'] ) {
+			useAmountFixed(radios[4].value);
+		}
 		setPremium(1);
 	}
 //	if (donation == '25') { useAmountFixed(radios[5].value); }
