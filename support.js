@@ -66,6 +66,36 @@ YAHOO.cc.help.init = function() {
     YAHOO.util.Dom.getElementsByClassName('helpLink', 'td', 'content',
 				     YAHOO.cc.help.init_help_item);
    
+	// If this is a "store" purchase then we need to do some special
+	// handling of the premiums box.  If the items is *not* a t-shirt
+	// then we don't want to show the premiums selection box at all,
+	// but if it's a t-shirt then we need to show the first item so
+	// so that the user can select/verify the shirt size and then
+	// hide the "No thank you" option, as that makes no sense for a
+	// store purchase.  This bit of code makes the somewhat shaky
+	// assumption that any premium that needs sizing info will have
+	// the word "T-Shirt" in the title.
+	//
+	// Don't run this if we didn't get here from the "store"
+	if ( document.referrer == "http://zupport.creativecommons.org/store" ) {
+		premium_block = document.getElementById("premiums");
+		// If there are no premiums, it's no-op
+		if ( premium_block ) {
+		    input_elms = premium_block.getElementsByTagName('input');
+			// Be sure that the premium is selected, hidden or not.
+			input_elms[0].checked = 'checked';
+			if ( /T-Shirt/.test(document.title) ) {
+				for ( i = 0; i <= input_elms.length; i++ ) {
+					if ( input_elms[i].value == 'no_thanks' ) {
+						input_elms[i].parentNode.style.display = 'none';
+					}
+				}
+			} else {
+				premium_block.style.display = 'none';
+			}
+		}
+	}
+
 } // init
 
 YAHOO.util.Event.onDOMReady(YAHOO.cc.help.init);
@@ -222,8 +252,8 @@ YAHOO.cc.help.selectDonation = function() {
 	document.getElementById('frequency_interval').value = 1;
 	document.getElementById('frequency_unit').value = 'month';
 	document.getElementById('installments').value = 12;
-	
-  
+
+
 }
 
 if (location.href.substring("contribute/transact")) {
