@@ -191,46 +191,40 @@ YAHOO.cc.help.selectDonation = function() {
 
 	if ((query['id'][0] == '15') && (!query['split'])) { return; }
 
-	var radios = Array();
-	var i = 2;
-	var form = document.Main.elements;
-	do {
-		radios.push(form[i]);
-		i++;
-	} while(form[i].type == 'radio');
-
+        var amount = document.getElementsByName('amount');
+        var schwag = document.getElementById('premiums-listings').getElementsByTagName('input');
 
 	if (donation == '1000') {
 		if ( ! query['split'] ) {
-			useAmountFixed(radios[0].value);
+			useAmountFixed(amount[0].value);
 		}
-		setPremium(19);
+		setPremium(schwag[4].value);
 	}
 	if (donation == '500') {
 		if ( ! query['split'] ) {
-			useAmountFixed(radios[1].value);
+			useAmountFixed(amount[1].value);
 		}
-		setPremium(17);
+		setPremium(schwag[3].value);
 	}
 	if (donation == '250') {
 		if ( ! query['split'] ) {
-			useAmountFixed(radios[2].value);
+			useAmountFixed(amount[2].value);
 		}
-		setPremium(18);
+		setPremium(schwag[2].value);
 	}
 	if (donation == '100') {
 		if ( ! query['split'] ) {
-			useAmountFixed(radios[3].value);
+			useAmountFixed(amount[3].value);
 		}
-		setPremium(2);
+		setPremium(schwag[1].value);
 	}
 	if (donation == '50') {
 		if ( ! query['split'] ) {
-			useAmountFixed(radios[4].value);
+			useAmountFixed(amount[4].value);
 		}
-		setPremium(1);
+		setPremium(schwag[0].value);
 	}
-//	if (donation == '25') { useAmountFixed(radios[5].value); }
+//	if (donation == '25') { useAmountFixed(amount[5].value); }
 
 	if (query["split"]) {
 		useAmountOther();
