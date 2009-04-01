@@ -77,7 +77,7 @@ YAHOO.cc.help.init = function() {
 	// the word "T-Shirt" in the title.
 	//
 	// Don't run this if we didn't get here from the "store"
-	if ( document.referrer == "http://zupport.creativecommons.org/store" ) {
+	if ( document.referrer == "https://support.creativecommons.org/store" ) {
 		premium_block = document.getElementById("premiums");
 		// If there are no premiums, it's no-op
 		if ( premium_block ) {
