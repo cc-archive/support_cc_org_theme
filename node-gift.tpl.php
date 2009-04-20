@@ -1,7 +1,7 @@
 <div class="node<?php print ($sticky) ? " sticky" : ""; ?>">
   <div class="block">
     <div class="store-pics">
-     <?= $special_content ?>      
+	 <?= $special_content ?>      
     </div>
 	</div>
 

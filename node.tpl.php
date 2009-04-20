@@ -1,8 +1,9 @@
 <? // Determine the type of node, via taxonomy
-   $nterms = taxonomy_node_get_terms($node->nid);
+//$nterms = taxonomy_node_get_terms($node->nid);
+	$nterms = $node->taxonomy;
    rsort($nterms);
    //($nterms[0]->name == 'Gift') ? $is_gift = true : $is_gift = false;
-   
+
    if ($nterms[0]->name == 'Gift') { include 'node-gift.tpl.php'; return; }
 ?>
 <div class="node<?php print ($sticky) ? " sticky" : ""; ?>">
@@ -24,4 +25,3 @@
   <div class="terms">( categories: <?= $terms ?> )</div>
 <?php } ?>
 </div>
-

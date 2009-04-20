@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<?php global $base_url; $theme_path = $base_url .'/'. path_to_theme(); ?>
+<?php global $base_url; $theme_path = $base_url .'/'. path_to_theme(); 
+if ($special_content) $node->special_content = $special_content; ?>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?php print $language->language ?>" xml:lang="<?php print $language->language ?>">
  <head>
   <title><?php print $head_title ?></title>
