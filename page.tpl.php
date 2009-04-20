@@ -13,6 +13,7 @@
   <script type="text/javascript" src="http://yui.yahooapis.com/2.5.2/build/container/container-min.js"></script> 
 
   <script type="text/javascript" src="/js/support.js"></script>
+	<script type="text/javascript" charset="utf-8" src="<?php print $theme_path; ?>/site.js"></script>
 
   <?php print $head ?>
   <?php print $styles ?>
@@ -26,30 +27,28 @@
 </head>
  <body class="yui-skin-sam" <?php print theme("onload_attribute"); ?>>
 
-  <div id="header-wrapper">
-    <div id="header" class="box">
-      <a href="http://creativecommons.org/license/" class="cc-actions"><img src="<?php print $theme_path; ?>/images/publish.png" border="0" class="publish"/> <h4>License</h4>Your Work</a>
-      <a href="http://search.creativecommons.org/" class="cc-actions"><img src="<?php print $theme_path; ?>/images/find.png" border="0"/> <h4>Search</h4>CC Licensed Work</a>
-      <a href="http://creativecommons.org/"><img src="<?php print $theme_path; ?>/images/cc-title.png" alt="creative commons" id="cc-title" border="0"/></a>
-    </div>
-  </div>
-  <div id="mainmenu">
-    <ul id="navbar" class="box">
-      <li class="inactive"><a href="http://creativecommons.org/" title="Home"><span>Home</span></a></li>
-      <li class="inactive"><a href="http://creativecommons.org/about/" title="About"><span>About</span></a></li>      
-      <li class="inactive"><a href="http://wiki.creativecommons.org/FFAQ" title="FAQ"><span>FAQ</span></li>
-      <li class="donate active"><a href="/" title="Donate"><span>Donate</span></a></li>
-      <li class="inactive"><a href="http://wiki.creativecommons.org" title="Wiki"><span>Wiki</span></a></li>
-      <li class="inactive"><a href="http://creativecommons.org/projects/" title="Projects"><span>Projects</span></a></li>
-      <li class="inactive"><a href="http://creativecommons.org/international/" title="International"><span>International</span></a></li>
-      <li class="inactive"><a href="http://creativecommons.org/contact/" title="Contact"><span>Contact</span></a></li>
-	</ul>
-    <div class="clear"></div>
-  </div>
+   <div id="globalWrapper">
+     <div id="headerWrapper" class="box">
+       <div id="headerLogo">
+         <h1><a href="http://creativecommons.org/"><span>Creative Commons</span></a></h1>
+       </div>
+       <div id="headerNav">
+         <ul>
+           <!-- <li><em>Home</em></li> -->
+           <li><a href="http://creativecommons.org/about/">About</a></li>
+           <li><a href="http://staging.creativecommons.org/weblog/">News</a></li>
+           <li><a href="http://creativecommons.org/faq">FAQ</a></li>
+           <li><a href="http://support.creativecommons.org/">Donate</a></li>
+           <li><a href="http://wiki.creativecommons.org/">Wiki</a></li>
+           <li><a href="http://creativecommons.org/projects/">Projects</a></li>
+           <li class="helpLink" id="international_list"><a href="http://creativecommons.org/international/">International</a></li>
+         </ul>
+      </div>
+     </div>
 
-  <div class="clear"></div>
-  <div class="box">
-    <div id="content" >
+
+     <div id="mainContent" class="box">
+       <div id="contentPrimary">
      <!-- div id="splash">
       <?php if ($node->field_title_image[0]['fid']) { ?>
       <div class="title-image">
@@ -59,7 +58,6 @@
 		  <h2><?php print $title ?></h2>
       <?php } ?>
      </div -->
-	 <div id="main-content" class="<?php $classary = explode(" ", $title); print strtolower($classary[0]); ?>">
          <div id="title" class="block">
            <div class="title-labels">
 			 <h1><?php print $title ?></h1>
@@ -70,9 +68,11 @@
            </div>
          </div>
 
-<?php if ($features != "") { ?>
-      <div id="main-content-primary" class="content-box">
+<?php if ($features != "") { 
+      $colClass = "sideContentSpace"; ?>
+      <div id="blocks">  
 <?php } ?>
+      <div id="main-content-primary" class="block page <?php $colClass ?>">
 <?php if ($tabs != ""): ?>
           <?php print $tabs ?>
 <?php endif; ?>
@@ -91,7 +91,7 @@
 
 <?php if ($features != "") { ?>
 		  </div>
-      <div id="main-content-secondary" class="content-box"><?php print $features ?></div>
+      <div id="sideContent" class="content-box"><?php print $features ?></div>
 <?php } ?> 
      </div>
 
@@ -103,13 +103,14 @@
 	  </div>
   </div>
 
-  <div class="clear">&nbsp;</div>
   <div id="footer">
-   <?php print $footer_message;?>
-   <?php print $footer; ?>
-  </div>
+    <div id="footerContent" class="box">
+    <?php print $footer_message;?>
+    <?php print $footer; ?>
+    </div>
 <!-- footer -->
  <?php print $closure;?>
+  </div>
  </body>
 </html>
 
