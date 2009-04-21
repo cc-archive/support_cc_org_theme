@@ -41,68 +41,47 @@
 }
 
 /* header */
-#header-wrapper {
-  background: url('images/header-main-b.png') repeat-x bottom left #334438;
+#globalWrapper {
+	background: #fff url('images/header-bar-thin.png') repeat-x top left;
 }
-#header {
- position: relative; font-size: 11px !important;
+
+#headerNav {
+	top: 13px;
 }
-#header a:visited { color: #333; }
-#header a:hover { background: transparent; }
 
-  html>body #header .logo span {
-    display: block;
-    width: 196px;
-    height: 69px; 
-    background: url('images/cc-title.png') no-repeat top left;
-  }
-  html>body #header .logo span img {
-    display: none;
-  }
-  
-  /* only visible to FF */
-  html>body #header .find span.img {
-    display: block;
-    float: left;
-    margin-right: 10px;
-    width: 70px;
-    height: 50px;
-    background: url('images/find.png') no-repeat top left;
-  }
-  html>body #header .publish span.img {
-    display: block;
-    float: left;
-    margin-right: 10px;
-    width: 70px;
-    height: 50px;
-    background: url('images/license.png') no-repeat top left;
-  }
-  html>body #header span.img img {
-    display: none;
-  }
+#headerWrapper {
+	height: 63px;
+}
+#headerLogo { 
+	height: 63px;
+	width: 251px;
+}
+
+#headerLogo {
+	height: 25px;
+	width: 142px;
+}
+
+#headerLogo h1 {
+	position: absolute;
+	height: 35px;
+	width: 142px;
+	background-image: url(images/cc-logo-small.png);
+	margin-top: 0;
+	top: 10px;
+}
+
+#mainContent {
+	margin-top: 45px;
+}
+
+#headerNav ul {
+	padding-top: 17px;
+}
 
 
-/* nav tab-bar */
-#mainmenu {	position: relative; padding-top: 0.6em; background: url("images/tabbar-bg.png") repeat-x bottom left #383e32 /*fafffa*/;/* height: 2.4em;*/ margin-bottom: 10px; overflow:hidden; }
-ul#navbar { list-style-type: none; }
-ul#navbar li {float: left; height: 2.4em;  margin: 0.2em 2px 0 2px; background: url("images/tab-bg.png") repeat-x bottom left #e0e8e3; }
-ul#navbar li.active { margin-top: 0; font-weight: bold; height: 2.6em;  }
-
-ul#navbar a {display: block; color: #333; background: url("images/tab-body-dark.png") no-repeat top right ;  }
-ul#navbar a span { display: block; padding: 0.5em 1.4em 0.2em; padding-top: 0.7em; background: url("images/tab-left-dark.png") no-repeat top left; }
-
-ul#navbar a:hover {text-decoration: none; color: #333;  background: url("images/tab-body-lit.png") no-repeat top right #fff; }
-ul#navbar a:hover span { background: url("images/tab-left-lit.png") no-repeat top left; }
-
-ul#navbar li.active a { background: url("images/tab-body-lit.png") no-repeat top right #fff; }
-ul#navbar li.active a span { background: url("images/tab-left-lit.png") no-repeat top left; padding-bottom: 0.4em; }
-
-ul#navbar li.donate a { background: url("images/tab-body-donate.png") no-repeat top right #fff; }
-ul#navbar li.donate a span { background: url("images/tab-left-donate.png") no-repeat top left; }
 
 
-#splash {  position: relative; background-color: /*#0f2700*/ #fff; color: #707070; margin: 7px 0 3px 0; padding-bottom:  6px; overflow: hidden;}
-#splash #blurb { margin: 0 0 28px 0; padding: 0 15px; font-size: 65%; color: #505050; }
 
 
 
