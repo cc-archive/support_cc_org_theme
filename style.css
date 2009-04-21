@@ -427,6 +427,11 @@ ol.letters ol {
 }
 
 /* Side content */
+#blocks {
+	width: 575px;
+	float: left;
+}
+
 #sideContent {
 	float: right;
 	margin-right: -5px;
