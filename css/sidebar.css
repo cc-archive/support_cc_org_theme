@@ -1,21 +1,26 @@
 /* SIDEBRA */
 #sidebar-right {
-	font-size: 0.85em; 
-	width: 15%;
-	margin-right: 0 !important;
-	margin-left: 1%;
-	margin-top: 20px;
-	padding-left: 5px;
-	padding-bottom: 30px; /*background-color: #f9faf9;*/
+		float: right;
+	/*	font-size: 75%; */
+		width: 150px; 
+		margin: 10px 0;
+		padding: 0;
+	/*	margin-left: 1%; */
+		margin-right: 0 !important; 
+		padding-bottom: 3em; 
+	/*	background-color: #f00; */
 }
 #sidebar-right .block {
   margin: 0;
   padding: 0;
 }
 #sidebar-right .content {
-  margin-bottom: 1em;
-  padding-bottom: 0.7em;
-  border-bottom: 1px solid #e0e0e0;
+	clear: both;
+	margin-bottom: 1em;
+	padding-bottom: 0.7em;
+	padding-left: 5px; 
+	border-bottom: 1px solid #e0e0e0;
+	font-size: 90%;
 }
 #sidebar-right ul.menu,  
 #features ul {
