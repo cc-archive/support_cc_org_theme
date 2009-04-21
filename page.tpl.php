@@ -91,9 +91,11 @@
 
 <?php if ($features != "") { ?>
 		  </div>
+		</div>
       <div id="sideContent" class="content-box"><?php print $features ?></div>
+<?php } else { ?>
+      </div>
 <?php } ?> 
-     </div>
 	</div>
 	<!-- mainContent --> 
 	   <?php #if ($sidebar_right != ""): ?>
