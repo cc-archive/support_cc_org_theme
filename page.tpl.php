@@ -47,7 +47,7 @@
      </div>
 
 
-     <div id="mainContent" class="box">
+     <div id="mainContent" class="box <?php $classary = explode(" ", $title); print strtolower($classary[0]); ?>">
        <div id="contentPrimary">
      <!-- div id="splash">
       <?php if ($node->field_title_image[0]['fid']) { ?>
