@@ -25,7 +25,7 @@
 #sidebar-right ul.menu,  
 #features ul {
   list-style:  none;
-  margin: 5px 0 0 0;
+  margin: 5px 0 0 0 !important;
   padding: 0;
 }
 #sidebar-right ul li, 

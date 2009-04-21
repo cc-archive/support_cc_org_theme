@@ -426,6 +426,20 @@ ol.letters ol {
   margin: 0;
 }
 
+/* Side content */
+#sideContent {
+	float: right;
+	margin-right: -5px;
+	width: 150px;
+	padding-left: 10px;
+	border-left: 1px dotted #ddd;
+}
+
+#sideContent ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
 
 
 /* footer */
