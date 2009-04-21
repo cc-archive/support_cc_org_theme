@@ -60,7 +60,7 @@
      </div -->
          <div id="title" class="block">
            <div class="title-labels">
-			 <h1><?php print $title ?></h1>
+			 <h2><?php print $title ?></h2>
 			 <h3><?php print $node->field_subtitle[0]['view'] ?></h3>
             <? if (strtolower($node->taxonomy[1]->name) == "gift") { ?>
              <h3><a href="/store">Store</a></h3>
@@ -72,7 +72,7 @@
       $colClass = "sideContentSpace"; ?>
       <div id="blocks">  
 <?php } ?>
-      <div id="main-content-primary" class="block page <?php $colClass ?>">
+      <div id="" class="block page <?php $colClass ?>">
 <?php if ($tabs != ""): ?>
           <?php print $tabs ?>
 <?php endif; ?>
@@ -94,13 +94,12 @@
       <div id="sideContent" class="content-box"><?php print $features ?></div>
 <?php } ?> 
      </div>
-
+	</div>
 	<!-- mainContent --> 
 	   <?php #if ($sidebar_right != ""): ?>
 	   <?php if ($right != ""): ?>
      <div class="content-box" id="sidebar-right"><?php print $right ?></div>
      <?php endif; ?>
-	  </div>
   </div>
 
   <div id="footer">
