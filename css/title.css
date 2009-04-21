@@ -34,27 +34,27 @@
     min-height: 6em;
 }
 
-/* FIXME: correct main-content class names */
-#main-content.store #title .title-labels, 
-#main-content.supporters #title .title-labels, 
-#main-content.join #title .title-labels,
-#main-content.spread #title .title-labels {
+/* FIXME: correct mainContent class names */
+#mainContent.store #title .title-labels, 
+#mainContent.supporters #title .title-labels, 
+#mainContent.join #title .title-labels,
+#mainContent.spread #title .title-labels {
 	margin-left: 7.74em;
 	float:none;
 }
 
-#main-content.help #title .title-labels {
+#mainContent.help #title .title-labels {
 	margin-left: 0;
 }
 
-#main-content.other #title .title-labels, 
-#main-content.commoner #title .title-labels {
+#mainContent.other #title .title-labels, 
+#mainContent.commoner #title .title-labels {
 	margin-left: 5.9em;
 	padding-top: 0.5em;
 	float: none;
 }
 
-#main-content.call #title .title-labels {
+#mainContent.call #title .title-labels {
 	margin-left: 6.5em;
 	float: none;
 	border: none;
@@ -62,8 +62,8 @@
 /*	margin-left: -0.5em;
 */}
 
-#main-content.supporters #title .title-labels,
-#main-content.spread #title .title-labels {
+#mainContent.supporters #title .title-labels,
+#mainContent.spread #title .title-labels {
 	margin-top: 2.5em;
 /*	margin-left: -0.5em;*/
 }
@@ -72,40 +72,40 @@
 	padding-left: 0.1em;
 }
 
-#main-content.store #title .title-labels {
+#mainContent.store #title .title-labels {
 /*	margin-top: 1.75em;
 	margin-left: -1em;
 */}
 
 /* Page head spot illustrations */
-#main-content.store {
+#mainContent.store {
 	background: url(../images/ident/store-id.png) no-repeat 0px 0;
 }
 
-#main-content.supporters {
+#mainContent.supporters {
 	background: url(../images/ident/supporters-id.png) no-repeat 0px 0;
 }
 
-#main-content.spread /*the word*/ {
+#mainContent.spread /*the word*/ {
 	background: url(../images/ident/spread-id.png) no-repeat 0px 0;
 }
 
-#main-content.call /*for videos*/ {
+#mainContent.call /*for videos*/ {
 	background: url(../images/ident/video-id.png) no-repeat 0px 0;
 }
 
-#main-content.join /*the cc network*/ {
+#mainContent.join /*the cc network*/ {
 	background: url(../images/ident/commoner-id.png) no-repeat 0px 0;
 }
 
-#main-content.other /*ways to give */ {
+#mainContent.other /*ways to give */ {
 	background: url(../images/ident/give-id.png) no-repeat 0px 0;
 }
 
-#main-content.commoner /*letters*/ {
+#mainContent.commoner /*letters*/ {
 	background: url(../images/ident/letters-id.png) no-repeat 0px 0;
 }
 
-#main-content.help /*build the commons*/ {
+#mainContent.help /*build the commons*/ {
 	background: url(../images/ident/build.png) no-repeat 100% 6%;
 }
