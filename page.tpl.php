@@ -17,6 +17,7 @@
 
   <?php print $head ?>
   <?php print $styles ?>
+  <link href="<?php print $theme_path; ?>/print.css" rel="stylesheet" media="print" type="text/css" />
   <link href="http://creativecommons.org/includes/progress.css?<?= rand()?>" rel="stylesheet" type="text/css" />
   <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="<?php print $theme_path ?>/style-ie.css" />
    <style type="text/css">
