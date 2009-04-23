@@ -78,33 +78,33 @@
 
 /* Page head spot illustrations */
 #mainContent.store {
-	background: url(../images/ident/store-id.png) no-repeat 0px 0;
+	background: url(../images/index/store-index.png) no-repeat 0px 0;
 }
 
 #mainContent.supporters {
-	background: url(../images/ident/supporters-id.png) no-repeat 0px 0;
+	background: url(../images/index/supporters-index.png) no-repeat 0px 0;
 }
 
 #mainContent.spread /*the word*/ {
-	background: url(../images/ident/spread-id.png) no-repeat 0px 0;
+	background: url(../images/index/spread-index.png) no-repeat 0px 0;
 }
 
 #mainContent.call /*for videos*/ {
-	background: url(../images/ident/video-id.png) no-repeat 0px 0;
+	background: url(../images/index/video-index.png) no-repeat 0px 0;
 }
 
 #mainContent.join /*the cc network*/ {
-	background: url(../images/ident/commoner-id.png) no-repeat 0px 0;
+	background: url(../images/index/commoner-index.png) no-repeat 0px 0;
 }
 
 #mainContent.other /*ways to give */ {
-	background: url(../images/ident/give-id.png) no-repeat 0px 0;
+	background: url(../images/index/give-index.png) no-repeat 0px 0;
 }
 
 #mainContent.commoner /*letters*/ {
-	background: url(../images/ident/letters-id.png) no-repeat 0px 0;
+	background: url(../images/index/letters-index.png) no-repeat 0px 0;
 }
 
 #mainContent.help /*build the commons*/ {
-	background: url(../images/ident/build.png) no-repeat 100% 6%;
+	background: url(../images/index/build.png) no-repeat 100% 6%;
 }
