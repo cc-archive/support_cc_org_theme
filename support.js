@@ -5,8 +5,8 @@ YAHOO.cc.help.init_help_item = function(help_anchor) {
 
     var link_id = help_anchor.id;
     var help_id = 'help_' + link_id;
-
-    // make sure we have an array to hold the list of panels
+    
+	// make sure we have an array to hold the list of panels
     if (!YAHOO.cc.help.help_panels) {
 			YAHOO.cc.help.help_panels = new Array();
     }
@@ -62,8 +62,7 @@ YAHOO.cc.help.init_help_item = function(help_anchor) {
 
 YAHOO.cc.help.init = function() {
     // initialization for help pop-ups
-
-    YAHOO.util.Dom.getElementsByClassName('helpLink', 'td', 'content',
+    YAHOO.util.Dom.getElementsByClassName('helpLink', 'td', 'mainContent',
 				     YAHOO.cc.help.init_help_item);
    
 	// If this is a "store" purchase then we need to do some special
