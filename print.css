@@ -10,7 +10,7 @@
 	color: #000 !important;
 }
 
-#sidebar {
+#sidebar, #sidebar-right {
 	display: none;
 }
 
