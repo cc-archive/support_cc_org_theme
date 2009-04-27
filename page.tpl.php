@@ -13,7 +13,7 @@
   <script type="text/javascript" src="http://yui.yahooapis.com/2.5.2/build/container/container-min.js"></script> 
 
 <script type="text/javascript" src="<?php print $theme_path; ?>/support.js"></script>
-	<script type="text/javascript" charset="utf-8" src="<?php print $theme_path; ?>/site.js"></script>
+	<?php /*<script type="text/javascript" charset="utf-8" src="<?php print $theme_path; ?>/site.js"></script>*/ ?>
 
   <?php print $head ?>
   <?php print $styles ?>
