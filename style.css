@@ -73,7 +73,7 @@
 
 #mainContent {
 	margin-top: 45px;
-	overflow: auto;
+	overflow: visible;
 }
 
 #headerNav ul {
@@ -212,7 +212,7 @@ display: block; float: right; width: 227px; margin: 0; padding: 10px 0 11px 10px
 
 
 
-#mainContent .block { clear: both; margin-bottom: 35px; padding-left: 1%; overflow: auto; }
+#mainContent .block { clear: both; margin-bottom: 35px; padding-left: 1%; overflow: visible; }
 #mainContent .feature { border-bottom:  1px solid #ddd; padding-bottom:  30px; margin-bottom: 25px; }
 
 #mainContent #contentPrimary .block { margin-bottom: 33px; }
