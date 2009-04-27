@@ -73,7 +73,7 @@
 
 #mainContent {
 	margin-top: 45px;
-	overflow: visible;
+	overflow: hidden;
 }
 
 #headerNav ul {
