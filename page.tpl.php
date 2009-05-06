@@ -60,7 +60,9 @@
       <?php } ?>
      </div -->
          <div id="title" class="block">
+		   <?php if ($node->nid != 13) { ?>	
 		   <h3 class="category"><a href="/">Support CC</a></h3>
+		   <?php } ?>
 		   <div class="title-labels">
 			 <h2><?php print $title ?></h2>
             <? if (strtolower($node->taxonomy[1]->name) == "gift") { ?>
@@ -78,7 +80,6 @@
 <?php if ($tabs != ""): ?>
           <?php print $tabs ?>
 <?php endif; ?>
-        
        <?php if ($help != ""): ?>
        <p id="help"><?php print $help ?></p>
        <?php endif; ?>
