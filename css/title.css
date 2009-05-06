@@ -9,7 +9,7 @@
 	color: #000;
 }
 
-.block .title-labels h3 {
+#title h3.subtitle {
 	font-family: Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	margin-top: 0.5em !important;
@@ -21,8 +21,10 @@
 #title .title-labels {
 /*	float: left;
 */	margin-left: 0px;
-	margin-top: 1.25em;
-
+/*	margin-top: 1.25em;
+*/
+	padding-bottom: 2em;
+	border-bottom: 1px solid #e0e0e0;
 }
 
 #title {
@@ -34,6 +36,7 @@
 }
 
 /* FIXME: correct mainContent class names */
+/*
 #mainContent.store #title .title-labels, 
 #mainContent.supporters #title .title-labels, 
 #mainContent.join #title .title-labels,
@@ -59,24 +62,22 @@
 	border: none;
 	margin-top: 2em;
 /*	margin-left: -0.5em;
-*/}
-
+}
+*/
+/*
 #mainContent.supporters #title .title-labels,
 #mainContent.spread #title .title-labels {
 	margin-top: 2.5em;
-/*	margin-left: -0.5em;*/
 }
-
+*/
+/*
 #title .supporters h3 {
 	padding-left: 0.1em;
 }
-
-#mainContent.store #title .title-labels {
-/*	margin-top: 1.75em;
-	margin-left: -1em;
-*/}
+*/
 
 /* Page head spot illustrations */
+/*
 #mainContent.store {
 	background: url(../images/index/store-index.png) no-repeat 0px 0;
 }
@@ -86,25 +87,25 @@
 }
 
 #mainContent.spread /*the word*/ {
-	background: url(../images/index/spread-index.png) no-repeat 0px 0;
+/*	background: url(../images/index/spread-index.png) no-repeat 0px 0;
 }
 
 #mainContent.call /*for videos*/ {
-	background: url(../images/index/video-index.png) no-repeat 0px 0;
+/*	background: url(../images/index/video-index.png) no-repeat 0px 0;
 }
 
 #mainContent.join /*the cc network*/ {
-	background: url(../images/index/commoner-index.png) no-repeat 0px 0;
+/*	background: url(../images/index/commoner-index.png) no-repeat 0px 0;
 }
 
 #mainContent.other /*ways to give */ {
-	background: url(../images/index/give-index.png) no-repeat 0px 0;
+/*	background: url(../images/index/give-index.png) no-repeat 0px 0;
 }
 
 #mainContent.commoner /*letters*/ {
-	background: url(../images/index/letters-index.png) no-repeat 0px 0;
+/*	background: url(../images/index/letters-index.png) no-repeat 0px 0;
 }
 
 #mainContent.help /*build the commons*/ {
-	background: url(../images/index/build.png) no-repeat 100% 6%;
-}
+/*	background: url(../images/index/build.png) no-repeat 100% 6%;
+}*/

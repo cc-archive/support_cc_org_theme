@@ -60,13 +60,14 @@
       <?php } ?>
      </div -->
          <div id="title" class="block">
-           <div class="title-labels">
+		   <h3 class="category"><a href="/">Support CC</a></h3>
+		   <div class="title-labels">
 			 <h2><?php print $title ?></h2>
-			 <h3><?php print $node->field_subtitle[0]['view'] ?></h3>
             <? if (strtolower($node->taxonomy[1]->name) == "gift") { ?>
              <h3><a href="/store">Store</a></h3>
             <? } ?>
            </div>
+		   <h3 class="subtitle"><?php print $node->field_subtitle[0]['view'] ?></h3>
          </div>
 
 <?php if ($features != "") { 
