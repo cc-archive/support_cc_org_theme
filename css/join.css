@@ -228,3 +228,32 @@ ul.custom-gifts {
 ul.custom-gifts li {
 	opacity: 0.25;
 }
+
+
+/* CC Network Menu */
+ul#join {
+		list-style: none;
+		padding: 0;
+		margin: 2em 0 0;
+}
+
+ul#join li {
+	float: left;
+		display: block;
+		width: 47%;
+		margin-right: 2%;
+		text-align: center;
+}
+
+ul#join li.students {
+		border:1px solid #ddd;
+		background-color: #eee;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+}
+
+ul#join li.students h2 {
+		margin-left: 5%;
+		margin-right: 5%;
+		color: #777 !important;
+}
