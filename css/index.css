@@ -11,14 +11,18 @@
 	-webkit-border-radius: 3px;
 }
 
+.index {
+	overflow: auto;
+	padding-top: 1px !important;
+}
+
 .extras {
-	width: 33%;
+	width: 70%;
 	margin: 0 auto;
+	margin-top: 2em;
 }
 .extras .support-block {
-	-moz-border-radius: 5px;
-	width: 90%;
-	border-color: #ccc;
+	width: 45%;
 }
 
 .extras .start {
@@ -130,3 +134,8 @@ font-family: "Helvetica Neue", helvetica, arial, sans-serif;
 .index .matching {
 	background: #fff url(../images/index/matching-index.png) no-repeat -15px -14px;
 }
+
+.index .donate {
+	background: #fff url(../images/index/donate-index.png) no-repeat -5px -15px;
+}
+
