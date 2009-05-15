@@ -1,5 +1,34 @@
 /* donate */
 
+/* Donate Rewrite - May 2009 */
+
+ul#levels {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+	overflow: auto;
+}
+
+ul#levels li {
+	clear: both;
+	margin: 1em 0;
+	border-bottom: 1px solid #ccc;
+}
+
+ul#levels li h2 {
+	float: left;
+	width: 100px;
+	color: #d33;
+	font-size: 18px;
+	margin: 0 0 1em 0;
+}
+
+ul#levels li div.donationInfo {
+	margin-left: 115px;
+}
+
+/* End Rewrite */
+
 div.level {
 	position:relative;
 	border: 1px solid #ccc;
