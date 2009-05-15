@@ -27,6 +27,11 @@ ul#levels li div.donationInfo {
 	margin-left: 80px;
 }
 
+ul#levels li div.donationInfo img {
+	margin-right: 10px;
+	opacity: 0.25;
+}
+
 /* End Rewrite */
 
 div.level {
