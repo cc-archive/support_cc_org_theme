@@ -4,27 +4,27 @@
 
 ul#levels {
 	list-style: none;
-	margin-left: 0;
+	margin-left: 0 !important;
 	padding-left: 0;
 	overflow: auto;
 }
 
 ul#levels li {
 	clear: both;
-	margin: 1em 0;
+	margin: 0;
 	border-bottom: 1px solid #ccc;
 }
 
 ul#levels li h2 {
 	float: left;
-	width: 100px;
+	width: 60px;
 	color: #d33;
-	font-size: 18px;
+	font-size: 1.5em;
 	margin: 0 0 1em 0;
 }
 
 ul#levels li div.donationInfo {
-	margin-left: 115px;
+	margin-left: 80px;
 }
 
 /* End Rewrite */
