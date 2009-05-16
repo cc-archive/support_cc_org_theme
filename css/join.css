@@ -27,16 +27,42 @@ ul#levels li div.donationInfo {
 	margin-left: 80px;
 }
 
-ul#levels li div.donationInfo a.link {
-	background-color: #5a93c4;
+ul#levels li div.donationInfo p {
+}
+
+ul#levels li div.donationInfo a {
 	color: #fff;
-	display: block;
+/*	display: block;
 	float: left;
-	width: 90px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	padding: 3px 20px 5px 10px;
-	background: url(../images/donate-arrow.png) no-repeat fixed 50% 98%;
+*/	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	padding: 0px 25px 0px 8px;
+	background: #5a93c4 url(../images/donate-arrow.png) no-repeat 97% 51%;
+	font-size: 110%;
+}
+
+ul#levels li div.donationInfo a:hover {
+	background-color: #467399;
+	text-decoration: none;
+}
+
+ul#levels li div.donationInfo a.donate {
+	width: 7em;
+}
+
+ul#levels li div.donationInfo a.student {
+	width: 10em;
+}
+
+ul#levels li div.donationInfo a.monthly {
+	width: 20em;
+	background-position: 99% 51%;
+}
+
+ul#levels li div.donationInfo p.premiums {
+	margin-top: 0;
+	padding-top: 0;
+	clear: both;
 }
 
 ul#levels li div.donationInfo img {
