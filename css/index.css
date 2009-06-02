@@ -135,6 +135,10 @@ font-family: "Helvetica Neue", helvetica, arial, sans-serif;
 	background: #fff url(../images/index/matching-index.png) no-repeat -15px -14px;
 }
 
+.index .corporate {
+	background: #fff url(../images/index/corporate-giving.png) no-repeat -7px -10px;
+}
+
 .index .donate {
 	background: #fff url(../images/index/donate-index.png) no-repeat -5px -15px;
 }
