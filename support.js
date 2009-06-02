@@ -18,7 +18,7 @@ YAHOO.cc.help.init_help_item = function(help_anchor) {
 			   draggable: false, 
 			   width: "30em",
 				effect: {effect:YAHOO.widget.ContainerEffect.FADE,duration:0.125},
-			   context: [help_anchor/*.childNodes[3]*/,'tl','tr']
+			   context: [help_anchor/*.childNodes[3]*/,'tr','tl']
 			    } ); 
 
     var item_idx = YAHOO.cc.help.help_panels.push(new_panel) - 1;
@@ -62,7 +62,7 @@ YAHOO.cc.help.init_help_item = function(help_anchor) {
 
 YAHOO.cc.help.init = function() {
     // initialization for help pop-ups
-    YAHOO.util.Dom.getElementsByClassName('helpLink', 'td', 'mainContent',
+    YAHOO.util.Dom.getElementsByClassName('helpLink', 'li', 'mainContent',
 				     YAHOO.cc.help.init_help_item);
    
 	// If this is a "store" purchase then we need to do some special
@@ -100,7 +100,7 @@ YAHOO.cc.help.init = function() {
 YAHOO.util.Event.onDOMReady(YAHOO.cc.help.init);
 
 
-var levels = new Array(25, 50, 100, 250, 500, 1000);
+var levels = new Array(75, 150, 300, 500, 1000);
 var custom_payments = 100; /* minimum $ amount for monthly payments */
 
 YAHOO.util.Event.addListener("donation", "keyup",
