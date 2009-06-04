@@ -205,19 +205,19 @@ YAHOO.cc.help.selectDonation = function() {
 		}
 		setPremium(schwag[3].value);
 	}
-	if (donation == '250') {
+	if (donation == '300') {
 		if ( ! query['split'] ) {
 			useAmountFixed(amount[2].value);
 		}
 		setPremium(schwag[2].value);
 	}
-	if (donation == '100') {
+	if (donation == '150') {
 		if ( ! query['split'] ) {
 			useAmountFixed(amount[3].value);
 		}
 		setPremium(schwag[1].value);
 	}
-	if (donation == '50') {
+	if (donation == '75') {
 		if ( ! query['split'] ) {
 			useAmountFixed(amount[4].value);
 		}
