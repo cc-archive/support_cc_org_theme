@@ -133,6 +133,7 @@ div.level ul li {
 }
 
 div.level div.options {
+	display: block !important;
 	position: relative;
 	clear: left;
 	border-top: 1px solid #ddd;
