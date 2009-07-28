@@ -10,8 +10,10 @@
 }
 
 .spread-row .spread-col-one {
-	width: 33%;
+	width: 30%;
+	margin-right: 3%;
 	float: left;
+	text-align: center;
 }
 
 .spread-row .spread-col-two {
