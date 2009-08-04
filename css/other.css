@@ -13,7 +13,7 @@
 		margin-top: 0;
 	}
 
-ul.other-ways {
+ul.other-ways, ul.other-ways ul {
 	list-style: none;
 
 }
@@ -21,6 +21,10 @@ ul.other-ways {
 ul.other-ways li {
 	background: url(../images/item-background.png) no-repeat 50% 100%;
 	padding: 25px 0;
+}
+
+ul.other-ways ul li {
+	background: none;
 }
 /** MATCHING GIFTS **/
 
