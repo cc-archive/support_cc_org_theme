@@ -13,23 +13,17 @@
 	$hero_image = end($node->field_image_cache);
   ?>
   <div class="content">
- 	<table>
-	  <tr>
-		<td><img src="/sites/default/files/imagecache/product_hero/<?php echo $hero_image['filepath'];?> "/> </td>
-		<td>
+		<div class="product-image"><img src="/sites/default/files/imagecache/product_hero/<?php echo $hero_image['filepath'];?> "/> </div>
+		<div class="product-details">
 		  <h2><?php print uc_currency_format($node->sell_price); ?></h2>
    		  <p><?php print $node->content['add_to_cart']['#value']; ?></p>
-		</td>
-	  </tr>
-	  <tr>
-		<td colspan="2">
+		</div>
+		<div class="product-pictures">
 <?php foreach ($node->field_image_cache as $images) { 
 		if ($images['list'] == "1") { ?>
 		<img src="/sites/default/files/imagecache/product/<?php print $images['filepath']; ?>" alt="<?php print $images['data']['title']; ?>" />
 <?php } } ?>
-		<td>
-	  </tr>
-	</table>
+		</div>
 
   </div>
 </div>
