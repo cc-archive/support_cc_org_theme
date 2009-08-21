@@ -3,21 +3,22 @@
 .spread-row {
 	height: 110px;
 	padding: 0 30px 25px;
+	margin: 0 auto;
 	margin-bottom: 30px;
 	/*border-bottom: 1px solid #e0e0e0;
-	*/width: 75%;
+	*/width: 80%;
 	background: url(../images/item-background.png) no-repeat 50% 100%;
 }
 
 .spread-row .spread-col-one {
-	width: 30%;
+	width: 28%;
 	margin-right: 3%;
 	float: left;
 	text-align: center;
 }
 
 .spread-row .spread-col-two {
-	width: 66%;
+	width: 69%;
 	float: left;
 }
 
