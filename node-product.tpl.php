@@ -9,13 +9,27 @@
   <?php if ($page == 0){ ?>
 	<h2><a href="<?= $node_url ?>" title="<?= $title ?>"><?= $title ?></a></h2>
   <?php } ?>
-  <?/*= $picture */?>
+  <?/*= $picture */
+	$hero_image = end($node->field_image_cache);
+  ?>
   <div class="content">
-  <?= $content ?>
+		<div class="product-image"><img src="/sites/default/files/imagecache/product_hero/<?php echo $hero_image['filepath'];?> "/> </div>
+		<div class="product-details">
+		  <h2><?php print uc_currency_format($node->sell_price); ?></h2>
+   		  <p><?php print $node->content['add_to_cart']['#value']; ?></p>
+		</div>
+		<div class="product-pictures">
+<?php foreach ($node->field_image_cache as $images) { 
+		if ($images['list'] == "1") { ?>
+		<img src="/sites/default/files/imagecache/product/<?php print $images['filepath']; ?>" alt="<?php print $images['data']['title']; ?>" />
+<?php } } ?>
+		</div>
+
   </div>
 </div>
-
+<?/*
 <pre>
 <?php // this will print the $node array at the bottom of each node take it out when finished ?>
 <?php var_dump($node); ?>
 </pre>
+*/?>
