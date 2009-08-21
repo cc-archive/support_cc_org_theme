@@ -18,6 +18,7 @@
   <?php print $head ?>
   <?php print $styles ?>
   <?php print $scripts ?>
+  
   <link href="<?php print $theme_path; ?>/print.css" rel="stylesheet" media="print" type="text/css" />
   <link href="http://creativecommons.org/includes/progress.css?<?= rand()?>" rel="stylesheet" type="text/css" />
   <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="<?php print $theme_path ?>/style-ie.css" />
@@ -61,14 +62,13 @@
       <?php } ?>
      </div -->
          <div id="title" class="block">
-		   <?php if ($node->nid != 13) { ?>	
+		   <?php if ($node->nid != 13 && strtolower($node->type) != "product") { ?>	
 		   <h3 class="category"><a href="/">Support CC</a></h3>
+		   <?php } else if (strtolower($node->type) == "product") { ?>
+			<h3 class="category"><a href="/store">Store</a></h3>
 		   <?php } ?>
 		   <div class="title-labels">
-			 <h2><?php print $title ?></h2>
-            <? if (strtolower($node->taxonomy[1]->name) == "gift") { ?>
-             <h3><a href="/store">Store</a></h3>
-            <? } ?>
+			 <h2><? if (strtolower($node->type) == "product") { echo current($node->taxonomy)->name . ":"; } ?> <?php print $title ?></h2>
            </div>
 		   <h3 class="subtitle"><?php print $node->field_subtitle[0]['view'] ?></h3>
          </div>

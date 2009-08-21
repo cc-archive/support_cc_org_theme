@@ -213,7 +213,13 @@ display: block; float: right; width: 227px; margin: 0; padding: 10px 0 11px 10px
 
 
 #mainContent .block { clear: both; margin-bottom: 35px; padding-left: 1%; overflow: visible; }
-#mainContent .feature { border-bottom:  1px solid #ddd; padding-bottom:  30px; margin-bottom: 25px; }
+#mainContent .feature { 
+	/*border-bottom:  1px solid #ddd;*/ 
+	padding-bottom:  30px; 
+	margin-bottom: 25px; 
+    margin-bottom: 30px;
+    background: url(images/item-background.png) no-repeat 50% 100%;
+}
 
 #mainContent #contentPrimary .block { margin-bottom: 33px; }
 #mainContent #main-content-secondary .block { padding: 0 5px; }
