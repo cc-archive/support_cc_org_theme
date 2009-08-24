@@ -18,7 +18,14 @@
   <?php print $head ?>
   <?php print $styles ?>
   <?php print $scripts ?>
-  
+
+<?php if ($node->uid == 13){ ?>
+  <!-- Fancybox - http://fancybox.net -->
+  <script type="text/javascript" src="<?php print $theme_path; ?>/fancybox/jquery.fancybox-1.2.1.pack.js"></script> 
+  <script type="text/javascript" src="<?php print $theme_path; ?>/fancybox/fancybox-go.js"></script>
+  <link rel="stylesheet" href="<?php print $theme_path; ?>/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<?php } ?>
+
   <link href="<?php print $theme_path; ?>/print.css" rel="stylesheet" media="print" type="text/css" />
   <link href="http://creativecommons.org/includes/progress.css?<?= rand()?>" rel="stylesheet" type="text/css" />
   <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="<?php print $theme_path ?>/style-ie.css" />
@@ -29,7 +36,6 @@
   
 </head>
  <body class="yui-skin-sam" <?php print theme("onload_attribute"); ?>>
-
    <div id="globalWrapper">
      <div id="headerWrapper" class="box">
        <div id="headerLogo">
@@ -62,9 +68,9 @@
       <?php } ?>
      </div -->
          <div id="title" class="block">
-		   <?php if ($node->nid != 13 && strtolower($node->type) != "product") { ?>	
+		   <?php if ($node->uid != 13 && strtolower($node->type) != "product") { ?>	
 		   <h3 class="category"><a href="/">Support CC</a></h3>
-		   <?php } else if (strtolower($node->type) == "product") { ?>
+		   <?php } else if ($node->uid == 13) { ?>
 			<h3 class="category"><a href="/store">Store</a></h3>
 		   <?php } ?>
 		   <div class="title-labels">
