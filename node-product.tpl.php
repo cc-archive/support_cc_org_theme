@@ -27,7 +27,9 @@
 
   </div>
 </div>
+<?php /*
 <pre>
 <?php // this will print the $node array at the bottom of each node take it out when finished ?>
 <?php var_dump($node); ?>
 </pre>
+*/?>
