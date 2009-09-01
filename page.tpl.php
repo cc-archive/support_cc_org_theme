@@ -45,7 +45,7 @@
          <ul>
            <!-- <li><em>Home</em></li> -->
            <li><a href="http://creativecommons.org/about/">About</a></li>
-           <li><a href="http://staging.creativecommons.org/weblog/">News</a></li>
+           <li><a href="http://creativecommons.org/weblog/">News</a></li>
            <li><a href="http://creativecommons.org/faq">FAQ</a></li>
            <li><a href="http://support.creativecommons.org/">Donate</a></li>
            <li><a href="http://wiki.creativecommons.org/">Wiki</a></li>
