@@ -321,6 +321,20 @@ ul.custom-gifts li {
 	opacity: 0.25;
 }
 
+/* One Click donations */
+.ui-widget, .ui-widget button, .ui-widget select { 
+		font-family: arial !important;
+}
+
+#shirtError {
+	   color: #f00;
+	   padding-left: 1em;
+}
+
+#tshirtSize h5 { margin-bottom: 0; }
+
+#premiums p, select { margin-top: 0.25em; }
+
 
 /* CC Network Menu */
 ul#join {
