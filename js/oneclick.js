@@ -6,6 +6,24 @@ function oneClick(e) {
   (donation > 25) ? $('#premiums').show() : $('#premiums').hide();
   (donation > 25) ? $("#giftCheck").val(["yes"]) : $("#giftCheck").val(["no"]);
   (donation > 25) ? $('#tshirtSize').show() : $('#tshirtSize').hide();
+
+  if ($(e).hasClass("split")) {
+    $("#recur_annual").attr("checked", "checked"); 
+  } else {
+    $("#recur_annual").attr("checked", ""); 
+    $("#recur_infinite").attr("checked", ""); 
+  }
+  
+  if (donation >= 100) {
+    var recurringAmount = donation / 12;
+    
+    // Fill in the popup's spans with the monthly amount
+    $(".recurringAmount").html(recurringAmount);
+    
+    $("#recurring").show();
+  } else {
+    $("#recurring").hide();
+  }
   
   $("#shirtError").html("");
   
@@ -33,8 +51,14 @@ $(document).ready(function (){
       // stacked and repeating query string
       if (!e.originalHref) e.originalHref = e.href;
       e.href = e.originalHref;
-      
-      if ($("#giftCheck:checked").val() == "yes") {
+     
+      // Recurring donation options
+      var recurring = $(':input[name=recur]:checked').val();
+      if (recurring) {
+        e.href += "&recur=" + recurring;
+      }
+ 
+      if ($("#reftCheck:checked").val() == "yes") {
         e.href += "&premium=1";
         
         // Validation
