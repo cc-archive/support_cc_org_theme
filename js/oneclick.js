@@ -15,8 +15,8 @@ function oneClick(e) {
   }
   
   if (donation >= 100) {
-    var recurringAmount = donation / 12;
-    
+    var recurringAmount = parseFloat(donation / 12).toFixed(2);
+
     // Fill in the popup's spans with the monthly amount
     $(".recurringAmount").html(recurringAmount);
     
