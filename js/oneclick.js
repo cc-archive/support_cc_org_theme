@@ -43,7 +43,7 @@ $(document).ready(function (){
     position:'center', 
     resizable: false,
     autoOpen: false,
-    width: 500,
+    width: 575,
     buttons: {"Continue...": function() { 
       var e = $(this).dialog('option', 'donateElement');
       
