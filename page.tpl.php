@@ -18,7 +18,15 @@
   <?php print $head ?>
   <?php print $styles ?>
   <?php print $scripts ?>
-  
+
+
+  <?php if ($node->title == "Donate") { ?>
+  <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.js"></script>
+  <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="<?php print $theme_path; ?>/js/oneclick.js"></script>
+  <link rel="stylesheet" href="<?php print $theme_path; ?>/css/ui-lightness/jquery-ui-1.7.2.custom.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+  <?php } ?>
+
   <link href="<?php print $theme_path; ?>/print.css" rel="stylesheet" media="print" type="text/css" />
   <link href="http://creativecommons.org/includes/progress.css?<?= rand()?>" rel="stylesheet" type="text/css" />
   <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="<?php print $theme_path ?>/style-ie.css" />
@@ -118,4 +126,3 @@
   </div>
  </body>
 </html>
-
