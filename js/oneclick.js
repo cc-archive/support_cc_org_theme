@@ -3,9 +3,9 @@ function oneClick(e) {
   // Get the donation level, so we can show/hide things based on it
   var donation = e.href.split("?")[1].split("=")[1].split("&")[0];
 
-  (donation < 75) ? $('#premiums').show() : $('#premiums').hide();
-  (donation < 75) ? $("#giftCheck").val(["yes"]) : $("#giftCheck").val(["no"]);
-  (donation < 75) ? $('#tshirtSize').show() : $('#tshirtSize').hide();
+  (donation > 25) ? $('#premiums').show() : $('#premiums').hide();
+  (donation > 25) ? $("#giftCheck").val(["yes"]) : $("#giftCheck").val(["no"]);
+  (donation > 25) ? $('#tshirtSize').show() : $('#tshirtSize').hide();
   
   $("#shirtError").html("");
   
