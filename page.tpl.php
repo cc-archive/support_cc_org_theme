@@ -68,7 +68,7 @@
       <?php } ?>
      </div -->
          <div id="title" class="block">
-		   <?php if ($node->uid != 13 && strtolower($node->type) != "product") { ?>	
+		   <?php if (strtolower($node->type) != "product") { ?>	
 		   <h3 class="category"><a href="/">Support CC</a></h3>
 		   <?php } else if ($node->uid == 13) { ?>
 			<h3 class="category"><a href="/store">Store</a></h3>
