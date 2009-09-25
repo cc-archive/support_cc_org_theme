@@ -1,0 +1,102 @@
+#pcp { position: relative; }
+
+#thermometer {
+   padding-left: 175px;
+   padding-top: 25px;
+   padding-bottom: 1em;
+   margin-bottom: 2.5em;
+   overflow-y: auto;
+       background: url(../images/item-background.png) no-repeat 50% 100%;
+ }
+ #thermoDetails {
+   width: 400px;
+   text-align: center;
+   float: left;
+ }
+ #thermoBar {
+   width: 400px;
+   height: 25px;
+   background-color: #6E5384;
+   -moz-border-radius: 2px;
+ }
+ #thermoProgress {
+   background-color: #4C1A82;
+   padding-left: 124px;
+   width: 1px;
+   height: 25px;
+   -moz-border-radius: 2px;
+   border-right: 1px solid #413664;
+ }
+ 
+ #thermoGoal {
+   padding-left: 410px;
+   padding-top: 4px;
+   font-size: 1.25em;
+ }
+ 
+ #userSidebar {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 150px;
+ }
+ #photo {
+   position: relative;
+   width: 150px;
+   height: 150px;
+   background: #ddd url(../images/tokencat.jpg);
+   -moz-border-radius: 5px;
+ }
+ #photo img { display: none; }
+ 
+ #pcpName {
+   position: absolute;
+   bottom: 0;
+   width: 140px;
+   padding: 5px;
+   padding-top: 10px;
+   background: url(../images/name-background.png);
+   color: #fff;
+   font-size: 2em;
+   font-weight: normal;
+   font-family: Helvetica, Arial, sans-serif;
+   -moz-border-radius-bottomleft: 5px;
+   -moz-border-radius-bottomright: 5px;
+ }
+ 
+ #donateButton {
+   -moz-border-radius: 5px;
+   background-color: #ddd;
+   padding: 5px 8px;
+   font-size: 1.25em;
+   font-weight: bold;
+   margin-top: 1.5em;
+   text-align: center;
+ }
+ 
+ #pageText {
+   padding-left: 175px;
+ }
+ 
+ #contributors {
+   margin-top: 2em;
+   border: 1px solid #aaa0aa;
+   padding: 5px;
+   font-size: 95%;
+   -moz-border-radius: 2px;
+}
+ #contributors h4 {
+   border-bottom: 1px solid #aaa0aa;
+   margin-top: 0;
+   margin-bottom: 0.5em;
+   padding-top: 0;
+   padding-bottom: 2px;
+ }
+ #contributors ul {
+   padding: 0;
+   margin: 0;
+   list-style: none;
+ }
+ #contributors ul li {
+   padding-bottom: 0.5em;
+ }
