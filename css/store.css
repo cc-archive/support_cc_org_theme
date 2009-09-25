@@ -1,3 +1,42 @@
+/* UBERCART */
+
+.product-image {
+	width: 370px;
+	margin-right: 20px;
+	float: left;
+}
+.product-details {}
+.product-pictures {
+	clear: both;
+	padding-top: 30px;
+	padding-bottom: 40px;
+}
+
+img.category{
+		display: none;
+}
+
+.category-grid-products td {
+	border-bottom: none;
+}	  
+.category-grid-products td:last-child {
+	border-right: none;
+}
+.category-grid-products table {
+		border: none !important;
+}
+
+.category-grid-products .add-to-cart {
+		text-align: left;
+}
+
+.category-grid-products .attributes {
+		padding-bottom: 1.25em;
+}
+.category-grid-products .description {
+		display: none;
+}
+
 /* STORE */
 h2.sub-section {
 	border-top: 1px solid #c0c0c0;

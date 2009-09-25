@@ -21,13 +21,13 @@
 		<div class="product-pictures">
 <?php foreach ($node->field_image_cache as $images) { 
 		if ($images['list'] == "1") { ?>
-		<img src="/sites/default/files/imagecache/product/<?php print $images['filepath']; ?>" alt="<?php print $images['data']['title']; ?>" />
+		<a rel="fancybox" class="fancybox" title="<?= $title ?>" href="<?php /*/sites/default/files/imagecache/product_hero/*/?>/<?php print $images['filepath']; ?>"><img src="/sites/default/files/imagecache/product/<?php print $images['filepath']; ?>" alt="<?php print $images['data']['title']; ?>" border="0" /></a>
 <?php } } ?>
 		</div>
 
   </div>
 </div>
-<?/*
+<?php /*
 <pre>
 <?php // this will print the $node array at the bottom of each node take it out when finished ?>
 <?php var_dump($node); ?>
