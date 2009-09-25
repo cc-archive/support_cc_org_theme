@@ -1,21 +1,34 @@
+var recurringAmount = 0.0;
 
 function oneClick(e) {
+  e.queryString = jQuery.queryString (e.href);
+
   // Get the donation level, so we can show/hide things based on it
-  var donation = e.href.split("?")[1].split("=")[1].split("&")[0];
+  var donation = e.queryString.amount;
+
+	// Multiply up the donation amount if it's a preset recurring amount
+  if (e.queryString.recur) { donation = donation * 12; }
 
   (donation > 25) ? $('#premiums').show() : $('#premiums').hide();
   (donation > 25) ? $("#giftCheck").val(["yes"]) : $("#giftCheck").val(["no"]);
   (donation > 25) ? $('#tshirtSize').show() : $('#tshirtSize').hide();
 
-  if ($(e).hasClass("split")) {
+  if (e.queryString.recur == 1) {
     $("#recur_annual").attr("checked", "checked"); 
+  } else if (e.queryString.recur == 2) {
+    $("#recur_annual").attr("checked", ""); 
+    $("#recur_infinite").attr("checked", "checked");
   } else {
     $("#recur_annual").attr("checked", ""); 
     $("#recur_infinite").attr("checked", ""); 
   }
   
   if (donation >= 100) {
-    var recurringAmount = parseFloat(donation / 12).toFixed(2);
+    if (e.queryString.recur) {
+      recurringAmount = e.queryString.amount;
+    } else {
+      recurringAmount = parseFloat(donation / 12).toFixed(2);
+    }
 
     // Fill in the popup's spans with the monthly amount
     $(".recurringAmount").html(recurringAmount);
@@ -47,19 +60,17 @@ $(document).ready(function (){
     buttons: {"Continue...": function() { 
       var e = $(this).dialog('option', 'donateElement');
       
-      // Reset the link href if it's been changed already, so we don't get a crazy 
-      // stacked and repeating query string
-      if (!e.originalHref) e.originalHref = e.href;
-      e.href = e.originalHref;
-     
+      var queryString = e.queryString;
+      
       // Recurring donation options
       var recurring = $(':input[name=recur]:checked').val();
       if (recurring) {
-        e.href += "&recur=" + recurring;
+        queryString.recur = recurring;
+        queryString.amount = recurringAmount;
       }
- 
-      if ($("#reftCheck:checked").val() == "yes") {
-        e.href += "&premium=1";
+      
+      if ($("#giftCheck:checked").val() == "yes") {
+        queryString.premium = 1;
         
         // Validation
         // Can't continue if no shirt size is selected
@@ -68,7 +79,7 @@ $(document).ready(function (){
           $("#shirtError").html("Please select a size!");
           return;
         }
-        e.href += "&size=" + shirtSize;
+        queryString.size = shirtSize;
       }
       
       // Select all the checked checkboxes with the name 'lists', add their value to an array.
@@ -76,8 +87,11 @@ $(document).ready(function (){
       $(":checkbox[name=groups]:checked").each(function() { groups.push(this.value); });
       
       if (groups.length) {
-        e.href += "&groups=" + groups.join(":");
+        queryString.groups = groups.join(":");
       }
+                
+      //console.log(e.href);
+      e.href = jQuery.queryString(e.href, queryString);
                 
       //console.log(e.href);
       //$("#response").html(e.href);
