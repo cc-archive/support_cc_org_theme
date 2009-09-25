@@ -22,6 +22,7 @@
 
   <?php if ($node->title == "Donate") { ?>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.js"></script>
+  <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.ba-url.min.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery-ui.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/oneclick.js"></script>
   <link rel="stylesheet" href="<?php print $theme_path; ?>/css/ui-lightness/jquery-ui-1.7.2.custom.css" type="text/css" media="screen" title="no title" charset="utf-8" />
