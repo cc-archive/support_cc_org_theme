@@ -30,6 +30,9 @@
 /* OTHER RANDOM STYLES */
 @import url('css/other.css');
 
+/* PERSONAL CAMPAIGNS */
+@import url('css/personalcampaign.css');
+
 /* turn off all bullets for all menus */
 .block li.expanded,
 .block li.collapsed, 

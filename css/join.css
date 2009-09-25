@@ -323,7 +323,12 @@ ul.custom-gifts li {
 
 /* One Click donations */
 .ui-widget, .ui-widget button, .ui-widget select { 
-		font-family: arial !important;
+	font-family: arial !important;
+}
+
+.ui-widget {
+	font-size: 1.5em !important;
+	text-align: left !important;
 }
 
 #shirtError {
@@ -331,8 +336,11 @@ ul.custom-gifts li {
 	   padding-left: 1em;
 }
 
-#tshirtSize h5 { margin-bottom: 0; }
+.ui-widget h5 { margin-bottom: 0 !important; }
 
+#donateOptions p { margin-top: 0; }
+
+#premiums { margin-bottom: 0.25em; }
 #premiums p, select { margin-top: 0.25em; }
 
 
