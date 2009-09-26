@@ -1,5 +1,4 @@
 var recurringAmount = 0.0;
-var pageQueryString = jQuery.queryString(document.href);
 
 function oneClick(e) {
   e.queryString = jQuery.queryString (e.href);
@@ -42,12 +41,12 @@ function oneClick(e) {
   $("#shirtError").html("");
  
   // Handle displaying PCP related things
-  if (pageQueryString.pcpid) {
-	$("#pcpHonorRoll").hide();
-  	$("#pcp").hide();
-  } else {
+  if (e.pageQueryString.pcpid) {
 	$("#pcpHonorRoll").show();
-    $("#pcp").show();
+  	$("#pcp").show();
+  } else {
+	$("#pcpHonorRoll").hide();
+    $("#pcp").hide();
   }
   $(":checkbox[name=optout]").each(function() { this.checked = true; });
 
@@ -98,9 +97,6 @@ $(document).ready(function (){
       $(":checkbox[name=groups]:checked").each(function() { groups.push(this.value); });
       if (groups.length) queryString.groups = groups.join(":");
 
-      // Personal Campaigns
-      if (pageQueryString.pcpid) queryString.pcpid = pageQueryString.pcpid;
-
       // Select all the checked checkboxes with the name 'optout', add their value to an array.
       var optout = new Array();
       $(":checkbox[name=optout]").each(function() { i
@@ -112,9 +108,9 @@ $(document).ready(function (){
 
       if (optout.length) queryString.optout = optout.join(":");
               
-      //console.log(e.href);
       e.href = jQuery.queryString(e.href, queryString);
-                
+      //console.log(e.href);
+
       //console.log(e.href);
       //$("#response").html(e.href);
       
