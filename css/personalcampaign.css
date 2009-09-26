@@ -47,22 +47,23 @@
    position: relative;
    width: 150px;
    height: 150px;
-   background: #ddd url(../images/tokencat.jpg);
-   -moz-border-radius: 5px;
-   -webkit-border-radius: 5px;
+   background: #6E5384 url(../images/tokencat.jpg) top left no-repeat;
+   -moz-border-radius-topleft: 5px;
+   -moz-border-radius-topright: 5px;
+   -webkit-border-top-left-radius: 5px;
+   -webkit-border-top-right-radius: 5px;
  }
  #photo img { display: none; }
  
  #pcpName {
-   position: absolute;
-   bottom: 0;
    width: 140px;
    padding: 5px;
-   padding-top: 10px;
-   background: url(../images/name-background.png);
+   padding-top: 5px;
+   border-top: 1px solid #2f0A42;
+   background: #6E5384 url(../images/name-background.png);
    color: #fff;
-   font-size: 2em;
-   line-height: 1em;
+   font-size: 1.75em;
+   line-height: 1.1em;
    font-weight: normal;
    font-family: Helvetica, Arial, sans-serif;
    -moz-border-radius-bottomleft: 5px;
