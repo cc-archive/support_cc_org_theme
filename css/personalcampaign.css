@@ -76,13 +76,17 @@
    -moz-border-radius: 5px;
    -webkit-border-radius: 5px;
    background-color: #ddd;
-   padding: 5px 8px;
    font-size: 1.25em;
    font-weight: bold;
    margin-top: 1.5em;
    text-align: center;
  }
  
+ #donateButton a {
+   display: block;
+   padding: 5px 8px;
+ }
+
  #pageText {
    padding-left: 175px;
  }
