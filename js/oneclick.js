@@ -41,7 +41,7 @@ function oneClick(e) {
   $("#shirtError").html("");
  
   // Handle displaying PCP related things
-  if (e.pageQueryString.pcpid) {
+  if (e.queryString.pcpid) {
 	$("#pcpHonorRoll").show();
   	$("#pcp").show();
   } else {
@@ -99,9 +99,9 @@ $(document).ready(function (){
 
       // Select all the checked checkboxes with the name 'optout', add their value to an array.
       var optout = new Array();
-      $(":checkbox[name=optout]").each(function() { i
+      $(":checkbox[name=optout]").each(function() { 
         // We only want to know if the checkbox has been unchecked, thus conciously opting out.
-        if (!this.attr("checked")) {
+        if (!this.checked) {
           optout.push(this.value); 
         }
       });
@@ -111,9 +111,6 @@ $(document).ready(function (){
       e.href = jQuery.queryString(e.href, queryString);
       //console.log(e.href);
 
-      //console.log(e.href);
-      //$("#response").html(e.href);
-      
       $(this).dialog("close"); 
       location.href = e.href;
     }, "I've changed my mind": function() { $(this).dialog("close"); }}
