@@ -1,8 +1,7 @@
 var recurringAmount = 0.0;
 
 function oneClickDialogSetup(e) {
-	console.log(e);
-	(e.donation > 25) ? $('#premiums').show() : $('#premiums').hide();
+  (e.donation > 25) ? $('#premiums').show() : $('#premiums').hide();
   (e.donation > 25) ? $("#giftCheck").val(["yes"]) : $("#giftCheck").val(["no"]);
   (e.donation > 25) ? $('#tshirtSize').show() : $('#tshirtSize').hide();
 
@@ -101,7 +100,8 @@ $(document).ready(function (){
       }
       
       if ($("#giftCheck:checked").val() == "yes") {
-        queryString.premium = 1;
+        // premiumId is defined in a <script> block at the top of the donate page
+	    queryString.premium = premiumId;
         
         // Validation
         // Can't continue if no shirt size is selected
