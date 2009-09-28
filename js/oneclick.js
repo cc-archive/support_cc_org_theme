@@ -95,10 +95,10 @@ $(document).ready(function (){
       }
 
       e.href = jQuery.queryString(e.href, queryString);
-      console.log(e.href);
+      //console.log(e.href);
 
       $(this).dialog("close"); 
-      //location.href = e.href;
+      location.href = e.href;
     }, "I've changed my mind": function() { $(this).dialog("close"); }}
   });
 });
