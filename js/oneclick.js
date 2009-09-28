@@ -40,15 +40,7 @@ function oneClick(e) {
   
   $("#shirtError").html("");
  
-  // Handle displaying PCP related things
-  if (e.queryString.pcpid) {
-	$("#pcpHonorRoll").show();
-  	$("#pcp").show();
-  } else {
-	$("#pcpHonorRoll").hide();
-    $("#pcp").hide();
-  }
-  $(":checkbox[name=optout]").each(function() { this.checked = true; });
+  $("#optout").attr("checked", "");
 
   $('#moreOptions').dialog('option', 'donateElement', e);
   $('#moreOptions').dialog('open');
@@ -97,22 +89,16 @@ $(document).ready(function (){
       $(":checkbox[name=groups]:checked").each(function() { groups.push(this.value); });
       if (groups.length) queryString.groups = groups.join(":");
 
-      // Select all the checked checkboxes with the name 'optout', add their value to an array.
-      var optout = new Array();
-      $(":checkbox[name=optout]").each(function() { 
-        // We only want to know if the checkbox has been unchecked, thus conciously opting out.
-        if (!this.checked) {
-          optout.push(this.value); 
-        }
-      });
+      // Check if user is opting out of appearing on any lists
+      if ($(":checkbox[name=optout]:checked").length) {
+		queryString.sloptout = "IChooseToSloptOut"; 
+      }
 
-      if (optout.length) queryString.optout = optout.join(":");
-              
       e.href = jQuery.queryString(e.href, queryString);
-      //console.log(e.href);
+      console.log(e.href);
 
       $(this).dialog("close"); 
-      location.href = e.href;
+      //location.href = e.href;
     }, "I've changed my mind": function() { $(this).dialog("close"); }}
   });
 });
