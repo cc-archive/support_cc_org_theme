@@ -1,3 +1,6 @@
+div#crm-container {
+	overflow: visible !important;
+}
 #pcp { position: relative; }
 
 #thermometer {
