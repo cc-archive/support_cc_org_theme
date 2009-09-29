@@ -1,3 +1,6 @@
+div#crm-container {
+	overflow: visible !important;
+}
 #pcp { position: relative; }
 
 #thermometer {
@@ -110,6 +113,8 @@
    padding: 0;
    margin: 0 !important;
    list-style: none;
+   height: 225px;
+   overflow-y: auto;
  }
  #contributors ul li {
    padding-bottom: 0.5em;

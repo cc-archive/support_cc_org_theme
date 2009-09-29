@@ -336,9 +336,11 @@ ul.custom-gifts li {
 	   padding-left: 1em;
 }
 
-.ui-widget h5 { margin-bottom: 0 !important; }
+.ui-widget h5 { 
+	margin-bottom: 0 !important; 
+	margin-top: 1em !important; }
 
-#donateOptions p { margin-top: 0; }
+#moreOptions p { margin-top: 0 !important; }
 
 #premiums { margin-bottom: 0.25em; }
 #premiums p, select { margin-top: 0.25em; }

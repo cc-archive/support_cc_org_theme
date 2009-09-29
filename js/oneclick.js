@@ -1,18 +1,9 @@
 var recurringAmount = 0.0;
-var pageQueryString = jQuery.queryString(document.href);
 
-function oneClick(e) {
-  e.queryString = jQuery.queryString (e.href);
-
-  // Get the donation level, so we can show/hide things based on it
-  var donation = e.queryString.amount;
-
-	// Multiply up the donation amount if it's a preset recurring amount
-  if (e.queryString.recur) { donation = donation * 12; }
-
-  (donation > 25) ? $('#premiums').show() : $('#premiums').hide();
-  (donation > 25) ? $("#giftCheck").val(["yes"]) : $("#giftCheck").val(["no"]);
-  (donation > 25) ? $('#tshirtSize').show() : $('#tshirtSize').hide();
+function oneClickDialogSetup(e) {
+  (e.donation > 25) ? $('#premiums').show() : $('#premiums').hide();
+  (e.donation > 25) ? $("#giftCheck").val(["yes"]) : $("#giftCheck").val(["no"]);
+  (e.donation > 25) ? $('#tshirtSize').show() : $('#tshirtSize').hide();
 
   if (e.queryString.recur == 1) {
     $("#recur_annual").attr("checked", "checked"); 
@@ -24,11 +15,11 @@ function oneClick(e) {
     $("#recur_infinite").attr("checked", ""); 
   }
   
-  if (donation >= 100) {
+  if (e.donation >= 100) {
     if (e.queryString.recur) {
       recurringAmount = e.queryString.amount;
     } else {
-      recurringAmount = parseFloat(donation / 12).toFixed(2);
+      recurringAmount = parseFloat(e.donation / 12).toFixed(2);
     }
 
     // Fill in the popup's spans with the monthly amount
@@ -41,15 +32,43 @@ function oneClick(e) {
   
   $("#shirtError").html("");
  
-  // Handle displaying PCP related things
-  if (pageQueryString.pcpid) {
-	$("#pcpHonorRoll").hide();
-  	$("#pcp").hide();
+  $("#optout").attr("checked", "");
+	
+}
+
+function oneClick(e) {
+  // Handle "Choose your own amount"
+  if (e.type == "submit") {
+		var e = new Object();
+    e.href = $(':input[name=base_href]').val() + "?" + "amount=" + $(':input[name=donation]').val();
+		e.queryString = jQuery.queryString (e.href);
+		
+		// Check if we're splitting, recurring forever, and the donation was >=75
+		// split: recur=1
+		// perm_recur: recur=2
+		if (($(':input[name=split]').attr('checked') || $(':input[name=perm_recur]').attr('checked')) && e.queryString.amount >= 75) {
+			if ($(':input[name=split]').attr('checked')) {
+				e.queryString.recur = 1;
+			} 
+			if ($(':input[name=perm_recur]').attr('checked')) { 
+				e.queryString.recur = 2;
+			}
+			e.queryString.amount = parseFloat(e.queryString.amount / 12).toFixed(2)
+		}
   } else {
-	$("#pcpHonorRoll").show();
-    $("#pcp").show();
-  }
-  $(":checkbox[name=optout]").each(function() { this.checked = true; });
+		e.queryString = jQuery.queryString (e.href);
+	}
+  
+  // Get the donation level, so we can show/hide things based on it
+  var donation = e.queryString.amount;
+
+	// Multiply up the donation amount if it's a preset recurring amount
+  if (e.queryString.recur) { donation *= 12; }
+
+	// Save the final total donation amount
+	e.donation = donation;
+	
+	oneClickDialogSetup(e);
 
   $('#moreOptions').dialog('option', 'donateElement', e);
   $('#moreOptions').dialog('open');
@@ -81,7 +100,8 @@ $(document).ready(function (){
       }
       
       if ($("#giftCheck:checked").val() == "yes") {
-        queryString.premium = 1;
+        // premiumId is defined in a <script> block at the top of the donate page
+	    queryString.premium = premiumId;
         
         // Validation
         // Can't continue if no shirt size is selected
@@ -98,26 +118,14 @@ $(document).ready(function (){
       $(":checkbox[name=groups]:checked").each(function() { groups.push(this.value); });
       if (groups.length) queryString.groups = groups.join(":");
 
-      // Personal Campaigns
-      if (pageQueryString.pcpid) queryString.pcpid = pageQueryString.pcpid;
+      // Check if user is opting out of appearing on any lists
+      if ($(":checkbox[name=optout]:checked").length) {
+		queryString.sloptout = "IChooseToSloptOut"; 
+      }
 
-      // Select all the checked checkboxes with the name 'optout', add their value to an array.
-      var optout = new Array();
-      $(":checkbox[name=optout]").each(function() { i
-        // We only want to know if the checkbox has been unchecked, thus conciously opting out.
-        if (!this.attr("checked")) {
-          optout.push(this.value); 
-        }
-      });
-
-      if (optout.length) queryString.optout = optout.join(":");
-              
-      //console.log(e.href);
       e.href = jQuery.queryString(e.href, queryString);
-                
       //console.log(e.href);
-      //$("#response").html(e.href);
-      
+
       $(this).dialog("close"); 
       location.href = e.href;
     }, "I've changed my mind": function() { $(this).dialog("close"); }}
