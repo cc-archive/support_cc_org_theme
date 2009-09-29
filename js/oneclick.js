@@ -65,7 +65,10 @@ function oneClick(e) {
   var donation = e.queryString.amount;
 
 	// Multiply up the donation amount if it's a preset recurring amount
-  if (e.queryString.recur && !e.adventure) { donation *= 12; }
+  if (e.queryString.recur && !e.adventure) { 
+    donation *= 12; 
+    donation = donation.toFixed();
+  }
 
 	// Save the final total donation amount
 	e.donation = donation;
