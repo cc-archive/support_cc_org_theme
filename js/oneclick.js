@@ -13,10 +13,11 @@ function oneClickDialogSetup(e) {
   } else {
     $("#recur_annual").attr("checked", ""); 
     $("#recur_infinite").attr("checked", ""); 
+  	$("#recur_none").attr("checked", "checked");
   }
   
   if (e.donation >= 100) {
-    if (e.queryString.recur) {
+    if (e.queryString.recur && !e.adventure) {
       recurringAmount = e.queryString.amount;
     } else {
       recurringAmount = parseFloat(e.donation / 12).toFixed(2);
@@ -24,7 +25,8 @@ function oneClickDialogSetup(e) {
 
     // Fill in the popup's spans with the monthly amount
     $(".recurringAmount").html(recurringAmount);
-    
+    $(".amount").html(e.donation);
+
     $("#recurring").show();
   } else {
     $("#recurring").hide();
@@ -42,7 +44,8 @@ function oneClick(e) {
 		var e = new Object();
     e.href = $(':input[name=base_href]').val() + "?" + "amount=" + $(':input[name=donation]').val();
 		e.queryString = jQuery.queryString (e.href);
-		
+      	e.adventure = true;
+
 		// Check if we're splitting, recurring forever, and the donation was >=75
 		// split: recur=1
 		// perm_recur: recur=2
@@ -53,7 +56,6 @@ function oneClick(e) {
 			if ($(':input[name=perm_recur]').attr('checked')) { 
 				e.queryString.recur = 2;
 			}
-			e.queryString.amount = parseFloat(e.queryString.amount / 12).toFixed(2)
 		}
   } else {
 		e.queryString = jQuery.queryString (e.href);
@@ -63,7 +65,7 @@ function oneClick(e) {
   var donation = e.queryString.amount;
 
 	// Multiply up the donation amount if it's a preset recurring amount
-  if (e.queryString.recur) { donation *= 12; }
+  if (e.queryString.recur && !e.adventure) { donation *= 12; }
 
 	// Save the final total donation amount
 	e.donation = donation;
