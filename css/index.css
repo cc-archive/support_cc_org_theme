@@ -149,3 +149,7 @@ border: 1px solid #e0e0e0;
 	background: #f0ffe5 url(../images/index/donate-index.png) no-repeat -5px -15px;
 }
 
+.index .testimonials {
+	background: #fff url(../images/index/testimonials-index.png) no-repeat -3px -9px;
+}
+
