@@ -33,6 +33,9 @@
 /* PERSONAL CAMPAIGNS */
 @import url('css/personalcampaign.css');
 
+/* TESTIMONIALS */
+@import url('css/testimonials.css');
+
 /* turn off all bullets for all menus */
 .block li.expanded,
 .block li.collapsed, 
