@@ -8,7 +8,7 @@ div.testimonial {
 
 
 div.testimonial img {
-	margin-right: 2em;
+	margin-right: 15px;
 }
 
 div.testimonial h3 {
@@ -16,5 +16,9 @@ div.testimonial h3 {
 }
 div.testimonial h4 {
 	font-weight: normal;
+}
+
+div.testimonial p {
+	margin-left: 165px;
 }
 
