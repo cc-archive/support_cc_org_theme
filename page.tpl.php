@@ -35,7 +35,7 @@
   <?php } ?>
 
   <link href="<?php print $theme_path; ?>/print.css" rel="stylesheet" media="print" type="text/css" />
-  <link href="http://creativecommons.org/includes/progress.css?<?= rand()?>" rel="stylesheet" type="text/css" />
+  <link href="http://staging.creativecommons.org/includes/progress.css?<?= rand()?>" rel="stylesheet" type="text/css" />
   <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="<?php print $theme_path ?>/style-ie.css" />
    <style type="text/css">
     img { behavior: url("<?php print $theme_path ?>/pngie.htc"); }
@@ -118,7 +118,12 @@
 	<!-- mainContent --> 
 	   <?php #if ($sidebar_right != ""): ?>
 	   <?php if ($right != ""): ?>
-     <div class="content-box" id="sidebar-right"><?php print $right ?></div>
+	 <div class="content-box" id="sidebar-right">
+		<div class="block block-block"><div class="content"> 
+		<?php include ("progress.php"); ?>
+		</div></div>
+		<?php print $right ?>
+	</div>
      <?php endif; ?>
   </div>
 

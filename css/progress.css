@@ -1,11 +1,17 @@
 /* PROGRESS METER */
-
 #campaign {
-background-color: #333d33; 
-height: 49px;
-padding-top: 5px;
+background-color: #ccc; 
+height: 46px;
+max-width: 640px;
+padding-top: 3px;
+margin: 0px auto;
 margin-bottom: 10px;
 text-align: center;
+-moz-border-radius-bottomleft: 10px;
+-moz-border-radius-bottomright: 10px;
+-webkit-border-bottom-left-radius: 10px;
+-webkit-border-bottom-right-radius: 10px;
+font-size: 80%;
 }
 
 #campaign.wide { margin: 0; padding: 5px 35%; height: 25px; position: relative; }
@@ -16,20 +22,19 @@ margin-top: 2px;
 }
 
 #campaign .title a {
-color: #fff;
+color: #280048;
 }
 
 #campaign .progress {
 position: relative;
 cursor:pointer; 
-margin-left: 2%; 
-margin-top: 2px; 
-margin-bottom: 3px;
-width: 94%; 
+margin: 2px auto 3px auto;
+width: 50%; 
 height: 20px;
 padding: 0 1%; 
-background-color: #ddd; 
-float: left;  
+background-color: #fff;   
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
 }
 
 #campaign .progress span {
@@ -41,10 +46,11 @@ height: 18px;
 margin: 0; 
 background-color: #a3aaa3;
 background: url('http://creativecommons.org/images/support/progress.png');
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
 }
 
 #campaign .results {
-font-size: 0.9em;
 /*position: absolute;
 top: 1px;
 left: 16px;*/
@@ -58,31 +64,39 @@ margin-left: 7px;
 
 #campaign .results a {
 	/*color: #131313;*/
-	color: #fff;
+	color: #280048;
 }
 
-#sidebar-right #campaign {
-  background-color: transparent !important;
-  padding-top: 0;
+.content #campaign {
+ /* background-color: transparent !important;
+ */ padding: 5px;
   text-align: left;
   height: auto;
   position: relative;
-  margin-bottom: 30px;
-  padding-bottom: 15px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: #280048;
 }
 
-#sidebar-right #campaign .progress {
+.content #campaign .progress {
   margin-left: 0;
+  margin-top: 0;
+  width: 98%;
+  -moz-border-radius: 2px;
 }
 
-#sidebar-right #campaign .results {
-  position: absolute;
+.content #campaign .results {
+  /*position: absolute;
   font-size: 1em;
   top: 3px;
-  left: 10px;
+  left: 8%;
+*/
+	text-align: center;
 }
 
-#sidebar-right #campaign .results a {
-  color: #333;
+.content #campaign .results a {
+  color: #fff;
 }
 
+#campaign.wide .results { position: absolute; top: 7px; left: 38%; }
+#campaign.wide .results a { color: #131313; }
