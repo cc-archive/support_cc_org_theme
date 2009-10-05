@@ -1,6 +1,6 @@
 <?php
 function cc_progress_total() {
-  $campaign_total = file_get_contents('http://staging.creativecommons.org/includes/total.txt');
+  $campaign_total = file_get_contents('http://creativecommons.org/includes/total.txt');
 
   print $campaign_total;
 }

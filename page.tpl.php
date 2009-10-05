@@ -35,7 +35,7 @@
   <?php } ?>
 
   <link href="<?php print $theme_path; ?>/print.css" rel="stylesheet" media="print" type="text/css" />
-  <link href="http://staging.creativecommons.org/includes/progress.css?<?= rand()?>" rel="stylesheet" type="text/css" />
+  <link href="http://creativecommons.org/includes/total.css?<?= rand()?>" rel="stylesheet" type="text/css" />
   <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="<?php print $theme_path ?>/style-ie.css" />
    <style type="text/css">
     img { behavior: url("<?php print $theme_path ?>/pngie.htc"); }
