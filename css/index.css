@@ -110,7 +110,7 @@ border: 1px solid #e0e0e0;
 
 
 .index .store {
-	background: #fff url(../images/index/store-index.png) no-repeat -21px -22px;
+	background: #e0efd5 url(../images/index/store-index.png) no-repeat -21px -22px;
 }
 
 .index .supporters {
@@ -146,7 +146,7 @@ border: 1px solid #e0e0e0;
 }
 
 .index .donate {
-	background: #f0ffe5 url(../images/index/donate-index.png) no-repeat -5px -15px;
+	background: #e0efd5 url(../images/index/donate-index.png) no-repeat -5px -15px;
 }
 
 .index .testimonials {
