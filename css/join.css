@@ -2,6 +2,49 @@
 
 /* Donate Rewrite - May 2009 */
 
+#bannerBottom {
+	background-color: #ccc;
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	width: 540px;
+	height: 105px;
+	padding: 5px 10px 10px 10px;
+}
+
+#bannerBottom .bannerGift {
+	float: left;
+	width: 250px;
+	margin-right: 20px;
+}
+#bannerBottom .bannerGift img {
+	float: left;
+	width: 75px;
+	height: 75px;
+	margin-right: 5px;
+}
+#bannerBottom p {
+	margin-top: 0;
+}
+
+.sidebarGift {
+	background-color: #e0e0e0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 5px;
+}
+.sidebarGift img {
+	float: left;
+	width: 75px;
+	height: 75px;
+}
+.sidebarGift p {
+	font-size: 95%;
+	margin-top: 0;
+	margin-left: 80px;
+}
+
 ul#levels {
 	list-style: none;
 	margin-left: 0 !important;
