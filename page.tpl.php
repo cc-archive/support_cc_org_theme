@@ -19,7 +19,7 @@
   <?php print $styles ?>
   <?php print $scripts ?>
 
-  <?php if ($node->title == "Donate") { ?>
+  <?php if (($node->title == "Donate") || (strpos($_SERVER["REQUEST_URI"], "/pcp"))) { ?>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.ba-url.min.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery-ui.js"></script>
