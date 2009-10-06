@@ -1,9 +1,30 @@
 var recurringAmount = 0.0;
 
+function isAnchorOnPcpPage(e) {
+	return (!e.donation && e.queryString.pcpId);
+}
+
 function oneClickDialogSetup(e) {
-  (e.donation > 25) ? $('#premiums').show() : $('#premiums').hide();
-  (e.donation > 25) ? $("#giftCheck").val(["yes"]) : $("#giftCheck").val(["no"]);
-  (e.donation > 25) ? $('#tshirtSize').show() : $('#tshirtSize').hide();
+	console.log(e);
+	if (isAnchorOnPcpPage(e)) {
+		// Assuming this is a oneclick request from a PCP page
+		$("#pcpOptions").show();
+		$("#customAmountSelection option").each(function() { this.selected = false; });
+		$("#customAmount").hide();
+		$("#customAmountEntry").val("");
+		$("#customAmountEntry").keyup(function(event) {
+			if (this.value > 1) {
+				console.log(e.queryString.pcpId);
+				updateOneClickWithAmount(this.value);
+			}
+		});
+	} else {
+		$("#pcpOptions").hide();
+	}
+	
+	(e.donation >= 75) ? $('#premiums').show() : $('#premiums').hide();
+  (e.donation >= 75) ? $("#giftCheck").val(["yes"]) : $("#giftCheck").val(["no"]);
+  (e.donation >= 75) ? $('#tshirtSize').show() : $('#tshirtSize').hide();
 
   if (e.queryString.recur == 1) {
     $("#recur_annual").attr("checked", "checked"); 
@@ -12,8 +33,8 @@ function oneClickDialogSetup(e) {
     $("#recur_infinite").attr("checked", "checked");
   } else {
     $("#recur_annual").attr("checked", ""); 
-    $("#recur_infinite").attr("checked", ""); 
-  	$("#recur_none").attr("checked", "checked");
+    $("#recur_infinite").attr("checked", "");
+		$("#recur_none").attr("checked", "checked");
   }
   
   if (e.donation >= 100) {
@@ -25,15 +46,16 @@ function oneClickDialogSetup(e) {
 
     // Fill in the popup's spans with the monthly amount
     $(".recurringAmount").html(recurringAmount);
-    $(".amount").html(e.donation);
-
+		$(".amount").html(e.donation);
+    
     $("#recurring").show();
   } else {
     $("#recurring").hide();
   }
   
   $("#shirtError").html("");
- 
+	$("#pcpError").html("");
+
   $("#optout").attr("checked", "");
 	
 }
@@ -44,7 +66,7 @@ function oneClick(e) {
 		var e = new Object();
     e.href = $(':input[name=base_href]').val() + "?" + "amount=" + $(':input[name=donation]').val();
 		e.queryString = jQuery.queryString (e.href);
-      	e.adventure = true;
+    e.adventure = true;
 
 		// Check if we're splitting, recurring forever, and the donation was >=75
 		// split: recur=1
@@ -81,6 +103,49 @@ function oneClick(e) {
   return false;
 }
 
+// Modify the dialog options based on given amount
+// For PCP donations
+function updateOneClickWithAmount(amount) {
+	$("#pcpError").html("");
+	
+	(amount >= 75) ? $('#premiums').show() : $('#premiums').hide();
+  (amount >= 75) ? $("#giftCheck").val(["yes"]) : $("#giftCheck").val(["no"]);
+  (amount >= 75) ? $('#tshirtSize').show() : $('#tshirtSize').hide();
+	
+	if (amount >= 100) {
+    recurringAmount = parseFloat(amount / 12).toFixed(2);
+
+    // Fill in the popup's spans with the monthly amount
+    $(".recurringAmount").html(recurringAmount);
+    $(".amount").html(amount);
+
+    $("#recurring").show();
+  } else {
+    $("#recurring").hide();
+  }
+
+	// Get the active oneclick link and update its amount value
+	var e = $("#moreOptions").dialog('option', 'donateElement');
+	e.queryString.amount = amount;
+}
+
+// Handle the dropdown selection for PCP donations
+function donationSelection(e) {
+	var selection = $("#customAmountSelection").val();
+
+	if (selection == "other") {
+		$("#customAmount").show();
+		updateOneClickWithAmount($("#customAmount").val());
+		return;
+	} else {
+		$("#customAmount").hide();
+	}
+	
+	if (selection == "") return;
+	
+	updateOneClickWithAmount(selection);
+}
+
 function hidePremiums(e) {
   $('#tshirtSize').toggle();
 }
@@ -91,7 +156,7 @@ $(document).ready(function (){
     position:'center', 
     resizable: false,
     autoOpen: false,
-    width: 575,
+    width: 600,
     buttons: {"Continue...": function() { 
       var e = $(this).dialog('option', 'donateElement');
       
@@ -105,8 +170,8 @@ $(document).ready(function (){
       }
       
       if ($("#giftCheck:checked").val() == "yes") {
-        // premiumId is defined in a <script> block at the top of the donate page
-	    queryString.premium = premiumId;
+				// premiumId is defined in a <script> block at the top of the donate page
+		    queryString.premium = premiumId;
         
         // Validation
         // Can't continue if no shirt size is selected
@@ -117,7 +182,21 @@ $(document).ready(function (){
         }
         queryString.size = shirtSize;
       }
-      
+
+      // Can't continue if no custom amount is selected/entered
+			// For PCP donations
+			if (isAnchorOnPcpPage(e)) {
+				if (!$("#customAmountSelection").val() || ($("#customAmountSelection").val() == "other" && !$("#customAmountEntry").val())) {
+					if ($("#customAmountSelection").val() == "other") {
+						$("#pcpError").html("Please enter a donation amount!");
+					} else {
+						$("#pcpError").html("Please select a donation amount!");
+					}
+					
+          return;
+				}
+			}
+
       // Select all the checked checkboxes with the name 'lists', add their value to an array.
       var groups = new Array();
       $(":checkbox[name=groups]:checked").each(function() { groups.push(this.value); });
@@ -125,9 +204,13 @@ $(document).ready(function (){
 
       // Check if user is opting out of appearing on any lists
       if ($(":checkbox[name=optout]:checked").length) {
-		queryString.sloptout = "IChooseToSloptOut"; 
+				queryString.sloptout = "IChooseToSloptOut"; 
       }
-
+			
+			if (isAnchorOnPcpPage(e)) {
+				e.href = e.href.replace('donate', 'sites/default/modules/civicrm/bin/OneClickDonate.php');
+			}
+			
       e.href = jQuery.queryString(e.href, queryString);
       //console.log(e.href);
 
