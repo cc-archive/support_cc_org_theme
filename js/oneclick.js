@@ -5,7 +5,6 @@ function isAnchorOnPcpPage(e) {
 }
 
 function oneClickDialogSetup(e) {
-	console.log(e);
 	if (isAnchorOnPcpPage(e)) {
 		// Assuming this is a oneclick request from a PCP page
 		$("#pcpOptions").show();
@@ -14,7 +13,6 @@ function oneClickDialogSetup(e) {
 		$("#customAmountEntry").val("");
 		$("#customAmountEntry").keyup(function(event) {
 			if (this.value > 1) {
-				console.log(e.queryString.pcpId);
 				updateOneClickWithAmount(this.value);
 			}
 		});
@@ -64,7 +62,7 @@ function oneClick(e) {
   // Handle "Choose your own amount"
   if (e.type == "submit") {
 		var e = new Object();
-    e.href = $(':input[name=base_href]').val() + "?" + "amount=" + $(':input[name=donation]').val();
+    e.href = $(':input[name=base_href]').val() + "amount=" + $(':input[name=donation]').val();
 		e.queryString = jQuery.queryString (e.href);
     e.adventure = true;
 
