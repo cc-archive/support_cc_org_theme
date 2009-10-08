@@ -212,3 +212,13 @@ pre {
 	opacity: 0.4;
 }
 
+
+/* FancyBox */
+div#fancy_title a {
+	color: #fff;
+	text-decoration: underline;
+}
+div#fancy_title a:hover {
+	text-decoration: none;
+}
+
