@@ -14,11 +14,12 @@
 
 <script type="text/javascript" src="<?php print $theme_path; ?>/support.js"></script>
 	<?php /*<script type="text/javascript" charset="utf-8" src="<?php print $theme_path; ?>/site.js"></script>*/ ?>
-
+  
   <?php print $head ?>
   <?php print $styles ?>
   <?php print $scripts ?>
 
+  
   <?php if (($node->title == "Donate") || (strpos($_SERVER["REQUEST_URI"], "/pcp"))) { ?>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.ba-url.min.js"></script>
@@ -26,10 +27,9 @@
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/oneclick.js"></script>
   <link rel="stylesheet" href="<?php print $theme_path; ?>/css/ui-lightness/jquery-ui-1.7.2.custom.css" type="text/css" media="screen" title="no title" charset="utf-8" />
   <?php } ?>
-  
   <?php if ($node->uid == 13){ ?>
   <!-- Fancybox - http://fancybox.net -->
-  <script type="text/javascript" src="<?php print $theme_path; ?>/fancybox/jquery.fancybox-1.2.1.pack.js"></script> 
+  <script type="text/javascript" src="<?php print $theme_path; ?>/fancybox/jquery.fancybox-1.2.1.CC.pack.js"></script> 
   <script type="text/javascript" src="<?php print $theme_path; ?>/fancybox/fancybox-go.js"></script>
   <link rel="stylesheet" href="<?php print $theme_path; ?>/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
   <?php } ?>
