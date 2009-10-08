@@ -27,12 +27,11 @@
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/oneclick.js"></script>
   <link rel="stylesheet" href="<?php print $theme_path; ?>/css/ui-lightness/jquery-ui-1.7.2.custom.css" type="text/css" media="screen" title="no title" charset="utf-8" />
   <?php } ?>
-  <?php if ($node->uid == 13){ ?>
+  
   <!-- Fancybox - http://fancybox.net -->
   <script type="text/javascript" src="<?php print $theme_path; ?>/fancybox/jquery.fancybox-1.2.1.CC.pack.js"></script> 
   <script type="text/javascript" src="<?php print $theme_path; ?>/fancybox/fancybox-go.js"></script>
   <link rel="stylesheet" href="<?php print $theme_path; ?>/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
-  <?php } ?>
 
   <link href="<?php print $theme_path; ?>/print.css" rel="stylesheet" media="print" type="text/css" />
   <link href="http://creativecommons.org/includes/total.css?<?= rand()?>" rel="stylesheet" type="text/css" />
@@ -76,7 +75,7 @@
       <?php } ?>
      </div -->
          <div id="title" class="block">
-		   <?php if ($node->uid != 13 && strtolower($node->type) != "product") { ?>	
+		   <?php if (strtolower($node->type) != "product") { ?>	
 		   <h3 class="category"><a href="/">Support CC</a></h3>
 		   <?php } else if ($node->uid == 13) { ?>
 			<h3 class="category"><a href="/store">Store</a></h3>
