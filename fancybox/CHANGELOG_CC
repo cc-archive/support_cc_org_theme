@@ -1,0 +1,3 @@
+2009-10-08 Alex Roberts
+ * Modified image handling to aquire the ALT attribute of the original image. If the ALT is a url, this gets placed into an anchor tag in the lightbox popup around the image. Used for linking the image to its original source from the store.
+
