@@ -21,7 +21,7 @@
 		<div class="product-pictures">
 <?php foreach ($node->field_image_cache as $images) { 
 		if ($images['list'] == "1") { ?>
-		<a rel="fancybox" class="fancybox" title="<?php print $images['data']['title'] ?>" href="<?php /*/sites/default/files/imagecache/product_hero/*/?>/<?php print $images['filepath']; ?>"><img src="/sites/default/files/imagecache/product/<?php print $images['filepath']; ?>" alt="<?php print $images['data']['alt']; ?>" border="0" /></a>
+		<a rel="fancybox" class="fancybox" title='<?php print $images['data']['title'] ?>' href="<?php /*/sites/default/files/imagecache/product_hero/*/?>/<?php print $images['filepath']; ?>"><img src="/sites/default/files/imagecache/product/<?php print $images['filepath']; ?>" alt='<?php print $images['data']['alt']; ?>' border="0" /></a>
 <?php } } ?>
 		</div>
 
