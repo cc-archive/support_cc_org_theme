@@ -371,7 +371,7 @@ ul.custom-gifts li {
 	text-align: left !important;
 }
 
-#shirtError {
+#shirtError, #pcpError {
 	   color: #f00;
 	   padding-left: 1em;
 }
