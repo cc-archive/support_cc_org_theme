@@ -1,7 +1,10 @@
 var recurringAmount = 0.0;
 
+// set a default premium id
+var premiumId = 26;
+
 function isAnchorOnPcpPage(e) {
-	return (!e.donation && e.queryString.pcpId);
+	return (!e.donation && e.queryString.pcpid);
 }
 
 function oneClickDialogSetup(e) {
@@ -62,9 +65,9 @@ function oneClick(e) {
   // Handle "Choose your own amount"
   if (e.type == "submit") {
 		var e = new Object();
-    e.href = $(':input[name=base_href]').val() + "amount=" + $(':input[name=donation]').val();
+    	e.href = $(':input[name=base_href]').val() + "amount=" + $(':input[name=donation]').val();
 		e.queryString = jQuery.queryString (e.href);
-    e.adventure = true;
+    	e.adventure = true;
 
 		// Check if we're splitting, recurring forever, and the donation was >=75
 		// split: recur=1
@@ -157,7 +160,6 @@ $(document).ready(function (){
     width: 600,
     buttons: {"Continue...": function() { 
       var e = $(this).dialog('option', 'donateElement');
-      
       var queryString = e.queryString;
       
       // Recurring donation options
@@ -182,9 +184,9 @@ $(document).ready(function (){
       }
 
       // Can't continue if no custom amount is selected/entered
-			// For PCP donations
-			if (isAnchorOnPcpPage(e)) {
-				if (!$("#customAmountSelection").val() || ($("#customAmountSelection").val() == "other" && !$("#customAmountEntry").val())) {
+	  // For PCP donations
+	  if (isAnchorOnPcpPage(e)) {
+	  	if (!$("#customAmountSelection").val() || ($("#customAmountSelection").val() == "other" && !$("#customAmountEntry").val())) {
 					if ($("#customAmountSelection").val() == "other") {
 						$("#pcpError").html("Please enter a donation amount!");
 					} else {
@@ -192,8 +194,8 @@ $(document).ready(function (){
 					}
 					
           return;
-				}
-			}
+	   	}
+	  }
 
       // Select all the checked checkboxes with the name 'lists', add their value to an array.
       var groups = new Array();
@@ -204,11 +206,11 @@ $(document).ready(function (){
       if ($(":checkbox[name=optout]:checked").length) {
 				queryString.sloptout = "IChooseToSloptOut"; 
       }
-			
-			if (isAnchorOnPcpPage(e)) {
-				e.href = e.href.replace('donate', 'sites/default/modules/civicrm/bin/OneClickDonate.php');
-			}
-			
+	  
+	  if (isAnchorOnPcpPage(e)) {
+		 e.href = e.href.replace('donate', 'sites/default/modules/civicrm/bin/OneClickDonate.php');
+	  }
+
       e.href = jQuery.queryString(e.href, queryString);
       //console.log(e.href);
 
