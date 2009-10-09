@@ -19,12 +19,15 @@
   <?php print $styles ?>
   
   <?php if (($node->title == "Donate") || (strpos($_SERVER["REQUEST_URI"], "/pcp"))) { ?>
+  <?php if (strpos($_SERVER["REQUEST_URI"], "/pcp") < 1) { print $scripts; } ?>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery-ui.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.ba-url.min.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/oneclick.js"></script>
   <link rel="stylesheet" href="<?php print $theme_path; ?>/css/ui-lightness/jquery-ui-1.7.2.custom.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-  <?php } ?>
+  <?php } 
+  if (strpos($_SERVER["REQUEST_URI"], "/pcp")) { print $scripts; } 
+  ?>
   
   <!-- Fancybox - http://fancybox.net -->
   <script type="text/javascript" src="<?php print $theme_path; ?>/fancybox/jquery.fancybox-1.2.1.CC.pack.js"></script> 
@@ -39,7 +42,6 @@
    </style>	
   <![endif]-->
   
-  <?php print $scripts ?>
 </head>
  <body class="yui-skin-sam" <?php print theme("onload_attribute"); ?>>
    <div id="globalWrapper">
