@@ -214,6 +214,14 @@ $(document).ready(function (){
       e.href = jQuery.queryString(e.href, queryString);
       //console.log(e.href);
 
+	  // Google Analytics
+	  // Since we head directly to PayPal from here, we need to give GA a fake pageview
+	  // else we get a page "exit" -- hard to determine if the user left or went to PayPal.
+	  if (typeof(_gat) == "object") {
+	    var pageTracker = _gat._getTracker("UA-9998295-1");
+		pageTracker._trackPageview("/donate/paypal");
+	  }
+
       $(this).dialog("close"); 
       location.href = e.href;
     }, "I've changed my mind": function() { $(this).dialog("close"); }}
