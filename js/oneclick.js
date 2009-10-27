@@ -218,7 +218,7 @@ $(document).ready(function (){
 	  // Since we head directly to PayPal from here, we need to give GA a fake pageview
 	  // else we get a page "exit" -- hard to determine if the user left or went to PayPal.
 	  if (typeof(_gat) == "object") {
-	    var pageTracker = _gat._getTracker("UA-9998295-1");
+	    var pageTracker = _gat._getTracker("UA-2010376-4");
 		pageTracker._trackPageview("/donate/paypal");
 	  }
 
