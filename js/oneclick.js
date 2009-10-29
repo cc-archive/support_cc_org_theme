@@ -23,6 +23,8 @@ function oneClickDialogSetup(e) {
 		$("#pcpOptions").hide();
 	}
 	
+	(e.donation < 75) ? $('#noPremiums').show() : $('#noPremiums').hide();
+
 	(e.donation >= 75) ? $('#premiums').show() : $('#premiums').hide();
   (e.donation >= 75) ? $("#giftCheck").val(["yes"]) : $("#giftCheck").val(["no"]);
   (e.donation >= 75) ? $('#tshirtSize').show() : $('#tshirtSize').hide();
