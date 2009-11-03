@@ -25,7 +25,7 @@
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.ba-url.min.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/oneclick.js"></script>
   <link rel="stylesheet" href="<?php print $theme_path; ?>/css/ui-lightness/jquery-ui-1.7.2.custom.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-  <?php } 
+  <?php } else { print $scripts; }
   if (strpos($_SERVER["REQUEST_URI"], "pcp")) { print $scripts; } 
   ?>
   
