@@ -6,7 +6,7 @@
   <title><?php print $head_title ?></title>
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <script src="http://creativecommons.org/includes/icommons.js" type="text/javascript"></script>
-
+  
   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.2/build/container/assets/skins/sam/container.css" /> 
   <script type="text/javascript" src="http://yui.yahooapis.com/2.5.2/build/yahoo-dom-event/yahoo-dom-event.js"></script> 
   <script type="text/javascript" src="http://yui.yahooapis.com/2.5.2/build/animation/animation-min.js"></script> 
@@ -54,10 +54,11 @@
            <!-- <li><em>Home</em></li> -->
            <li><a href="http://creativecommons.org/about/">About</a></li>
            <li><a href="http://creativecommons.org/weblog/">News</a></li>
+           <li><a href="https://support.creativecommons.org/">Donate</a></li>
            <li><a href="http://creativecommons.org/faq">FAQ</a></li>
-           <li><a href="http://support.creativecommons.org/">Donate</a></li>
            <li><a href="http://wiki.creativecommons.org/">Wiki</a></li>
            <li><a href="http://creativecommons.org/projects/">Projects</a></li>
+           <li><a href="https://support.creativecommons.org/store">Store</a></li>
            <li class="helpLink" id="international_list"><a href="http://creativecommons.org/international/">International</a></li>
          </ul>
       </div>
