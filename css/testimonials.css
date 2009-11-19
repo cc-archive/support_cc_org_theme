@@ -1,4 +1,22 @@
+.names {
+	overflow-y: auto;
+	margin-bottom: 3em;
+}
+
+.names ul {
+	list-style: none;
+	padding: 0 !important;
+	margin: 0 !important;
+	width: 175px;
+	float: left;
+}
+
+.names ul li {
+	margin-bottom:0.5em;
+}
+
 div.testimonial {
+	clear: left;
 	overflow-y: auto;
 	margin-bottom: 2em;
 	padding-bottom: 2em;
