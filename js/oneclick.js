@@ -160,7 +160,7 @@ $(document).ready(function (){
     resizable: false,
     autoOpen: false,
     width: 600,
-    buttons: {"Continue...": function() { 
+    buttons: {"Donate": function() { 
       var e = $(this).dialog('option', 'donateElement');
       var queryString = e.queryString;
       
