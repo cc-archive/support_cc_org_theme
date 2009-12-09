@@ -35,7 +35,7 @@
 			<div id="tshirtSize">
 				<h5>Tshirt Size</h5>
 				<select name="size">
-					<option value="">Select Size</option>
+					<option value="">-- Select Size --</option>
 					<option value="Adult Small">Adult Small</option>
 					<option value="Adult Medium">Adult Medium</option>
 					<option value="Adult Large">Adult Large</option>
