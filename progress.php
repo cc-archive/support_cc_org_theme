@@ -7,19 +7,19 @@ function cc_progress_total() {
 }
 
 function showTestimonial() { 
-	$url = "https://support.creativecommons.org/testimonials";
+	$url = "https://support.creativecommons.org/testimonials#chrisdibona";
 	$utm = "?utm_source=support&utm_medium=testimonial&utm_campaign=fall2009";
 ?>
 
 <div id="sidebarTestimonial">
-	<h3>Join Jonathan in supporting&nbsp;CC!</h3>
+	<h3>Join Chris in supporting&nbsp;CC!</h3>
 	<p class="quote">
-		<a href="<?= $url ?><?= $utm ?>"><img src="https://support.creativecommons.org/images/75/jonathancoulton.jpg" align="left" alt="Jonathan Coulton" border="0" /></a>
-		"With Creative Commons, the act of creation becomes not the end, but the beginning of a creative process that links complete strangers together in collaboration"
+		<a href="<?= $url ?><?= $utm ?>"><img src="https://support.creativecommons.org/images/75/chrisdibona.jpg" align="left" alt="Chris DiBona" border="0" /></a>
+		"The use of Creative Commons licensing presents the best way for creative people to share work with each other and through that sharing make the world better for us all."
 	</p>
 	<p class="source">
-		<a href="<?= $url?><?= $utm ?>">&mdash; Jonathan Coulton</a><br/>
-		<small>Musician</small><br/>
+		<a href="<?= $url?><?= $utm ?>">&mdash; Chris DiBona</a><br/>
+		<small>Google</small><br/>
 	</p>
 </div>
 	<script>jQuery("#sidebarTestimonial").click(function() { window.location="https://support.creativecommons.org/donate<?= $utm ?>"; });</script>
