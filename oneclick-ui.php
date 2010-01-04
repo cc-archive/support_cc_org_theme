@@ -24,7 +24,6 @@
 		<div id="premiums" style="display:block;">
 			<p style="float: right">
 				<img src="/sites/default/files/campaign-shirt-boys.jpg" alt="Supporter Shirt"/><br/>
-				<img src="/sites/default/files/campaign-shirt-girls.jpg" alt="Supporter Shirt"/><br/>
 				<small>Supporter T-Shirt</small>
 			</p>
 
