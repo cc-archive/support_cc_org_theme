@@ -23,8 +23,8 @@
 		</div>
 		<div id="premiums" style="display:block;">
 			<p style="float: right">
-				<img src="/sites/default/files/campaign-shirt-boys.jpg" alt="Supporter Shirt"/><br/>
-				<small>Supporter T-Shirt</small>
+				<img src="/sites/default/files/cc-shirt-ft.png" alt="Supporter Shirt"/><br/>
+				<small>Supporter T-Shirt<br/>CC-BY <a href="http://www.flickr.com/photos/franktobia/3722933771">Frank Tobia</a></small>
 			</p>
 
 			<p>
@@ -35,6 +35,7 @@
 				<h5>Tshirt Size</h5>
 				<select name="size">
 					<option value="">-- Select Size --</option>
+					<option value="Women's Medium">Women's Medium</option>
 					<option value="Adult Small">Adult Small</option>
 					<option value="Adult Medium">Adult Medium</option>
 					<option value="Adult Large">Adult Large</option>
