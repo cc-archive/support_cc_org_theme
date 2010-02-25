@@ -207,7 +207,7 @@ div.level div.options {
 	border-top: 1px solid #ddd;
 /*	margin-top: 8.25em;*/
 	padding: 1em 1em 0 1em;
-	text-align: right;
+	text-align: left;
 }
 
 a.join {
@@ -228,9 +228,6 @@ a.join:hover {
 }
 
 div.level div.options div.custom-amount {
-	position: absolute;
-	top: 0.6em;
-	left: 1em;
 	font-size: 125%;
 	color: #d33;
 }
@@ -238,11 +235,28 @@ div.level div.options div.custom-amount {
 div.level div.options div.custom-amount input {
 	font-size: 100%;
 	margin-left: 3px;
+	font-family: arial, sans-serif;
 }
 
 div.level div.options div.custom-amount span {
 	color: #000;
 	font-size: 70%;
+}
+
+#joinButton {
+	font-size: 88%;
+	position: absolute;
+	right: 0.7em;
+	bottom: 2px;	
+	border: none;
+	background-color: #346288;
+	color: #fff;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+#joinButton.disabled {
+	background-color: #bbb;
 }
 
 #donate-classes {
@@ -380,6 +394,16 @@ table.levels td img {
 
 table.levels tr.alt {
 	background-color: #ddd;
+}
+
+#customError {
+	display: none;
+	color: #c00;
+	background-color: #ffb;
+	margin-bottom: 10px;
+	padding: 2px 5px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
 }
 
 ul.custom-gifts {
