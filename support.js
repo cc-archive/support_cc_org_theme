@@ -126,6 +126,19 @@ YAHOO.util.Event.addListener("donation", "keyup",
 				}
 			});
 
+// Handle validating custom amount
+// Show an error message and disable Donate button if the value is too low
+function check_minimum(e) {
+    if (e.value < 5.0) {
+        $('#customError').html("The minimum donation is <strong>$5</strong>.").show();
+		//$('#joinButton').attr('disabled', true).addClass('disabled');
+    } else {
+        $('#customError').hide();
+		//$('#joinButton').attr('disabled', false).removeClass('disabled');
+    }
+}
+
+
  function parseQueryString(_1){var 
 _2={};if(_1==undefined){_1=location.search?location.search:"";}if(_1.charAt(0)=="?"){_1=_1.substring(1);}_1=_1.replace("+"," ");var 
 _3=_1.split(/[&;]/g);for(var i=0;i<_3.length;i++){var _5=_3[i].split("=");var _6=decodeURIComponent(_5[0]);var 
