@@ -66,16 +66,21 @@ function oneClickDialogSetup(e) {
 function oneClick(e) {
   // Handle "Choose your own amount"
   if (e.type == "submit") {
+		var amount = $(':input[name=amount]').val();
 		var e = new Object();
-    	e.href = $(':input[name=base_href]').val() + "amount=" + $(':input[name=donation]').val();
+
+		// No donations below $5.00
+		if (amount < 5.0) return ;
+
+    	e.href = $('#customForm').attr('action') + "amount=" + amount;
 		e.queryString = jQuery.queryString (e.href);
     	e.adventure = true;
 
 		// Check if we're splitting, recurring forever, and the donation was >=75
 		// split: recur=1
 		// perm_recur: recur=2
-		if (($(':input[name=split]').attr('checked') || $(':input[name=perm_recur]').attr('checked')) && e.queryString.amount >= 75) {
-			if ($(':input[name=split]').attr('checked')) {
+		if (($(':input[name=recur]').attr('checked') || $(':input[name=perm_recur]').attr('checked')) && e.queryString.amount >= 75) {
+			if ($(':input[name=recur]').attr('checked')) {
 				e.queryString.recur = 1;
 			} 
 			if ($(':input[name=perm_recur]').attr('checked')) { 
