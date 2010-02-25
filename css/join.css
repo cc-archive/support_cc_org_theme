@@ -1,6 +1,34 @@
 /* donate */
 
 /* Donate Rewrite - May 2009 */
+.errorBlock {
+	background-color: #fadddd;
+	border: 2px solid #fff;
+	outline: 1px solid #d33;
+	-moz-border-radius: 4px;
+	-moz-outline-radius: 3px;
+	-webkit-border-radius: 4px;
+	-webkit-outline-radius: 3px;
+	font-size: 110%;
+	margin-bottom: 15px;
+	padding-left: 0 !important;
+}
+
+.errorBlock h2 { 
+	background-color: #ff0;
+	background-color: rgba(255, 255, 0, 0.75);
+	margin-bottom: 10px;
+
+	-moz-border-radius: 4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+}
+.errorBlock p { 
+	margin-top: 0;
+}
+
+.errorBlock h2, .errorBlock p {
+	padding-left: 10px;
+}
 
 #bannerBottom {
 	background-color: #ccc;
