@@ -247,7 +247,7 @@ div.level div.options div.custom-amount span {
 	font-size: 88%;
 	position: absolute;
 	right: 0.7em;
-	bottom: 2px;	
+	top: 15px;	
 	border: none;
 	background-color: #346288;
 	color: #fff;
@@ -400,7 +400,7 @@ table.levels tr.alt {
 	display: none;
 	color: #c00;
 	background-color: #ffb;
-	margin-bottom: 10px;
+	margin-top: 10px;
 	padding: 2px 5px;
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
