@@ -130,7 +130,7 @@ YAHOO.util.Event.addListener("donation", "keyup",
 // Show an error message and disable Donate button if the value is too low
 function check_minimum(e) {
     if (e.value < 5.0) {
-        $('#customError').html("The minimum donation is <strong>$5</strong>.").show();
+        $('#customError').html("Donations must be at least <strong>$5</strong>.").show();
 		//$('#joinButton').attr('disabled', true).addClass('disabled');
     } else {
         $('#customError').hide();
