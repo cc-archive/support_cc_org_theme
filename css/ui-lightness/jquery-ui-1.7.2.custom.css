@@ -351,7 +351,7 @@
     height: 200px; /*must have*/
 }/* Dialog
 ----------------------------------*/
-.ui-dialog { position: relative; padding: .2em; width: 300px; -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.75); -moz-box-shdaow: 0 0 20px rgba(0, 0, 0, 0.75); }
+.ui-dialog { position: relative; padding: .2em; width: 300px; -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.75); -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.75); }
 .ui-dialog .ui-dialog-titlebar { padding: .5em .3em .3em 1em; position: relative;  }
 .ui-dialog .ui-dialog-title { float: left; margin: .1em 0 .2em; } 
 .ui-dialog .ui-dialog-titlebar-close { position: absolute; right: .3em; top: 50%; width: 19px; margin: -10px 0 0 0; padding: 1px; height: 18px; background: none;}
