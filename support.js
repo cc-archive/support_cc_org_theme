@@ -1,130 +1,29 @@
-YAHOO.namespace("cc.help");
 
-// convenience function for creating help tool tips
-YAHOO.cc.help.init_help_item = function(help_anchor) { 
+$(document).ready(function(){
 
-    var link_id = help_anchor.id;
-    var help_id = 'help_' + link_id;
-    
-	// make sure we have an array to hold the list of panels
-    if (!YAHOO.cc.help.help_panels) {
-			YAHOO.cc.help.help_panels = new Array();
-    }
-
-    // create the new panel and position it
-    var new_panel = new YAHOO.widget.Panel(help_id, 
-                            {close: true, 
-			   visible: false, 
-			   draggable: false, 
-			   width: "30em",
-				effect: {effect:YAHOO.widget.ContainerEffect.FADE,duration:0.125},
-			   context: [help_anchor/*.childNodes[3]*/,'tr','tl']
-			    } ); 
-
-    var item_idx = YAHOO.cc.help.help_panels.push(new_panel) - 1;
-
-    YAHOO.cc.help.help_panels[item_idx].render();
-
-	// hideTimeout code adapted from http://jqueryfordesigners.com/coda-popup-bubbles/
-	var hideDelay = 250;
-	var hideTimeout = null;
+// jQuery rewrite of YUI event listener
+$("#donation").keyup(function() {
+	var levels = new Array(75, 150, 300, 500, 1000);
+	var custom_payments = 100; /* minimum $ amount for monthly payments */
+	var value = this.value;
+	var split_custom = $("#split-custom");
 	
-	
-   // connect the event handlers
-	function showPanel(e) {
-		if (hideTimeout) clearTimeout(hideTimeout);
-
-	   YAHOO.cc.help.help_panels[item_idx].show();
-	
-		YAHOO.util.Event.preventDefault(e);	   
+	if (value >= custom_payments) {
+		split_custom.attr('disabled', '');
+		split_custom.parent().fadeTo('fast', 1);
+	} else {
+		split_custom.attr('disabled', 'true');
+		split_custom.parent().fadeTo('fast', 0.5);
 	}
-	
-	function hidePanel(e) {
-		if (hideTimeout) clearTimeout(hideTimeout);
-						
-		hideTimeout = setTimeout(function() {
-			hideTimeout = null;
-							
-		 	YAHOO.cc.help.help_panels[item_idx].hide();
-		   
-			YAHOO.util.Event.preventDefault(e);			
-		}, hideDelay);
-						
-	}
-	
-   YAHOO.util.Event.addListener(link_id, "mouseover", showPanel);
-	YAHOO.util.Event.addListener(link_id, "mouseout", hidePanel);
-	
-	YAHOO.util.Event.addListener(help_id, "mouseover", showPanel);
-	YAHOO.util.Event.addListener(help_id, "mouseout", hidePanel);
-		
-} // init_help_text
 
-YAHOO.cc.help.init = function() {
-    // initialization for help pop-ups
-    YAHOO.util.Dom.getElementsByClassName('helpLink', 'li', 'mainContent',
-				     YAHOO.cc.help.init_help_item);
-   
-	// If this is a "store" purchase then we need to do some special
-	// handling of the premiums box.  If the items is *not* a t-shirt
-	// then we don't want to show the premiums selection box at all,
-	// but if it's a t-shirt then we need to show the first item so
-	// so that the user can select/verify the shirt size and then
-	// hide the "No thank you" option, as that makes no sense for a
-	// store purchase.  This bit of code makes the somewhat shaky
-	// assumption that any premium that needs sizing info will have
-	// the word "T-Shirt" in the title.
-	//
-	// Don't run this if we didn't get here from the "store"
-	if ( document.referrer == "https://support.creativecommons.org/store" ) {
-		premium_block = document.getElementById("premiums");
-		// If there are no premiums, it's no-op
-		if ( premium_block ) {
-		    input_elms = premium_block.getElementsByTagName('input');
-			// Be sure that the premium is selected, hidden or not.
-			input_elms[0].checked = 'checked';
-			if ( /T-Shirt/.test(document.title) ) {
-				for ( i = 0; i <= input_elms.length; i++ ) {
-					if ( input_elms[i].value == 'no_thanks' ) {
-						input_elms[i].parentNode.style.display = 'none';
-					}
-				}
-			} else {
-				premium_block.style.display = 'none';
-			}
+	for (var i = 0; i < levels.length; i++) {
+		if (value >= levels[i]) {
+			$("#" + levels[i]).fadeTo('fast', 1);
+		} else {
+			$("#" + levels[i]).fadeTo('fast', 0.25);
 		}
 	}
-
-} // init
-
-YAHOO.util.Event.onDOMReady(YAHOO.cc.help.init);
-
-
-var levels = new Array(75, 150, 300, 500, 1000);
-var custom_payments = 100; /* minimum $ amount for monthly payments */
-
-YAHOO.util.Event.addListener("donation", "keyup",
-			function(e) {
-				var value = document.getElementById("donation").value;
-				var active_gifts = new Array();
-				
-				var split_custom = document.getElementById("split-custom");
-				if (value >= custom_payments) {
-					split_custom.disabled = false;
-					split_custom.parentNode.style.opacity = 1;
-				} else {
-					split_custom.disabled = true;
-					split_custom.parentNode.style.opacity = 0.5;
-				}
-
-				for (var i = 0; i < levels.length; i++) {
-					if (value >= levels[i]) {
-						document.getElementById(levels[i]).style.opacity = 1;
-					} else {
-						document.getElementById(levels[i]).style.opacity = 0.25;
-					}
-				}
-			});
+});
 
 // Handle validating custom amount
 // Show an error message and disable Donate button if the value is too low
@@ -138,182 +37,54 @@ function check_minimum(e) {
     }
 }
 
+var hideDelay = 250;
+var hideTimeout = null;
+function showDialog(dialog) {
+	if (hideTimeout) clearTimeout(hideTimeout);
 
- function parseQueryString(_1){var 
-_2={};if(_1==undefined){_1=location.search?location.search:"";}if(_1.charAt(0)=="?"){_1=_1.substring(1);}_1=_1.replace("+"," ");var 
-_3=_1.split(/[&;]/g);for(var i=0;i<_3.length;i++){var _5=_3[i].split("=");var _6=decodeURIComponent(_5[0]);var 
-_7=decodeURIComponent(_5[1]);if(!_2[_6]){_2[_6]=[];}_2[_6].push((_5.length==1)?"":_7);}return _2;}
-	 
-YAHOO.cc.help.selectOption = function() {
-   var query = parseQueryString();
-	   
-   if (!query['size']) { return; }
-   var shirtSize = query['size'][0]
-     
-   // get the <select> tag containing shirt size options
-   var premium = document.getElementById('product-options').getElementsByTagName('select')[0]; 
-   var options = premium.options;
-  	 
-   for (var i = 0; i < options.length; i++) {
-  	   if (options[i].value == shirtSize) {
-  	     options[i].selected = true;
-  	     break;
-  	   }
-  }
-
-  selectPremium(premium);
+	$(".help_dialog").each(function () { 
+		if ($(this) != $(dialog)) {			
+			$(this).dialog('close'); 
+		}
+	});
+	$(dialog).dialog('open');
 }
 
-function useAmountFixed(fixedamount) {
-  clearAmountOther();
-  for( i=0; i < document.Main.elements.length; i++) {
-    element = document.Main.elements[i];
-    if (element.type == 'radio' && element.name == 'amount') {
-      if (element.value == fixedamount ) {
-        element.checked = true;
-      } else {
-        element.checked = false;
-      }
-    }
-  }
+function hideDialog(dialog) {
+	if (hideTimeout) clearTimeout(hideTimeout);
+
+	hideTimeout = setTimeout(function() {
+		hideTimeout = null;	
+		$(dialog).dialog('close');
+	}, hideDelay);
 }
 
-/**
- * This will automatically check the appropriate radio button
- * for the right premium when a user is on the contribution
- * page. BE WARNED, that like the function that checks the
- * right donation amount that this relies on database ID that
- * can and will change as the database gets updated or changed.
- */
-function setPremium(premiumId) {
-    var premiums = document.getElementsByName("selectProduct");
-    for( i=0; i < premiums.length; i++) {
-        if ( premiums[i].value == premiumId ) { 
-            premiums[i].checked = true;
-        }
-    }
-}
+// Gift hover popups
+$(".help_dialog").each(function() { 
+	var header = $(this).find(".hd");
 
-YAHOO.cc.help.selectDonation = function() {
-	var query = parseQueryString();
-	var donation = query['donation'][0];
+	$(this).dialog({
+		title: header.text(),
+		position: 'center',
+		resizable: false,
+		autoOpen: false,
+	/*	show: 'fade',
+		hide: 'fade',	*/
+		width: 300
+	});			
 	
-	useAmountOther();
-	document.getElementById('amount_other').value = donation;
+	// Hide the header text div
+	header.hide();
 
-	if ((query['id'][0] == '15') && (!query['split'])) { return; }
+	$(this).dialog().mouseover(function() { showDialog("#" + this.id) });
+	$(this).dialog().mouseout(function() { hideDialog("#" + this.id) });
+});
 
-        var amount = document.getElementsByName('amount');
-        var schwag = document.getElementById('premiums-listings').getElementsByTagName('input');
+$(".helpLink").each(function() {
+	$(this).mouseover(function() { showDialog("#" + this.id + "_help") });
+	$(this).mouseout(function () { hideDialog("#" + this.id + "_help") });
+});
 
-	if (donation == '1000') {
-		if ( ! query['split'] ) {
-			useAmountFixed(amount[0].value);
-		}
-		setPremium(schwag[4].value);
-	}
-	if (donation == '500') {
-		if ( ! query['split'] ) {
-			useAmountFixed(amount[1].value);
-		}
-		setPremium(schwag[3].value);
-	}
-	if (donation == '300') {
-		if ( ! query['split'] ) {
-			useAmountFixed(amount[2].value);
-		}
-		setPremium(schwag[2].value);
-	}
-	if (donation == '150') {
-		if ( ! query['split'] ) {
-			useAmountFixed(amount[3].value);
-		}
-		setPremium(schwag[1].value);
-	}
-	if (donation == '75') {
-		if ( ! query['split'] ) {
-			useAmountFixed(amount[4].value);
-		}
-		setPremium(schwag[0].value);
-	}
-//	if (donation == '25') { useAmountFixed(amount[5].value); }
+// end of jQuery
+});
 
-	if (query["split"]) {
-		useAmountOther();
-
-		split_value = Math.round((donation/12)*100)/100;
-		document.getElementById('amount_other').value = split_value.toFixed(2);
-
-		for( i=0; i < document.Main.elements.length; i++) {
-			element = document.Main.elements[i];
-			if (element.type == 'radio' && element.name == 'is_recur') {
-				if (element.value == 1 ) {
-					element.checked = true;
-				} else {
-					element.checked = false;
-				}
-			}
-		}
-	}
-	document.getElementById('frequency_interval').value = 1;
-	document.getElementById('frequency_unit').value = 'month';
-	document.getElementById('installments').value = 12;
-
-
-}
-
-if (location.href.substring("contribute/transact")) {
-	YAHOO.util.Event.onDOMReady(YAHOO.cc.help.selectOption);
-	YAHOO.util.Event.onDOMReady(YAHOO.cc.help.selectDonation);
-}
-
-function is_recurring() {
-    if ( document.getElementById('split-custom').checked == true ) {
-        document.getElementById('id').value = '15';
-    } else {
-        document.getElementById('id').value = '1';
-    }
-}
-
-
-/**
- * This will automatically update the the total amount listed for
- * the recurring contribution if the user changes the value in the
- * amount_other text box.
- */
-YAHOO.util.Event.addListener("amount_other", "keyup",
-        function(e) {
-                var value = document.getElementById("amount_other").value;
-                var fld_ttl = document.getElementById("cc_total_amt");
-                if ( ! value.NaN && value > 0 ) {
-                        var new_ttl = value*12;
-                        fld_ttl.innerHTML = new_ttl.toFixed(2);
-                } else {
-                        fld_ttl.innerHTML = "<<span style='color: red'>0</span>>";
-                }
-        });
-
-
-/**
- * This gets triggered when a user selects the open-ended recurring
- * contribution option.  It simply adds an onsubmit attribute to the form.  If
- * the user never clicks this button then we don't care about calculating 
- * anything because the defaults will always be okay.
- */
-function set_form_onsubmit() {
-        document.getElementById("Main").setAttribute('onsubmit', 'set_installments();');
-}
-
-/**
- * This function should get run when the contribution form is submitted
- * and if the user had selected an open-ended recurring contriubtion
- * then it will set the installments accordingly, else installments are
- * set to 12.
- */
-function set_installments() {
-        if ( document.getElementById("open-ended").checked == true ) {
-                document.getElementById("installments").value = '';
-        } else {
-                document.getElementById("installments").value = '12';
-        }
-}
