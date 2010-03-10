@@ -6,15 +6,20 @@
   <title><?php print $head_title ?></title>
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <script src="http://creativecommons.org/includes/icommons.js" type="text/javascript"></script>
-  
+
+<?php /* removing YUI 
   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.2/build/container/assets/skins/sam/container.css" /> 
   <script type="text/javascript" src="http://yui.yahooapis.com/2.5.2/build/yahoo-dom-event/yahoo-dom-event.js"></script> 
   <script type="text/javascript" src="http://yui.yahooapis.com/2.5.2/build/animation/animation-min.js"></script> 
   <script type="text/javascript" src="http://yui.yahooapis.com/2.5.2/build/container/container-min.js"></script> 
+*/ ?>
 
-<script type="text/javascript" src="<?php print $theme_path; ?>/support.js"></script>
 	<?php /*<script type="text/javascript" charset="utf-8" src="<?php print $theme_path; ?>/site.js"></script>*/ ?>
   
+  <?php if ((strpos ($node->title, "Donate") === 0) || (strpos($_SERVER["REQUEST_URI"], "pcp"))) { ?>
+  <link rel="stylesheet" href="<?php print $theme_path; ?>/css/ui-lightness/jquery-ui-1.7.2.custom.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+  <?php } ?>
+
   <?php print $head ?>
   <?php print $styles ?>
   <?php print $scripts;  ?>
@@ -24,10 +29,10 @@
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery-ui.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.ba-url.min.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/oneclick.js"></script>
-  <link rel="stylesheet" href="<?php print $theme_path; ?>/css/ui-lightness/jquery-ui-1.7.2.custom.css" type="text/css" media="screen" title="no title" charset="utf-8" />
   <?php } 
 //  if (strpos($_SERVER["REQUEST_URI"], "pcp")) { print $scripts; } 
   ?>
+  <script type="text/javascript" src="<?php print $theme_path; ?>/support.js"></script>
   
   <!-- Fancybox - http://fancybox.net -->
   <script type="text/javascript" src="<?php print $theme_path; ?>/fancybox/jquery.fancybox-1.2.1.CC.pack.js"></script> 
