@@ -67,6 +67,13 @@
 			<input id="optout" name="optout" type="checkbox" value="Supporters" class="form-checkbox" />
 			<label for="optout">Do not include my name in any supporter lists.</label>
 		</p>
+		<div class="paymentOptions">
+			<h5>Payment Options</h5>
+			<ul>
+				<li><strong>PayPal</strong> &mdash; Use your credit card or PayPal account.</li>
+				<li><strong>Google Checkout</strong> &mdash; Requires a Checkout account.</li>
+			</ul>
+		</div>
 	</form>
 </div>
 
