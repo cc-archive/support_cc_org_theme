@@ -211,7 +211,7 @@ function oneClickProcess(e) {
 	}
 
 	if (isAnchorOnPcpPage(e)) {
-		e.href = e.href.replace('donate', 'sites/default/modules/civicrm/bin/OneClickDonate.php');
+		e.href = e.href.replace('donate', 'sites/default/modules/civicrm/bin/OneClick.php');
 	}
 	
 	e.queryString = queryString;
