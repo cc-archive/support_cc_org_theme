@@ -1,6 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php global $base_url; $theme_path = $base_url .'/'. path_to_theme(); ?>
+<?php 
+// extract path, remove naything after the first slash so we can use the toplevel 
+// name as a css class for the body
+$path_as_class = current(explode("/", $node->path));
+?>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="<?php print $language->language ?>" xml:lang="<?php print $language->language ?>">
  <head>
   <title><?php print $head_title ?></title>
@@ -29,6 +34,7 @@
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery-ui.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.ba-url.min.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/oneclick.js"></script>
+  <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.marquee.js"></script>
   <?php } 
 //  if (strpos($_SERVER["REQUEST_URI"], "pcp")) { print $scripts; } 
   ?>
@@ -48,7 +54,7 @@
   <![endif]-->
   
 </head>
- <body class="yui-skin-sam" <?php print theme("onload_attribute"); ?>>
+ <body class="yui-skin-sam <?php echo $path_as_class; ?>" <?php print theme("onload_attribute"); ?>>
    <div id="globalWrapper">
      <div id="headerWrapper" class="box">
        <div id="headerLogo">

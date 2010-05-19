@@ -1,11 +1,22 @@
 /* donate */
 
 /* Donate Rewrite - May 2009 */
+body.donate {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #e1ebf2), color-stop(0.45, #fff)) no-repeat;
+	background: -moz-linear-gradient(#e1ebf2 20%, #fff 55%) no-repeat;
+}
+
+.donate #title { text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35); }
+ 
 h2.lede {
 	font-family: "helvetica", arial, sans-serif;
 	font-size: 1.35em;
 	font-weight: normal;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
+
+h2.lede img { margin-right: 15px; }
+
 .errorBlock {
 	background-color: #fadddd;
 	border: 2px solid #fff;
@@ -189,6 +200,42 @@ ul#giftsList li img {
 #giftsList span:last-child {
 	margin-right: 0 !important;
 }
+
+/* fixme: David Bowie */
+#latestHeroes {
+	position: relative;
+	text-align: center;
+	width: 735px;
+	height: 21px;
+	background: url('../images/latest-heroes-bar.png') repeat-x;
+}
+
+#latestHeroes .marquee {
+	text-shadow: 0 1px 0 #f0ede2;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+	color: #555;
+	color: rgba(32, 32, 32, 0.75);
+}
+
+#latestHeroes .leftCap {
+	width: 107px;
+	height: 21px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url('../images/latest-heroes-left.png') no-repeat;
+}
+
+#latestHeroes .rightCap {
+	width: 27px;
+	height: 21px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: url('../images/latest-heroes-right.png') no-repeat;
+}
+
+
 /* End Rewrite */
 
 div.level {
