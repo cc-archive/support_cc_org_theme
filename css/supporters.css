@@ -1,7 +1,13 @@
 /* SUPPORTERS */
 .block .col {
 	float: left;
-	width: 33%;
+	width: 31%;
+	padding-right: 2%;
+}
+
+.block .col ul, .block .col ul li {
+	margin-left: 0;
+	padding-left: 0;
 }
 
 .block > .col:nth-of-type(2) {
