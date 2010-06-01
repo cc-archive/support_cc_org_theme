@@ -10,7 +10,7 @@ $path_as_class = current(explode("/", $node->path));
  <head>
   <title><?php print $head_title ?></title>
   <meta http-equiv="Content-Style-Type" content="text/css" />
-  <script src="/cc_includes/icommons.js" type="text/javascript"></script>
+  <script src="http://creativecommons.org/includes/icommons.js" type="text/javascript"></script>
 
 <?php /* removing YUI 
   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.2/build/container/assets/skins/sam/container.css" /> 
@@ -46,7 +46,7 @@ $path_as_class = current(explode("/", $node->path));
   <link rel="stylesheet" href="<?php print $theme_path; ?>/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 
   <link href="<?php print $theme_path; ?>/print.css" rel="stylesheet" media="print" type="text/css" />
-  <link href="/cc_includes/total.css?<?= rand()?>" rel="stylesheet" type="text/css" />
+  <link href="http://creativecommons.org/includes/total.css?<?= rand()?>" rel="stylesheet" type="text/css" />
   <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="<?php print $theme_path ?>/style-ie.css" />
    <style type="text/css">
     img { behavior: url("<?php print $theme_path ?>/pngie.htc"); }
