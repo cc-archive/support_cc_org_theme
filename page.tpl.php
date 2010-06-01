@@ -21,7 +21,7 @@ $path_as_class = current(explode("/", $node->path));
 
 	<?php /*<script type="text/javascript" charset="utf-8" src="<?php print $theme_path; ?>/site.js"></script>*/ ?>
   
-  <?php if ((strpos ($node->title, "Donate") === 0) || (strpos($_SERVER["REQUEST_URI"], "pcp"))) { ?>
+  <?php if (($node->nid == 50) || (strpos($_SERVER["REQUEST_URI"], "pcp"))) { ?>
   <link rel="stylesheet" href="<?php print $theme_path; ?>/css/ui-lightness/jquery-ui-1.7.2.custom.css" type="text/css" media="screen" title="no title" charset="utf-8" />
   <?php } ?>
 
@@ -29,7 +29,7 @@ $path_as_class = current(explode("/", $node->path));
   <?php print $styles ?>
   <?php print $scripts;  ?>
   
-  <?php if ((strpos ($node->title, "Donate") === 0) || (strpos($_SERVER["REQUEST_URI"], "pcp"))) { ?>
+  <?php if (($node->nid == 50) || (strpos($_SERVER["REQUEST_URI"], "pcp"))) { ?>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery-ui.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.ba-url.min.js"></script>
@@ -52,7 +52,7 @@ $path_as_class = current(explode("/", $node->path));
     img { behavior: url("<?php print $theme_path ?>/pngie.htc"); }
    </style>	
   <![endif]-->
-  
+  <script type="text/javascript" src="http://creativecommons.org/wp-content/themes/cc5/site.js"></script> 
 </head>
  <body class="yui-skin-sam <?php echo $path_as_class; ?>" <?php print theme("onload_attribute"); ?>>
    <div id="globalWrapper">
@@ -74,7 +74,6 @@ $path_as_class = current(explode("/", $node->path));
          </ul>
       </div>
      </div>
-
 
      <div id="mainContent" class="box <?php $classary = explode(" ", $title); print strtolower($classary[0]); ?>">
        <div id="contentPrimary">

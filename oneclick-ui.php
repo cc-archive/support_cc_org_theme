@@ -23,8 +23,9 @@
 		</div>
 		<div id="premiums" style="display:block;">
 			<p style="float: right">
-				<img src="/sites/default/files/cc-shirt-ft.png" alt="Supporter Shirt"/><br/>
-				<small>Supporter T-Shirt<br/>CC-BY <a href="http://www.flickr.com/photos/franktobia/3722933771">Frank Tobia</a></small>
+				<img src="https://support.creativecommons.org/sites/default/files/cc-share-green.png" alt="Supporter Shirt"/><br/>
+				<span style="font-size:10px; line-height:1.2;">I Love To Share<br/>
+					<a rel="cc:attributionURL" href="http://www.flickr.com/photos/lassmatazz/4643223832/">Ruby Bhattacharya</a> / <a rel="license" href="http://creativecommons.org/licenses/by/2.0/">CC-BY</a> </span>
 			</p>
 
 			<p>
