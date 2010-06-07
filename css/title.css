@@ -1,3 +1,6 @@
+/* Page title css */
+
+
 /* page title header */
 .block .title-labels h1 {
 	font-family: Helvetica, Arial, sans-serif;
@@ -35,77 +38,5 @@
     min-height: 6em;
 }
 
-/* FIXME: correct mainContent class names */
-/*
-#mainContent.store #title .title-labels, 
-#mainContent.supporters #title .title-labels, 
-#mainContent.join #title .title-labels,
-#mainContent.spread #title .title-labels {
-	margin-left: 7.74em;
-	float:none;
-}
+/* End of page titles */
 
-#mainContent.help #title .title-labels {
-	margin-left: 0;
-}
-
-#mainContent.other #title .title-labels, 
-#mainContent.commoner #title .title-labels {
-	margin-left: 5.9em;
-	padding-top: 0.5em;
-	float: none;
-}
-
-#mainContent.call #title .title-labels {
-	margin-left: 6.5em;
-	float: none;
-	border: none;
-	margin-top: 2em;
-/*	margin-left: -0.5em;
-}
-*/
-/*
-#mainContent.supporters #title .title-labels,
-#mainContent.spread #title .title-labels {
-	margin-top: 2.5em;
-}
-*/
-/*
-#title .supporters h3 {
-	padding-left: 0.1em;
-}
-*/
-
-/* Page head spot illustrations */
-/*
-#mainContent.store {
-	background: url(../images/index/store-index.png) no-repeat 0px 0;
-}
-
-#mainContent.supporters {
-	background: url(../images/index/supporters-index.png) no-repeat 0px 0;
-}
-
-#mainContent.spread /*the word*/ {
-/*	background: url(../images/index/spread-index.png) no-repeat 0px 0;
-}
-
-#mainContent.call /*for videos*/ {
-/*	background: url(../images/index/video-index.png) no-repeat 0px 0;
-}
-
-#mainContent.join /*the cc network*/ {
-/*	background: url(../images/index/commoner-index.png) no-repeat 0px 0;
-}
-
-#mainContent.other /*ways to give */ {
-/*	background: url(../images/index/give-index.png) no-repeat 0px 0;
-}
-
-#mainContent.commoner /*letters*/ {
-/*	background: url(../images/index/letters-index.png) no-repeat 0px 0;
-}
-
-#mainContent.help /*build the commons*/ {
-/*	background: url(../images/index/build.png) no-repeat 100% 6%;
-}*/

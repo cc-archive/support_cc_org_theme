@@ -1,3 +1,5 @@
+/* Testimonials CSS */
+
 .names {
 	overflow-y: auto;
 	margin-bottom: 3em;
@@ -39,4 +41,6 @@ div.testimonial h4 {
 div.testimonial p {
 	margin-left: 165px;
 }
+
+/* End of testimonials css */
 
