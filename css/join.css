@@ -1,6 +1,5 @@
-/* donate */
+/* Donate  page css */
 
-/* Donate Rewrite - May 2009 */
 body.donate {
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #e1ebf2), color-stop(0.45, #fff)) no-repeat;
 	background: -moz-linear-gradient(#e1ebf2 20%, #fff 55%) no-repeat;
@@ -235,9 +234,6 @@ ul#giftsList li img {
 	background: url('../images/latest-heroes-right.png') no-repeat;
 }
 
-
-/* End Rewrite */
-
 div.level {
 	position:relative;
 	border: 1px solid #ccc;
@@ -339,63 +335,6 @@ div.level div.options div.custom-amount span {
 	background-color: #bbb;
 }
 
-#donate-classes {
-	margin-bottom: 100px;
-}
-
-#donate-classes.index {
-	width: 100%;
-}
-
-#donate-classes ul.donate {
-	list-style: none !important;
-	margin: 0;
-	padding: 0;
-}
-
-#donate-classes li {
-	padding: 15px 0;
-	margin: 0;
-    border-bottom: 1px solid #ccc;
-}
-
-#donate-classes li ul li { padding: 20px 25px; }
-
-#donate-classes li ul li { padding: 20px 25px; }
-
-#donate-classes ul.store li {
-	padding: 10px 0;
-}
-
-
-#donate-classes li img {
-	padding-top: 8px;
-	padding-right: 5px;
-}
-#donate-classes li strong {
-	/*padding-right: 30px;*/
-}
-
-#donate-classes .amount {
-	font-size: 125%;
-	font-weight: bold;
-	color: #c30;
-	width: 70px;
-	float: left;
-	padding-top: 10px;
-}
-
-#donate-classes .spread {
-	width: 100px;
-	height: 50px;
-	padding-top: 20px;
-}
-
-#donate-classes code {
-	display: block;
-	margin-top: 5px;
-}
-
 .fair {
 	font-size: 90%;
 	color: #666;
@@ -408,72 +347,6 @@ div.level div.options div.custom-amount span {
 }
 .fair img.donate {
 	padding-bottom: 0.25em !important;
-}
-
-ul.rewards {
-	margin-bottom: 1em;
-}
-ul.rewards li {
-	margin-bottom: 1em;
-}
-
-
-
-
-ul.standard {
-	list-style-type: disc !important;
-	padding-left: 2em;
-}
-
-ul.standard li {
-	margin-bottom: 1em;
-}
-
-
-
-table.levels {
-	width: 100%;
-	border-bottom: 1px solid #ddd;
-}
-
-table.levels td, table.levels th {
-	text-align: center;
-	margin: 0;
-	padding: 0;
-}
-
-table.levels th {
-	padding-bottom: 0.5em;
-}
-
-table.levels th h3, .note {
-	color: #d33;
-}
-
-table.levels h3 {
-	margin-bottom: 0;
-}
-
-table.levels td {
-	padding: 0.5em 0;
-}
-
-table.levels td.first {
-	padding-left: 0.25em;
-	padding-right: 0.25em;
-	border-right: 4px double #fff;
-}
-
-table.levels td.first img {
-	margin: 1px 0;
-}
-
-table.levels td img {
-	border: none !important;
-}
-
-table.levels tr.alt {
-	background-color: #ddd;
 }
 
 #customError {
@@ -535,15 +408,6 @@ ul.custom-gifts li {
 	height: 43px;
 	width: 160px;
 }
-/*
-.ui-dialog button.paypal-hover {
-	background-color: #44d;
-}
-
-.ui-dialog button.gc-hover {
-	background-color: #4d4;
-}
-*/
 .ui-dialog button.cancel {
 	font-weight: normal;
 	float: right;
@@ -561,30 +425,6 @@ ul.custom-gifts li {
 	margin-bottom: 0.5em;
 }
 
-/* CC Network Menu */
-ul#join {
-		list-style: none;
-		padding: 0;
-		margin: 2em 0 0;
-}
 
-ul#join li {
-	float: left;
-		display: block;
-		width: 47%;
-		margin-right: 2%;
-		text-align: center;
-}
+/* End of donate page css */
 
-ul#join li.students {
-		border:1px solid #ddd;
-		background-color: #eee;
-		-moz-border-radius: 5px;
-		-webkit-border-radius: 5px;
-}
-
-ul#join li.students h2 {
-		margin-left: 5%;
-		margin-right: 5%;
-		color: #777 !important;
-}
