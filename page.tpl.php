@@ -45,6 +45,11 @@ $path_as_class = current(explode("/", $node->path));
   <script type="text/javascript" src="<?php print $theme_path; ?>/fancybox/fancybox-go.js"></script>
   <link rel="stylesheet" href="<?php print $theme_path; ?>/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 
+  <?php if ($node->nid == 61) /* FIXME: Add nid for live site */ { ?>
+  <?php /* Sparklines for the analytics/facts and figures page */ ?>
+  <script type="text/javascript" src="<?php print $theme_path;?>/js/jquery.sparkline.min.js"></script>
+  <?php } ?>
+
   <link href="<?php print $theme_path; ?>/print.css" rel="stylesheet" media="print" type="text/css" />
   <link href="http://creativecommons.org/includes/total.css?<?= rand()?>" rel="stylesheet" type="text/css" />
   <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="<?php print $theme_path ?>/style-ie.css" />
