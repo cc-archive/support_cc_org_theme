@@ -10,7 +10,6 @@ $path_as_class = current(explode("/", $node->path));
  <head>
   <title><?php print $head_title ?></title>
   <meta http-equiv="Content-Style-Type" content="text/css" />
-  <script src="http://creativecommons.org/includes/icommons.js" type="text/javascript"></script>
 
 <?php /* removing YUI 
   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.2/build/container/assets/skins/sam/container.css" /> 
@@ -51,13 +50,12 @@ $path_as_class = current(explode("/", $node->path));
   <?php } ?>
 
   <link href="<?php print $theme_path; ?>/print.css" rel="stylesheet" media="print" type="text/css" />
-  <link href="http://creativecommons.org/includes/total.css?<?= rand()?>" rel="stylesheet" type="text/css" />
   <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="<?php print $theme_path ?>/style-ie.css" />
    <style type="text/css">
     img { behavior: url("<?php print $theme_path ?>/pngie.htc"); }
    </style>	
   <![endif]-->
-  <script type="text/javascript" src="http://creativecommons.org/wp-content/themes/cc5/site.js"></script> 
+  <script type="text/javascript" src="<?php print $theme_path ?>/site.js"></script> 
 </head>
  <body class="yui-skin-sam <?php echo $path_as_class; ?>" <?php print theme("onload_attribute"); ?>>
    <div id="globalWrapper">

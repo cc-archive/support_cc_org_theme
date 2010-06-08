@@ -1,3 +1,22 @@
+function thundercats() {
+    if ((location.href.match(/http\:(.*)?creativecommons.org\/$/) && !location.href.match(/pport.creativecommons.org\/$/)) || location.href.match(/creativecommons.org\/donate/)) return;
+
+    var d = document.createElement("div");
+    var mainContent = document.getElementById("globalWrapper");
+    d.setAttribute('style', 'font-size: 22px; font-family: "helvetica neue", arial, sans-serif; line-height:1; text-shadow: 0 1px 0 #45c5ea; color: #ffff00; padding: 12px 0; border-bottom: 1px solid rgb(120, 159, 44); margin-top: -1px; background: #35afe3; z-index:1000;');
+    d.innerHTML = '<a href="http://creativecommons.org/catalyst/" style="color:#ffff00; text-decoration:none;"><strong><span style="color:#000">Catalyst Grants:</span> <span style="text-shadow: 0 -1px 0 #258ab9">Ignite openness and innovation around the world.</span></strong> <span style="color:#000">&mdash; Donate Now</span></a>';
+    mainContent.parentNode.insertBefore(d, mainContent);
+}
+
+if (typeof window.addEventListener !== 'undefined') {
+    window.addEventListener('load', thundercats, false);
+} else {
+    window.attachEvent('onload', thundercats);
+}
+
+
+if (typeof YAHOO != "undefined") { 
+
 YAHOO.namespace("cc.site");
 
 // convenience function for creating help tool tips
@@ -5,6 +24,9 @@ YAHOO.cc.site.init_help_item = function(help_anchor) {
 
     var link_id = help_anchor.id;
     var help_id = 'help_' + link_id;
+	
+	// Make sure help_id doesn't have the sideitem class
+	YAHOO.util.Dom.removeClass(help_id, "sideitem");
 
     // make sure we have an array to hold the list of panels
     if (!YAHOO.cc.site.help_panels) {
@@ -24,7 +46,7 @@ YAHOO.cc.site.init_help_item = function(help_anchor) {
 	} else {
 		var panelWidth = "280px";
 	}
-	
+		
     // create the new panel and position it
     var new_panel = new YAHOO.widget.Panel(help_id, 
                             {close: false, title:false, 
@@ -92,6 +114,7 @@ function wakeSearch(e) {
 		if (search.value == searchValue) {
 			search.value = "";
 			YAHOO.util.Dom.replaceClass(search, "inactive", "active");
+			document.getElementById("searchsubmit").disabled = "";
 		}	
 	return false;
 }
@@ -100,11 +123,11 @@ function resetSearch(e) {
 	if (search.value == "") {
 		search.value = searchValue;
 		YAHOO.util.Dom.replaceClass(search, "active", "inactive");
+		document.getElementById("searchsubmit").disabled = "disabled";
 	}
 	
 	return false;
 }
-
 
 YAHOO.cc.site.init = function() {
     // initialization for help pop-ups
@@ -112,9 +135,14 @@ YAHOO.cc.site.init = function() {
 	YAHOO.util.Dom.getElementsByClassName('helpLink', null, null,
 											YAHOO.cc.site.init_help_item);
 	
-	document.getElementById("s").value = searchValue;
+	resetSearch();
 	YAHOO.util.Event.addListener("s", "click", wakeSearch);
 	YAHOO.util.Event.addListener("s", "blur", resetSearch);
+
+
 } // init
 
 YAHOO.util.Event.onDOMReady(YAHOO.cc.site.init);
+
+}
+
