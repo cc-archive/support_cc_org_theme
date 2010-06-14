@@ -44,7 +44,7 @@ $path_as_class = current(explode("/", $node->path));
   <script type="text/javascript" src="<?php print $theme_path; ?>/fancybox/fancybox-go.js"></script>
   <link rel="stylesheet" href="<?php print $theme_path; ?>/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
 
-  <?php if ($node->nid == 61) /* FIXME: Add nid for live site */ { ?>
+  <?php if (($node->nid == 61) || ($node->nid == 62)) { ?>
   <?php /* Sparklines for the analytics/facts and figures page */ ?>
   <script type="text/javascript" src="<?php print $theme_path;?>/js/jquery.sparkline.min.js"></script>
   <?php } ?>
