@@ -2111,6 +2111,7 @@ ul.analytics li .top10 p {
 
 ul.analytics table {
 	font-size: 85%; 
+	width: 100%;
 }
 
 ul.analytics td{
@@ -2118,8 +2119,13 @@ ul.analytics td{
 	padding: 7px 5px 7px 0;
 }
 
+ul.analytics td.org-name {
+	width: 225px;
+}
+
 ul.analytics tr td:first-child {
 	text-align: right;
+	width: 18px;
 }
 
 ul.analytics tr td:last-child {
