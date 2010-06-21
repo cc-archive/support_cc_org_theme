@@ -2041,6 +2041,12 @@ ul.analytics {
 	width: 350px;
 }
 
+ul.analytics-wide {
+	float: inherit;
+	width: 700px;
+	margin-bottom: 0 !important;
+}
+
 ul.analytics li.stat {
 	display: inline-block;
 	width: 330px;
@@ -2055,6 +2061,11 @@ ul.analytics li.stat {
 	-webkit-box-shadow: inset 0 -3px 4px rgba(128, 128, 128, 0.28), inset 0 3px 4px rgba(128, 128, 128, 0.4);
 	-moz-box-shadow: inset 0 -3px 4px rgba(128, 128, 128, 0.28), inset 0 3px 4px rgba(128, 128, 128, 0.4);
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+ul.analytics-wide li.stat {
+	width: inherit;
+	margin-bottom: -25px !important;
 }
 
 ul.analytics li.stat h1 {
@@ -2111,6 +2122,7 @@ ul.analytics li .top10 p {
 
 ul.analytics table {
 	font-size: 85%; 
+	width: 100%;
 }
 
 ul.analytics td{
