@@ -107,6 +107,14 @@ function oneClick(e) {
 
 	oneClickDialogSetup(e);
 
+    // Google Analytics
+    // Log when the oneclick dialog gets opened, hopefully doesn't confuse GA 
+    if (typeof(_gat) == "object") {
+        var pageTracker = _gat._getTracker("UA-2010376-4");
+    	pageTracker._trackPageview("/donate/oneclick/" + donation);
+    }
+
+
 	$('#moreOptions').dialog('option', 'donateElement', e);
 	$('#moreOptions').dialog('open');
 
