@@ -954,6 +954,10 @@ border: 1px solid #e0e0e0;
 }
 
 .index .corporate {
+	background: #fff url(images/index/corporate.png) no-repeat -5px 0;
+}
+
+.index .figures {
 	background: #fff url(images/index/corporate-giving.png) no-repeat -7px -10px;
 }
 
