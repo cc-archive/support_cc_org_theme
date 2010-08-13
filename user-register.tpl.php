@@ -1,5 +1,11 @@
 <div id="registration_form">
-  <div class="field">
+<? 
+   echo $messages;
+   echo drupal_render($form['timezone']);
+   echo drupal_render($form['form_build_id']);
+   echo drupal_render($form['form_id']);
+?>
+<div class="field">
     <?= drupal_render($form['account']['name']); ?>
   </div>
   <div class="field">
@@ -25,9 +31,9 @@
 .submit-enabled { background:#5ca422; color:#fff; cursor:pointer } 
 </style>
 <? 
-$form['submit']['#attributes']['disabled'] = '';
-$form['submit']['#attributes']['class'] = 'submit-disabled';
-print drupal_render($form['submit']); 
+  $form['submit']['#attributes']['disabled'] = '';
+  $form['submit']['#attributes']['class'] = 'submit-disabled';
+  print drupal_render($form['submit']); 
 ?>
 <script>
 $(document).ready(function() {
@@ -40,7 +46,6 @@ $(document).ready(function() {
             $('#edit-submit').attr('disabled', false);
         }            
     });
-            
 </script>
   </div>
 </div>
