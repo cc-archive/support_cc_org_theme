@@ -26,7 +26,7 @@
 		</div>
 
 <?php if ( trim($node->content['body']['#value']) ) { ?>
-        <div style="font-size: x-small">
+        <div style="font-size: small">
 <?php print $node->content['body']['#value']; ?>
         </div>
 <?php } ?>
