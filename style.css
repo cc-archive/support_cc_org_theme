@@ -2237,3 +2237,47 @@ ul.analytics ol li {
 	color: #555;
 }
 
+
+/* Thankyou page */
+.shoutout {
+	text-align: center; 
+	background-color: #e2eeee; 
+	margin: 2em auto; 
+	padding: 1em; 
+	width: 300px; 
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-box-shadow: inset 0 1px 2px #80bdbe;
+	-moz-box-shadow: inset 0 1px 2px #80bdbe;
+}
+
+.shoutout h2 {
+	text-shadow: 0 1px 0 #fff;
+}
+
+.shoutout h4 a {
+	display: block;
+	background: #d7fcff;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(1, #d7fcff)) #d7fcff;
+	background: -moz-linear-gradient(top , #fff 0%, #d7fcff 100%) #d7fcff;
+	border: 1px solid #7dd3d9;
+	color: #666
+	padding: 5px 10px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-box-shadow: 0 1px 0 #fff, inset 0 1px 0 rgba(255, 255, 255, 1), inset 0 -1px 0 rgba(255, 255, 255, 1);
+	-moz-box-shadow: 0 1px 0 #fff, inset 0 1px 0 rgba(255, 255, 255, 1), inset 0 -1px 0 rgba(255, 255, 255, 1);
+}
+
+.shoutout h4 a:hover {
+	color: #333;
+	text-decoration: none;
+	border-color: #bbd97d;
+}
+;
+.shoutout h4 a:active {
+	background: #fff
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d7fcff), color-stop(1, #fff)) #fff;
+	background: -moz-linear-gradient(top, #d7fcff 0%, #fff 100%) #fff;
+}
+
