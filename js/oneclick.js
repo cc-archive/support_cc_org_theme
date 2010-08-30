@@ -72,7 +72,7 @@ function oneClick(e) {
 		var e = new Object();
 
 		// No donations below $5.00
-		if (amount < 5.0) return false;
+		if (amount < 5.0 || isNaN(amount)) return false;
 
 		e.href = $('#customForm').attr('action') + "amount=" + amount;
 		e.queryString = jQuery.queryString (e.href);
