@@ -987,6 +987,7 @@ border: 1px solid #e0e0e0;
 	width: 234px;
 	height: 110px;
 	display: inline-block;
+	margin-bottom: -18px;
 }
 
 .indexButtons .donate, .indexButtons .donate a {
@@ -1176,7 +1177,9 @@ ul#levels li div.donationInfo a.student, ul#levels li div.donationInfo a.donate 
 }
 
 ul#levels li div.donationInfo a.monthly {
+	background-color: #284966;
 }
+ul#levels li div.donationInfo a.monthly:hover { background-color: #356288; }
 
 ul#levels li div.donationInfo p {
 	padding-top: 0;
