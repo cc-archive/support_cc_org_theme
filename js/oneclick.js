@@ -68,7 +68,7 @@ function oneClickDialogSetup(e) {
 function oneClick(e) {
 	// Handle "Choose your own amount"
 	if (e.type == "submit") {
-		var amount = $(':input[name=amount]').val();
+		var amount = parseFloat($(':input[name=amount]').val());
 		var e = new Object();
 
 		// No donations below $5.00
