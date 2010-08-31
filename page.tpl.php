@@ -78,6 +78,7 @@ $path_as_class = current(explode("/", $node->path));
       </div>
      </div>
 
+	 <div id="campaignBanner"><a href="/donate"><img src="/sites/default/themes/cc/images/banner-super.png" border="0"/></a></div>
      <div id="mainContent" class="box <?php $classary = explode(" ", $title); print strtolower($classary[0]); ?>">
        <div id="contentPrimary">
      <!-- div id="splash">
