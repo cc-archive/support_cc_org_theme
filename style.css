@@ -1134,7 +1134,7 @@ ul#levels li {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 /*	background: -moz-linear-gradient(#fafafa, #ececec 10%);
-*/	background: -moz-radial-gradient(center top , circle , #FAFAFA 0%, #CCCCCC 120%);
+*/	background: -moz-radial-gradient(center top , circle , rgb(0, 147, 229) 0%, rgb(0, 99, 166) 120%);
 	background: -webkit-gradient(radial, 100% 0%, 0, 50% 0, 220, from(rgb(0, 137, 229)), to(rgb(0, 99, 166))); 
 	float: left;
 	height: 180px;
@@ -1145,6 +1145,7 @@ ul#levels li {
 ul#levels li h2 {
 	display: block;
 	color: #FCEE21;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.43);
 	font-size: 2em;
 	margin: 0;
 	padding: 0;
@@ -1279,17 +1280,23 @@ div.level {
 	padding: 0;
 	padding-bottom: 1em;
 	margin: 0 0.825em 1em 0;
+	background: -moz-linear-gradient(center top, #fafafa 85%, #ddd 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.85, #fafafa), color-stop(1, #ddd));
 }
 
 div.level h2 {
 	margin: 0;
 	-moz-border-radius-topleft: 3px;
 	-moz-border-radius-topright: 3px;
-	background-color: #CCE5E7; /*225F9D*/
+	-webkit-border-top-right-radius: 3px;
+	-webkit-border-top-left-radius: 3px;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.43);
+	background: #0080d7; /*225F9D*/
+	background: -moz-linear-gradient(center top, #0085df, #006ab2);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0085df), color-stop(1, #006ab2));
 	border-bottom: 1px solid #bbd4d6;
-	color: #446466;
-	padding: 0.5em;
-	padding-bottom: 0.4em;
+	color: #fcee21;
+	padding: 0.25em 0.5em 0.5em;
 }
 
 
