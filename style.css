@@ -1289,7 +1289,7 @@ ul#giftsList li img {
 
 div.level {
 	position:relative;
-	border: 1px solid #ccc;
+	border: 1px solid #949494;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	padding: 0;
@@ -1297,6 +1297,9 @@ div.level {
 	margin: 0 0.825em 1em 0;
 	background: -moz-linear-gradient(center top, #fafafa 85%, #ddd 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.85, #fafafa), color-stop(1, #ddd));
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0.3, #F7F7F8), color-stop(0.58, #EDEDED), color-stop(0.95, #DADADA), to(#D7D7D7));
+    -webkit-box-shadow: inset 0 -1px 0 #fff, inset 1px 0 0 #fff, inset -1px 0 0 #fff, 0 1px 3px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: inset 0 -1px 0 #fff, inset 1px 0 0 #fff, inset -1px 0 0 #fff, 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 div.level h2 {
@@ -1309,7 +1312,7 @@ div.level h2 {
 	background: #0080d7; /*225F9D*/
 	background: -moz-linear-gradient(center top, #0085df, #006ab2);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0085df), color-stop(1, #006ab2));
-	border-bottom: 1px solid #bbd4d6;
+	border-bottom: 1px solid rgba(0, 90, 150, 0.746094);
 	color: #fcee21;
 	padding: 0.25em 0.5em 0.5em;
 }
