@@ -18,7 +18,7 @@
 		  <h2><?php print uc_currency_format($node->sell_price); ?></h2>
    		  <p><?php print $node->content['add_to_cart']['#value']; ?></p>
 		</div>
-		<div class="product-pictures">
+		<div class="product-pictures" style="width:53%; float: left; overflow-y:auto;">
 <?php foreach ($node->field_image_cache as $images) { 
 		if ($images['list'] == "1") { ?>
 		<a rel="fancybox" class="fancybox" title='<?php print $images['data']['title'] ?>' href="<?php /*/sites/default/files/imagecache/product_hero/*/?>/<?php print $images['filepath']; ?>"><img src="/sites/default/files/imagecache/product/<?php print $images['filepath']; ?>" alt='<?php print $images['data']['alt']; ?>' border="0" /></a>
@@ -26,7 +26,7 @@
 		</div>
 
 <?php if ( trim($node->content['body']['#value']) ) { ?>
-        <div style="font-size: x-small">
+        <div style="font-size: small">
 <?php print $node->content['body']['#value']; ?>
         </div>
 <?php } ?>

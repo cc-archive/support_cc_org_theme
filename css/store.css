@@ -1,4 +1,4 @@
-/* UBERCART */
+/* Store css / UBERCART */
 
 .product-image {
 	width: 370px;
@@ -97,3 +97,6 @@ table#store thead tr {
 table#store td, table#store th {
 	padding: 2px; margin: 0;
 }
+
+/* End of Store ubercart */
+

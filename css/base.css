@@ -1,3 +1,5 @@
+/* Base css */
+
 body {
 	margin: 0;
 	padding: 0;
@@ -221,4 +223,8 @@ div#fancy_title a {
 div#fancy_title a:hover {
 	text-decoration: none;
 }
+
+
+/* end of base css */
+
 

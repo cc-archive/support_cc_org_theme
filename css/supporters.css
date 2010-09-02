@@ -1,4 +1,5 @@
 /* SUPPORTERS */
+
 .block .col {
 	float: left;
 	width: 31%;
@@ -24,3 +25,6 @@
 }
 
 h2.thanks { font-size: 200%; }
+
+/* End of Supporters */
+
