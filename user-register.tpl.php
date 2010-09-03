@@ -25,11 +25,6 @@
       <label for="kapeesh">By agreeing to the Terms of Use you affirm you are at least 13 years of age. If you are between 13 years old and the age of majority in your jurisdiction, you affirm that you have obtained your parent's or legal guardian's express permission to create an account as required by CC.</label>
   </div>
   <div class="field">
-<style>
-#edit-submit { font-weight:bold; padding:10px;margin:10px 0; }
-.submit-disabled { background:#ddd; color:#777; cursor:arrow; }
-.submit-enabled { background:#5ca422; color:#fff; cursor:pointer } 
-</style>
 <? 
   $form['submit']['#attributes']['disabled'] = '';
   $form['submit']['#attributes']['class'] = 'submit-disabled';
@@ -38,11 +33,11 @@
 <script>
 $(document).ready(function() {
         $('#kapeesh').click(function() {
-                $('#edit-submit').toggleClass('submit-enabled');
+                $('#edit-submit').toggleClass('submit-disabled');
                 $('#edit-submit').attr('disabled', !($('#edit-submit').attr('disabled')));
             });
         if($('#kapeesh:checked').val()) {
-            $('#edit-submit').toggleClass('submit-enabled');
+            $('#edit-submit').toggleClass('submit-disabled');
             $('#edit-submit').attr('disabled', false);
         }            
     });

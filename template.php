@@ -15,8 +15,12 @@ function support2009_theme($existing, $type, $theme, $path) {
   return array(
     // tell Drupal what template to use for the user register form
     'user_register' => array(
-      'arguments' => array('form' => NULL),
-      'template' => 'user-register', // this is the name of the template
+      	'arguments' => array('form' => NULL),
+      	'template' => 'user-register', // this is the name of the template
+    ),
+    'user_login_block' => array (
+	'template' => 'user-login-block',
+	'arguments' => array('form' => NULL)
     ),
   );
 }
