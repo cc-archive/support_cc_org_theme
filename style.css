@@ -1029,6 +1029,7 @@ ul.indexLinks {
 	margin-left: 0;
 	width: 46%;
 	display: inline-block;
+	vertical-align:top;
 }
 
 /* End of index css */
