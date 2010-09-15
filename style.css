@@ -8,6 +8,7 @@ body {
 	line-height: 1.5;
 	text-align: center;
 	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
 }
 
 #mainContent h1, h2, h3, h4, h5 {
