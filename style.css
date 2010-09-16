@@ -660,7 +660,7 @@ fieldset {
   padding:5px 10px;
   margin-top:50px;
   position:relative;
-  background:#f7f7f7;
+  background:transparent url('images/paper-gray.png');
 }
 fieldset legend {
   border-radius:3px;
@@ -696,13 +696,13 @@ input.form-text, input.form-password {
   background:#fff;
 }
 input, textarea {
-  background: transparent;
   color: inherit;
   border: 1px solid #777;
   padding:5px;
   background:#fff;
   border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; 
 }
+
 form input.buy-button { border: none !important; }
 form input.form-text-item { border: 1px solid #666 !important; }
 
@@ -732,14 +732,20 @@ div#sidebar-right input { max-width:130px; }
 
 .profile { margin: 0px; clear:left; padding:0 10px; }
 .profile-side { width: 300px; margin:10px 0px 15px 15px; float:right; }
-.profile-side>div { background: transparent url('images/paper-green.png'); padding:10px;
-                   border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
-.profile-side>div>input, #network-badge { width:265px; }
-.profile-side dd { margin:0px; padding:0px; }
+.green-box { background: transparent url('images/paper-green.png'); padding:10px;
+             border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+.green-box input[type=text], #network-badge { width:265px; }
+.green-box dd { margin:0px; padding:0px; }
 
 ul.works { margin:0px !important; padding-left:0px !important; }
 ul.works li { list-style:none; padding:0px 0px 10px 2px !important; margin:5px 0px !important; 
               border-bottom:1px #aaa dotted; }
+
+#crm-container td { vertical-align:middle !important; padding:5px 10px !important; font-size:100% !important; }
+#crm-container table.view-layout .label { background:none !important; color:#111; padding:5px 10px !important;
+                                        vertical-align:middle; }
+#crm-container .boxBlock, #crm-container fieldset { 
+  background: transparent url('images/paper-gray.png'); }
 
 .submit-disabled { 
     background:#ddd !important; color:#777 !important; cursor:arrow !important; 
@@ -768,8 +774,11 @@ form .form-item .title  {
   text-align: left;
 }
 select {
-  margin: 1px 5px;
+  border: 1px solid #777;
+  background:#fff;
+  border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; 
 }
+option { margin:3px; }
 .container-inline {
   margin: 0 0 1.6em 0;
 }
