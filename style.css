@@ -731,6 +731,7 @@ div#sidebar-right input { max-width:130px; }
 
 
 .profile { margin: 0px; clear:left; padding:0 10px; }
+.profile fieldset { margin-top:10px !important; }
 .profile-side { width: 300px; margin:10px 0px 15px 15px; float:right; }
 .green-box { background: transparent url('images/paper-green.png'); padding:10px;
              border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}

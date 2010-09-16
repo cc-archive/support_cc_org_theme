@@ -53,14 +53,16 @@
 <? if ($user->uid == $account->uid) { ?>     
    <h2>Profile Information</h2>
      <small>Information published on your public profile.</small>
-     <p><strong>Your name</strong></p>
+   <dd><fieldset>
+     <strong>Your name</strong>
      <p><? print $account->profile_name ?></p>
-     <p><strong>Your location</strong></p>
+     <strong>Your location</strong>
      <p><? print $account->profile_location ?></p>
-     <p><strong>Your homepage</strong></p>
+     <strong>Your homepage</strong>
      <p><? print $account->profile_homepage ?></p>
-     <p><strong>Your story</strong></p>
+     <strong>Your story</strong>
      <p><? print nl2br($account->profile_story) ?></p>
+   </fieldset></dd>
      &raquo; <a href="/<?=$account->name?>/edit/Profile%20Information">Edit 'Profile Information'</a>
    
    <div class="divider">&nbsp;</div>
