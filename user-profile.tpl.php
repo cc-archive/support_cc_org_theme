@@ -65,9 +65,9 @@
    
    <div class="divider">&nbsp;</div>
 
-   <h2>Name and Address</h2>
+   <h2>Contact Information</h2>
      <small>This information is for the internal use of CC and will not be made public on your profile.</small>
-      <? print $account->content['Name and Address']['#children'] ?>
+      <? print $account->content['Contact Information']['#children'] ?>
 
    <div class="divider">&nbsp;</div>
 
