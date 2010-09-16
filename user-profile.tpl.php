@@ -12,6 +12,7 @@
    </div>
 </div>
 
+<div class="profile">
 
 <div class="registrations">
    <div>
@@ -19,11 +20,9 @@
      <? print $account->content['works']['#children'] ?>
    </div>
 </div>
-
-<div class="profile">
    <h2>My CC Story</h2>
 <p>
-<?php print $account->profile_story ?>
+<?php print nl2br($account->profile_story) ?>
 </p>
 </div>
 

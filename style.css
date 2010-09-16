@@ -718,19 +718,19 @@ div#sidebar-right input { max-width:130px; }
 
 #profile_header { 
     background: url('images/commoner-id.png') right -15px no-repeat; 
-    min-height:160px; margin:0px 0px 0px 0px !important; }
+    min-height:160px; margin:0px 0px 0px 0px !important;  }
 #profile_header #title h2 { margin:5px 0px 10px 0px !important; }
 #profile_header #title h3 { margin:0px 0px; font-weight:normal;  }
 #profile_header #title { padding:10px 0 0 10px !important; margin-right:200px; border-bottom:1px #ddd solid;  }
 #profile_header div.picture { border:1px #eee solid !important; margin-right:20px;
                               border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; 
     float:left !important; margin:none !important; background:#f6f6f6; padding:5px !important; }
-#profile_header div.picture img { margin:0px !important; }
+#profile_header div.picture img { margin:0px !important; max-height:100px; }
 #profile_header #title h2 { }
 
 
-.profile { margin:0px 340px 0px 0px; clear:none; padding:0 10px; }
-.registrations { width: 300px; margin-top:10px; float:right; }
+.profile { margin: 0px; clear:left; padding:0 10px; }
+.registrations { width: 300px; margin:10px 0px 15px 15px; float:right; }
 .registrations>div { background: transparent url('images/paper-green.png'); padding:10px;
                    border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
 .registrations dd { margin:0px; padding:0px; }
