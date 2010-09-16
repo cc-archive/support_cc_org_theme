@@ -716,6 +716,7 @@ form input.form-text-item { border: 1px solid #666 !important; }
 
 div#sidebar-right input { max-width:130px; }
 
+
 #profile_header { 
     background: url('images/commoner-id.png') right -15px no-repeat; 
     min-height:160px; margin:0px 0px 0px 0px !important;  }
@@ -730,10 +731,11 @@ div#sidebar-right input { max-width:130px; }
 
 
 .profile { margin: 0px; clear:left; padding:0 10px; }
-.registrations { width: 300px; margin:10px 0px 15px 15px; float:right; }
-.registrations>div { background: transparent url('images/paper-green.png'); padding:10px;
+.profile-side { width: 300px; margin:10px 0px 15px 15px; float:right; }
+.profile-side>div { background: transparent url('images/paper-green.png'); padding:10px;
                    border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
-.registrations dd { margin:0px; padding:0px; }
+.profile-side>div>input, #network-badge { width:265px; }
+.profile-side dd { margin:0px; padding:0px; }
 
 ul.works { margin:0px !important; padding-left:0px !important; }
 ul.works li { list-style:none; padding:0px 0px 10px 2px !important; margin:5px 0px !important; 

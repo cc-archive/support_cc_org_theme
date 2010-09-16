@@ -14,11 +14,43 @@
 
 <div class="profile">
 
-<div class="registrations">
+<div class="profile-side">
+
+<? if ($user->uid == $account->uid && in_array('Commoner', array_values($user->roles))) { 
+         // is the user logged in at their own profile page ?>
+
+       <div>
+         <h4>Your OpenID URL</h4>
+         <input onclick="this.select()" readonly="readonly" value="https://creativecommons.net/<?=$user->name?>" type="text">
+
+		<p>
+		  <small>
+		    Use this URL to log into OpenID enabled sites.
+		    
+		    <strong>
+		      To reduce risk of attack we  recommend using HTTPS for your OpenID URL.
+		    </strong>
+		    
+		  </small>
+		</p>
+       </div>
+       <br />
+
+       <div>   
+         <h4>Place this badge on your website</h4>
+          <? print $account->content['badge']['#children'] ?>
+       </div>
+       <br />
+
+<? } ?>
+
    <div>
      <h4>Works I have licensed</h4>
      <? print $account->content['works']['#children'] ?>
    </div>
+
+
+
 </div>
    <h2>My CC Story</h2>
 <p>
