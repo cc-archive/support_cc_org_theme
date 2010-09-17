@@ -90,8 +90,10 @@ $path_as_class = current(explode("/", $node->path));
 		  <h2><?php print $title ?></h2>
       <?php } ?>
      </div -->
-         <div id="title" class="block">
-		   <?php if (strtolower($node->type) != "product") { ?>	
+	 <div id="title" class="block">
+		   <?php if ($node->taxonomy[key((array)$node->taxonomy)]->name == "Superhero") { ?>
+		   <h3 class="category"><a href="/superheroes">CC Superheroes</a></h3>
+		   <?php } else if (strtolower($node->type) != "product") { ?>	
 		   <h3 class="category"><a href="/">Support CC</a></h3>
 		   <?php } else if ($node->uid == 13) { ?>
 			<h3 class="category"><a href="/store">Store</a></h3>
