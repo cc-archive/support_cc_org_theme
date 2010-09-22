@@ -90,18 +90,27 @@ $path_as_class = current(explode("/", $node->path));
 		  <h2><?php print $title ?></h2>
       <?php } ?>
 	 </div -->
-	 <?php if ($node->taxonomy[key((array)$node->taxonomy)]->name == "Superhero") { $isSuperhero = true; } ?>
+	 <?php // FIXME: This is dirty, there should be a better way. (current() throws an error :/ )
+	 $tax = $node->taxonomy[key((array)$node->taxonomy)]->name;
+	 if ($tax == "Superhero") { $isSuperhero = true; } 
+	 if ($tax == "Superhero Index") { $isSuperheroIndex = true; } ?>
+	 
 	 <div id="title" class="block <? if ($isSuperhero) print "superhero"; ?>">
 
 		   <?php if ($isSuperhero) {?>
-				 <h3 class="category"><a href="/superheroes"><img src="<?php print $theme_path; ?>/images/superhero/cc-superhero-hero.png" alt="[CC]" border="0" /> <span>Superheroes</span></a></h3>
+				 <h3 class="category"><a href="/superheroes"><img src="<?php print $theme_path; ?>/images/superhero/cc-superhero-hero-small.png" alt="[CC]" border="0" /> <span>Superheroes</span></a></h3>
 		   <?php } else if (strtolower($node->type) != "product") { ?>	
 		   <h3 class="category"><a href="/">Support CC</a></h3>
 		   <?php } else if ($node->uid == 13) { ?>
 			<h3 class="category"><a href="/store">Store</a></h3>
 		   <?php } ?>
+			<?php if ($isSuperheroIndex) { ?>
+		   <div class="title-labels superhero">
+			<h2><img src="<?php print $theme_path; ?>/images/superhero/cc-superhero-hero.png" alt="[CC]" border="0" /> <span>Superheroes</span></h2>
+			<?php } else { ?>
 		   <div class="title-labels">
 			 <h2><? if (strtolower($node->type) == "product") { echo current($node->taxonomy)->name . ":"; } ?> <?php print $title ?></h2>
+		    <?php } ?>
            </div>
 		   <h3 class="subtitle"><?php print $node->field_subtitle[0]['view'] ?></h3>
          </div>

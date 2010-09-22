@@ -445,7 +445,17 @@ display: block; float: right; width: 227px; margin: 0; padding: 10px 0 11px 10px
 	height: 100px;
 }
 
+#title .superhero {
+	height: 44px;
+}	
+
 #title.superhero h3 {
+	position: absolute;
+	top: 0;
+	left: -85px;
+}	
+
+#title .superhero h2 {
 	position: absolute;
 	top: 0;
 	left: -95px;
@@ -454,13 +464,24 @@ display: block; float: right; width: 227px; margin: 0; padding: 10px 0 11px 10px
 #title.superhero h3 span {
 	position: absolute;
 	top: 14px;
-	left: 140px;
+	left: 130px;
 }
 
 #title.superhero h2 {
 	position: absolute;
 	top: 55px;
 }
+
+#title .superhero h2 {
+	top: 25px;
+}
+
+#title .superhero h2 span {
+	position: absolute;
+	top: 2px;
+	left: 140px;
+}
+
 
 #mainContent .block .title a:link, #mainContent .block .title a:visited { color: #383838; }
 #mainContent .block h4.meta { color: #aaa; margin-bottom: 7px; font-variant: normal; font-size: 105%; padding-left: 0 !important; }
@@ -2462,7 +2483,7 @@ ul.analytics ol li {
 	-moz-box-shadow:0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.superheroBlock .superhero h2 {
+.superheroBlock .superhero h2, .superheroBlock .superhero h2 a {
 	color: #fcee21;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
 }
