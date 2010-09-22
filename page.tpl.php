@@ -89,10 +89,12 @@ $path_as_class = current(explode("/", $node->path));
 		  <?php } else if (($title != "") && ($title != "Support the Commons")){ ?>
 		  <h2><?php print $title ?></h2>
       <?php } ?>
-     </div -->
-	 <div id="title" class="block">
-		   <?php if ($node->taxonomy[key((array)$node->taxonomy)]->name == "Superhero") { ?>
-		   <h3 class="category"><a href="/superheroes">CC Superheroes</a></h3>
+	 </div -->
+	 <?php if ($node->taxonomy[key((array)$node->taxonomy)]->name == "Superhero") { $isSuperhero = true; } ?>
+	 <div id="title" class="block <? if ($isSuperhero) print "superhero"; ?>">
+
+		   <?php if ($isSuperhero) {?>
+				 <h3 class="category"><a href="/superheroes"><img src="<?php print $theme_path; ?>/images/superhero/cc-superhero-hero.png" alt="[CC]" border="0" /> <span>Superheroes</span></a></h3>
 		   <?php } else if (strtolower($node->type) != "product") { ?>	
 		   <h3 class="category"><a href="/">Support CC</a></h3>
 		   <?php } else if ($node->uid == 13) { ?>

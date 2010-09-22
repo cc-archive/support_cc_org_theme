@@ -265,7 +265,7 @@ div#fancy_title a:hover {
 
 #mainContent {
 	margin-top: 45px;
-	overflow: hidden;
+	overflow: visible;
 }
 
 #headerNav ul {
@@ -404,7 +404,7 @@ display: block; float: right; width: 227px; margin: 0; padding: 10px 0 11px 10px
 
 
 
-#mainContent .block { clear: both; margin-bottom: 35px; padding-left: 1%; overflow-y: visible; }
+#mainContent .block { clear: both; margin-bottom: 35px; padding-left: 1%; overflow-y: visible; position: relative; }
 #mainContent .feature { 
 	/*border-bottom:  1px solid #ddd;*/ 
 	padding-bottom:  30px; 
@@ -430,7 +430,7 @@ display: block; float: right; width: 227px; margin: 0; padding: 10px 0 11px 10px
 */
 
 
-#title { margin-top: 0; margin-bottom: 25px; margin-right: -5px;}
+#title { margin-top: 0; margin-bottom: 25px; margin-right: -5px; overflow-x:visible;}
 #title h1 { margin-top: 1.5em; }
 #title h2, .title h1 { padding: 0 0 0 0; font-size: 43px; margin: 0 !important; line-height: 1;}
 #title h2.tagline { /*  color: #92534e;*/ color: #b82e00;}
@@ -439,6 +439,28 @@ display: block; float: right; width: 227px; margin: 0; padding: 10px 0 11px 10px
 #title h4 { font-size: 90%; padding-top: 1em;}
 #title img {  border: 1px solid #666; padding: 0 !important; margin-right: 15px; }
 #title #blurb { font-size: 60%; margin-bottom: 15px; }
+
+/* Superhero titles */
+#title.superhero {
+	height: 100px;
+}
+
+#title.superhero h3 {
+	position: absolute;
+	top: 0;
+	left: -95px;
+}
+
+#title.superhero h3 span {
+	position: absolute;
+	top: 14px;
+	left: 140px;
+}
+
+#title.superhero h2 {
+	position: absolute;
+	top: 55px;
+}
 
 #mainContent .block .title a:link, #mainContent .block .title a:visited { color: #383838; }
 #mainContent .block h4.meta { color: #aaa; margin-bottom: 7px; font-variant: normal; font-size: 105%; padding-left: 0 !important; }
@@ -723,11 +745,11 @@ div#sidebar-right input { max-width:130px; }
     min-height:160px; margin:0px 0px 0px 0px !important;  }
 #profile_header #title h2 { margin:5px 0px 10px 0px !important; }
 #profile_header #title h3 { margin:0px 0px; font-weight:normal;  }
-#profile_header #title { padding:10px 0 0 10px !important; margin-right:200px; border-bottom:1px #ddd solid;  }
+#profile_header #title { padding:10px 0 0 10px !important; min-height:120px; margin-right:200px; border-bottom:1px #ddd solid;  }
 #profile_header div.picture { border:1px #eee solid !important; margin-right:20px;
                               border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; 
     float:left !important; margin:none !important; background:#f6f6f6; padding:5px !important; }
-#profile_header div.picture img { margin:0px !important; max-height:100px; }
+#profile_header div.picture img { margin:0px !important; }
 #profile_header #title h2 { }
 
 
@@ -1932,7 +1954,7 @@ margin-left: 7px;
 	clear: both;
 	margin-bottom: 1em;
 	padding-bottom: 0.7em;
-	padding-left: 5px; 
+/*	padding-left: 5px; */
 	border-bottom: 1px solid #e0e0e0;
 	font-size: 90%;
 }
