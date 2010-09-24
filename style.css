@@ -2523,7 +2523,11 @@ ul.analytics ol li {
   position: absolute;
   left: -5px;
   top: 110px;
-  opacity: 0.5;
+  opacity: 0.38;
+}
+
+.superheroBubbleUser {
+  top: 150px !important;
 }
 
 .superheroContent {

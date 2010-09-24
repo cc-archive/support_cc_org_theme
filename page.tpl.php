@@ -120,7 +120,7 @@ $path_as_class = current(explode("/", $node->path));
       <div id="blocks">  
 <?php } ?>
 <?php if ($isSuperhero) { ?>
-	  <div id="superheroBubble">
+<div id="superheroBubble" class="<?php if ($tabs != "") { ?>superheroBubbleUser<?php } ?>">
 		<img src="<?php print $theme_path; ?>/images/superhero/speech-bubble.png" alt="" />
 	  </div>
 <?php } ?>
