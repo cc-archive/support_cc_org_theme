@@ -767,12 +767,12 @@ div#sidebar-right input { max-width:130px; }
 #profile_header #title h2 { margin:5px 0px 10px 0px !important; }
 #profile_header #title h3 { margin:0px 0px; font-weight:normal;  }
 #profile_header #title { padding:10px 0 0 10px !important; min-height:120px; margin-right:200px; border-bottom:1px #ddd solid;  }
-#profile_header div.picture { border:1px #eee solid !important; margin-right:20px;
-                              border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px; 
-    float:left !important; margin:none !important; background:#f6f6f6; padding:5px !important; }
-#profile_header div.picture img { margin:0px !important; }
-#profile_header #title h2 { }
 
+#profile_header div.picture { float:left; }
+#profile_header div.picture img { border:5px #f6f6f6 solid !important; 
+	border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;
+	margin:0px 20px 5px 5px !important; }
+#profile_header #title h2 { }
 
 .profile { margin: 0px; clear:left; padding:0 10px; }
 .profile fieldset { margin-top:10px !important; }
@@ -2517,5 +2517,16 @@ ul.analytics ol li {
 	overflow-y:auto;
 	-webkit-box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.1);
 	-moz-box-shadow:inset 0 -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#superheroBubble {
+  position: absolute;
+  left: -5px;
+  top: 110px;
+  opacity: 0.5;
+}
+
+.superheroContent {
+  padding-top: 45px;
 }
 
