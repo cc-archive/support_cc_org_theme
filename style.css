@@ -2523,14 +2523,36 @@ ul.analytics ol li {
   position: absolute;
   left: -5px;
   top: 110px;
-  opacity: 0.38;
+  opacity: 0.45;
 }
 
-.superheroBubbleUser {
-  top: 150px !important;
-}
-
-.superheroContent {
+.superheroContent, .superheroBubbleUser {
   padding-top: 45px;
 }
 
+.superheroPhotos {
+  position: relative;
+  width: 704px;
+  margin: 15px auto;
+}
+
+.superheroPhotos img {
+  padding-right: 1px;
+}
+
+.superheroPhotosOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 700px;
+  height: 180px;
+  background: url(/sites/default/themes/cc/images/superhero/comic-panels.png) no-repeat;
+}
+
+.superheroPhotosOverlay p {
+  position: absolute;
+  top: -13px;
+  padding-left: 5px;
+  color: #000;
+}
