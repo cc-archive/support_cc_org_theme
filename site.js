@@ -1,3 +1,29 @@
+function bannerHtml() {
+    var banner = new Array(3); for (i = 0; i < banner.length; ++i) banner[i] = new Array(2);
+    banner[0][0] = "&utm_medium=banner_1"; banner[0][1] = "Help the world harness the power of Creative Commons.";
+    banner[1][0] = "&utm_medium=banner_2"; banner[1][1] = "Help the world harness the amazing strength of Creative Commons!";
+    banner[2][0] = "&utm_medium=banner_3"; banner[2][1] = "Join us in the fight for openness and innovation!"; return banner;
+}
+function thundercats() {
+//    if ((location.href.match(/http\:(.*)?creativecommons.org\/$/) && !location.href.match(/pport.creativecommons.org\/$/)) || location.href.match(/creativecommons.org\/donate/)) return;
+
+    //var i = Math.floor(Math.random() * 3);
+	var i = 1;
+    var banners = bannerHtml();
+
+    var d = document.createElement("div");
+    var mainContent = document.getElementById("globalWrapper");
+    d.setAttribute('style', 'font-size: 22px; font-family: "helvetica neue", arial, sans-serif; line-height:1; text-shadow: 0 1px 0 #45c5ea; color: #ffff00; padding: 7px 0 2px 0; border-bottom: 1px solid rgb(120, 159, 44); margin-top: -1px; background: #c5deed; background:-webkit-gradient(linear, left top, left bottom, from(#c5deed), to(#91b6cd)); background:-moz-linear-gradient(center top, #c5deed, #91b6cd); z-index:1000;');
+    d.innerHTML = '<a href="/donate?utm_campaign=catalyst' + banners[i][0] + '&utm_source=support&utm_medium=banner" style="color:#ffff00; text-decoration:none;"><img src="/sites/default/themes/cc/images/superhero/supercc-banner.png" style="vertical-align:middle; padding-right: 10px;" border="0"/> <strong><span style="text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)">' + banners[i][1] + '</span></strong> <span style="color:#000">&mdash; Donate Now</span></a>';
+    mainContent.parentNode.insertBefore(d, mainContent);
+}
+
+if (typeof window.addEventListener !== 'undefined') {
+    window.addEventListener('load', thundercats, false);
+} else {
+    window.attachEvent('onload', thundercats);
+}
+
 if (typeof YAHOO != "undefined") { 
 
 YAHOO.namespace("cc.site");
