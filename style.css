@@ -1183,7 +1183,7 @@ body.donate {
 
 .donate #title { text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35); }
  
-h2.lede {
+.lede {
 	font-family: "helvetica", arial, sans-serif;
 	font-size: 1.35em;
 	font-weight: normal;
@@ -2536,8 +2536,27 @@ ul.analytics ol li {
   margin: 15px auto;
 }
 
-.superheroPhotos img {
+.superheroPhoto {
   padding-right: 1px;
+  width: 230px;
+  display: inline-block;
+  vertical-align:top;
+  font-size: 80%;
+  color: #777;
+}
+
+.superheroPhoto img {
+  margin-bottom: 5px;
+}
+
+.superheroPhoto a {
+  color: #777;
+  border-bottom: 1px dotted #b9b9b9;
+}
+
+.superheroPhoto a:hover {
+  text-decoration: none;
+  border-bottom-style: solid;
 }
 
 .superheroPhotosOverlay {
