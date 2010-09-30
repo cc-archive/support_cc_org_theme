@@ -119,7 +119,7 @@ $path_as_class = current(explode("/", $node->path));
       $colClass = "sideContentSpace"; ?>
       <div id="blocks">  
 <?php } ?>
-<?php if ($isSuperhero) { ?>
+<?php if ($isSuperhero && 0  ) { ?>
 <div id="superheroBubble" class="<?php if ($tabs != "") { ?>superheroBubbleUser<?php } ?>">
 		<img src="<?php print $theme_path; ?>/images/superhero/speech-bubble.png" alt="" />
 	  </div>

@@ -2463,13 +2463,13 @@ ul.analytics ol li {
 /* Superhero Pages */
 .superheroBlock {
 	float: right; 
-	width:190px; 
+	width:175px; 
 	margin-left: 25px; 
 	text-align:center;
 }
 
 .superheroBlock .superhero {
-	width: 175px;
+	width: 160px;
 	margin-bottom: 15px;
 	padding: 5px 5px 0;
 	background:#007fd4;
@@ -2520,9 +2520,10 @@ ul.analytics ol li {
 }
 
 #superheroBubble {
+  z-index: -1000;
   position: absolute;
-  left: -5px;
-  top: 110px;
+  left: -20px;
+  top: 30px;
   opacity: 0.45;
 }
 
