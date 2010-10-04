@@ -1226,6 +1226,7 @@ ul#levels li {
 	border: 1px solid #949494;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
+  background: #ededed;
 /*	background: -moz-linear-gradient(#fafafa, #ececec 10%);
 */	background: -moz-linear-gradient(center top, #f7f7f8 0%, #ededed 28%, #dadada 87%, #d7d7d7 100%);;
 /*	background: -webkit-gradient(radial, 100% 0%, 0, 50% 0, 220, from(rgb(0, 137, 229)), to(rgb(0, 99, 166))); 
@@ -1246,6 +1247,7 @@ ul#levels li h2 {
 	margin: 0 10px 10px;
 	padding: 0;
 	text-align: center;
+  background: #0065a8;
 	background: -moz-linear-gradient(center top, #26abe2 0%, #0071bc 25%, #0065a8 38%, #0088e3 90%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #26abe2), color-stop(0.247, #0071bc), color-stop(0.38, #0065a8), color-stop(0.9, #0088e3));
 	-webkit-border-bottom-left-radius: 3px;
