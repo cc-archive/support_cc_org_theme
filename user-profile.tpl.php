@@ -1,4 +1,5 @@
 <div id="profile_header">
+
    <div id="title" class="block">
        <? theme('user_picture', $account, 'depiction'); ?>
        <? print $profile['user_picture'] ?>
@@ -11,6 +12,24 @@
        </div>
    </div>
 </div>
+
+<?php if ($user->uid == $account->uid) { ?>
+<div class="pcp" style="margin-bottom:25px;">
+	<h2>Superhero Fundraising Page</h2>
+<?php $pcpID = creativecommons_user_has_pcp($account->uid);
+if ($pcpID < 1) { ?> 
+	<a href="/civicrm/contribute/campaign?action=add&reset=1&pageId=27"><img border="0" src="/sites/default/themes/cc/images/superhero/pcp.png" /></a>
+	<div class="pcpProfileBar">
+		<a class="start" href="/civicrm/contribute/campaign?action=add&reset=1&pageId=27"><span>Start your fundraising page</span></a>
+	</div>
+<?php } else { ?>
+	<div class="pcpProfileBar">
+		<h3><a href="/civicrm/contribute/pcp/info?reset=1&id=<?php echo $pcpID; ?>">Access your fundraising page &raquo;</a></h3> 
+	</div>
+<?php } ?>
+</div>
+
+<?php } ?>
 
 <div class="profile">
 
