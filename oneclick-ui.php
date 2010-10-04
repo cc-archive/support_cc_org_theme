@@ -23,9 +23,8 @@
 		</div>
 		<div id="premiums" style="display:block;">
 			<p style="float: right">
-                <img src="/sites/default/files/cc-shirt-mh.jpg" alt="Supporter Shirt"/><br/>
-				<small style="font-size:10px; line-height:1.2">CC T-Shirt<br/>
-					<a href="http://www.flickr.com/photos/leesean/3815673243" rel="cc:attributionURL">Lee-Sean Huang</a> / <a rel="license" href="http://creativecommons.org/licenses/by/2.0/">CC-BY</a></small>
+                <img src="/sites/default/files/cc-shirt-superhero.jpg" alt="Superhero Campaign Shirt"/><br/>
+				<small style="font-size:10px; line-height:1.2">Superhero Campaign T-Shirt</small>
 			</p>
 
 			<p>
