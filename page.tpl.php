@@ -10,7 +10,7 @@ $path_as_class = current(explode("/", $node->path));
  <head>
   <title><?php print $head_title ?></title>
   <meta http-equiv="Content-Style-Type" content="text/css" />
-
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
 <?php /* removing YUI 
   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.2/build/container/assets/skins/sam/container.css" /> 
   <script type="text/javascript" src="http://yui.yahooapis.com/2.5.2/build/yahoo-dom-event/yahoo-dom-event.js"></script> 
