@@ -109,8 +109,8 @@ pre {
 }
 
 #globalWrapper {
-	background: #fff url('images/header-bar-full.png') repeat-x top left;
-}
+/*	background: #fff url('images/header-bar-full.png') repeat-x top left;
+*/}
 
 #s.inactive {
 	color: #666;
@@ -762,11 +762,10 @@ div#sidebar-right input { max-width:130px; }
 
 
 #profile_header { 
-    background: url('images/commoner-id.png') right -15px no-repeat; 
-    min-height:160px; margin:0px 0px 0px 0px !important;  }
+   margin:0px 0px 0px 0px !important;  }
 #profile_header #title h2 { margin:5px 0px 10px 0px !important; }
 #profile_header #title h3 { margin:0px 0px; font-weight:normal;  }
-#profile_header #title { padding:10px 0 0 10px !important; min-height:120px; margin-right:200px; border-bottom:1px #ddd solid;  }
+#profile_header #title { padding:10px 0 0 10px !important;  border-bottom:1px #ddd solid;  }
 
 #profile_header div.picture { float:left; }
 #profile_header div.picture img { border:5px #f6f6f6 solid !important; 
@@ -1063,54 +1062,7 @@ border: 1px solid #e0e0e0;
 .support-block ul li { list-style: none !important; }
 
 
-.index .store {
-	background: #e0efd5 url(images/index/store-index.png) no-repeat -21px -22px;
-}
-
-.index .supporters {
-	background: #fff url(images/index/supporters-index.png) no-repeat -15px -22px;
-}
-
-.index .spread {
-	background: #fff url(images/index/spread-index.png) no-repeat -15px -22px;
-}
-
-.index .give {
-	background: #fff url(images/index/give-index.png) no-repeat -13px -9px;
-}
-
-.index .commoner {
-	background: #fff url(images/index/commoner-index.png) no-repeat -25px -17px;
-}
-
-.index .letters {
-	background: #fff url(images/index/letters-index.png) no-repeat -14px -8px;
-}
-
-.index .videos {
-	background: #fff url(images/index/video-index.png) no-repeat -11px -9px;
-}
-
-.index .matching {
-	background: #fff url(images/index/matching-index.png) no-repeat -15px -14px;
-}
-
-.index .corporate {
-	background: #fff url(images/index/corporate.png) no-repeat -5px 0;
-}
-
-.index .figures {
-	background: #fff url(images/index/corporate-giving.png) no-repeat -7px -10px;
-}
-
-.index .donate {
-	background: #e0efd5 url(images/index/donate-index.png) no-repeat -5px -15px;
-}
-
-.index .testimonials {
-	background: #fff url(images/index/testimonials-index.png) no-repeat -3px -9px;
-}
-
+	
 /* Index - 2010/06/25 */
 .indexButtons {
 	margin-top: 30px;
