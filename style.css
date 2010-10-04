@@ -441,42 +441,42 @@ display: block; float: right; width: 227px; margin: 0; padding: 10px 0 11px 10px
 #title #blurb { font-size: 60%; margin-bottom: 15px; }
 
 /* Superhero titles */
-#title.superhero {
+#title.superheroTitle {
 	height: 100px;
 }
 
-#title .superhero {
+#title .superheroTitle {
 	height: 44px;
 }	
 
-#title.superhero h3 {
+#title.superheroTitle h3 {
 	position: absolute;
 	top: 0;
 	left: -85px;
 }	
 
-#title .superhero h2 {
+#title .superheroTitle h2 {
 	position: absolute;
 	top: 0;
 	left: -95px;
 }
 
-#title.superhero h3 span {
+#title.superheroTitle h3 span {
 	position: absolute;
 	top: 14px;
 	left: 130px;
 }
 
-#title.superhero h2 {
+#title.superheroTitle h2 {
 	position: absolute;
 	top: 55px;
 }
 
-#title .superhero h2 {
+#title .superheroTitle h2 {
 	top: 25px;
 }
 
-#title .superhero h2 span {
+#title .superheroTitle h2 span {
 	position: absolute;
 	top: 2px;
 	left: 140px;

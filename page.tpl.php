@@ -95,7 +95,7 @@ $path_as_class = current(explode("/", $node->path));
 	 if ($tax == "Superhero") { $isSuperhero = true; } 
 	 if ($tax == "Superhero Index") { $isSuperheroIndex = true; } ?>
 	 
-	 <div id="title" class="block <? if ($isSuperhero) print "superhero"; ?>">
+	 <div id="title" class="block <? if ($isSuperhero) print "superheroTitle"; ?>">
 
 		   <?php if ($isSuperhero) {?>
 				 <h3 class="category"><a href="/superheroes"><img src="<?php print $theme_path; ?>/images/superhero/cc-superhero-hero-small.png" alt="[CC]" border="0" /> <span>Superheroes</span></a></h3>
@@ -105,7 +105,7 @@ $path_as_class = current(explode("/", $node->path));
 			<h3 class="category"><a href="/store">Store</a></h3>
 		   <?php } ?>
 			<?php if ($isSuperheroIndex) { ?>
-		   <div class="title-labels superhero">
+		   <div class="title-labels superheroTitle">
 			<h2><img src="<?php print $theme_path; ?>/images/superhero/cc-superhero-hero.png" alt="[CC]" border="0" /> <span>Superheroes</span></h2>
 			<?php } else { ?>
 		   <div class="title-labels">
