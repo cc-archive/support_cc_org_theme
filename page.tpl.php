@@ -6,7 +6,17 @@
 // name as a css class for the body
 $path_as_class = current(explode("/", $node->path));
 ?>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php print $language->language ?>" xml:lang="<?php print $language->language ?>">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:ccnet="http://creativecommons.net/n#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:sioc_service="http://rdfs.org/sioc/services#"
+  xmlns:powder="http://www.w3.org/2007/05/powder#"
+  lang="<?php print $language->language ?>" xml:lang="<?php print $language->language ?>">
  <head>
   <title><?php print $head_title ?></title>
   <meta http-equiv="Content-Style-Type" content="text/css" />
@@ -135,6 +145,13 @@ $path_as_class = current(explode("/", $node->path));
        <?php if ($messages != ""): ?>
        <div id="message"><?php print $messages ?></div>
        <?php endif; ?>
+
+<?php if($title == "Access denied" && substr( $_SERVER['REQUEST_URI'], 'https://creativecommons.net/') == '/r/add/') { ?>
+
+<h3>The ability to register works on the CC Network is a feature only available to those with a paid account.</h3>
+<h4>To register your own works, please consult our <a href="/donate/?utm_source=join&utm_campaign=upsell">donate</a> page for more information.</h4>
+
+<?php } ?>
         
        <!-- start main content -->
        <?php print($content) ?>
