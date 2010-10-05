@@ -18,9 +18,9 @@
 	<h2>Superhero Fundraising Page</h2>
 <?php $pcpID = creativecommons_user_has_pcp($account->uid);
 if ($pcpID < 1) { ?> 
-	<a href="/civicrm/contribute/campaign?action=add&reset=1&pageId=27"><img border="0" src="/sites/default/themes/cc/images/superhero/pcp.png" /></a>
+	<a href="/civicrm/contribute/campaign?action=add&reset=1&pageId=26"><img border="0" src="/sites/default/themes/cc/images/superhero/pcp.png" /></a>
 	<div class="pcpProfileBar">
-		<a class="start" href="/civicrm/contribute/campaign?action=add&reset=1&pageId=27"><span>Start your fundraising page</span></a>
+		<a class="start" href="/civicrm/contribute/campaign?action=add&reset=1&pageId=26"><span>Start your fundraising page</span></a>
 	</div>
 <?php } else { ?>
 	<div class="pcpProfileBar">
@@ -40,7 +40,7 @@ if ($pcpID < 1) { ?>
 
        <div class="green-box">
          <h4>Your OpenID URL</h4>
-         <input onclick="this.select()" readonly="readonly" value="https://creativecommons.net/<?=$user->name?>" type="text">
+         <input onclick="this.select()" readonly="readonly" value="https://creativecommons.net/<?=$user->name?>/" type="text">
 		<p>
 		  <small>
 		    Use this URL to log into OpenID enabled sites.
