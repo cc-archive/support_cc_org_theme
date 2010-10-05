@@ -78,11 +78,11 @@ $path_as_class = current(explode("/", $node->path));
            <!-- <li><em>Home</em></li> -->
            <li><a href="http://creativecommons.org/about/">About</a></li>
            <li><a href="http://creativecommons.org/weblog/">News</a></li>
-           <li><a href="https://support.creativecommons.org/">Donate</a></li>
+           <li><a href="/donate">Donate</a></li>
            <li><a href="http://creativecommons.org/faq">FAQ</a></li>
            <li><a href="http://wiki.creativecommons.org/">Wiki</a></li>
            <li><a href="http://creativecommons.org/projects/">Projects</a></li>
-           <li><a href="https://support.creativecommons.org/store">Store</a></li>
+           <li><a href="/store">Store</a></li>
            <li class="helpLink" id="international_list"><a href="http://creativecommons.org/international/">International</a></li>
          </ul>
       </div>
