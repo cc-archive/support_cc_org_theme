@@ -2447,6 +2447,76 @@ ul.analytics ol li {
 	background: -moz-linear-gradient(top, #d7fcff 0%, #fff 100%) #fff;
 }
 
+/* Matching challenge styles */
+.challenge-sponsors {
+	margin-top: 3em;
+}
+.challenge-sponsors ul {
+	text-align: center;
+	list-style: none;
+	margin: 0 !important;
+	padding: 1em 0;
+}
+
+.challenge-sponsors ul li {
+	vertical-align: top;
+	text-align: left;
+	display: inline-block;
+	background-color: #d3e6ea;
+	width: 240px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 0;
+	margin: 0;
+}
+
+.challenge-sponsors .challenge-sponsor-head {
+	padding: 4px;
+	margin: 5px;
+	background-color: #dff2f7;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+}
+
+.challenge-sponsor-head h1 {
+	margin: 0;
+	line-height: 1;
+}
+
+.challenge-sponsor-head p {
+	margin: 5px 0;
+	font-size: 95%;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.67);
+}
+
+.challenge-sponsor-z {
+	margin-bottom: 50px !important;
+}
+
+.challenge-sponsor-z:last-child { margin-bottom: 5px !important; }
+.challenge-sponsors .challenge-sponsor-body {
+	min-height: 190px;
+	padding: 4px;
+	margin: 0 5px 5px;
+	background-color: #fff;
+	-webkit-border-bottom-left-radius: 3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+}
+
+.challenge-sponsor-body blockquote {
+	border: none;
+	padding: 0;
+}
+
+.challenge-sponsor-body p {
+	font-size: 95%;
+	color: #666;
+}
 
 /* Campaign */
 #campaignBanner {
