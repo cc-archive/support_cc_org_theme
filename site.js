@@ -6,7 +6,7 @@ function bannerHtml() {
 	return banner;
 }
 function thundercats() {
-//    if ((location.href.match(/http\:(.*)?creativecommons.org\/$/) && !location.href.match(/pport.creativecommons.org\/$/)) || location.href.match(/creativecommons.org\/donate/)) return;
+    if (location.href.match(/creativecommons.net\/donate/) || location.href.match(/creativecommons.org\/donate/)) return;
 
     var i = Math.floor(Math.random() * 3);
     var banners = bannerHtml();
