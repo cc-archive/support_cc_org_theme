@@ -494,7 +494,25 @@ display: block; float: right; width: 227px; margin: 0; padding: 10px 0 11px 10px
 #mainContent .block .comments { margin: 35px 0; }
 
 
+/* Styling for when we don't want navigation items to be visible */
+body.noNav #sidebar-right {
+  display: none;
+}
 
+body.noNav #contentPrimary {
+  float: inherit;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.noNav #headerNav, body.noNav #sub-footer {
+  display: none;
+}
+
+body.noNav .category a {
+  color: #999;
+  color: rgba(64, 64, 64, 0.25);
+}
 
 /* styles for content areas */
 
@@ -2650,3 +2668,4 @@ ul.analytics ol li {
   padding-left: 5px;
   color: #000;
 }
+
