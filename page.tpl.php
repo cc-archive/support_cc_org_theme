@@ -1,11 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <?php global $base_url; $theme_path = $base_url .'/'. path_to_theme(); ?>
-<?php 
-// extract path, remove naything after the first slash so we can use the toplevel 
-// name as a css class for the body
-$path_as_class = current(explode("/", $node->path));
-?>
 <html xmlns="http://www.w3.org/1999/xhtml" 
   xmlns:cc="http://creativecommons.org/ns#"
   xmlns:ccnet="http://creativecommons.net/n#"
@@ -67,7 +62,7 @@ $path_as_class = current(explode("/", $node->path));
   <![endif]-->
   <script type="text/javascript" src="<?php print $theme_path ?>/site.js"></script> 
 </head>
- <body class="yui-skin-sam <?php echo $path_as_class; ?>" <?php print theme("onload_attribute"); ?>>
+ <body class="yui-skin-sam <?php echo $node->field_css_body[0]['view']; ?>" <?php print theme("onload_attribute"); ?>>
    <div id="globalWrapper">
      <div id="headerWrapper" class="box">
        <div id="headerLogo">
@@ -152,7 +147,6 @@ $path_as_class = current(explode("/", $node->path));
 <h4>To register your own works, please consult our <a href="/donate/?utm_source=join&utm_campaign=upsell">donate</a> page for more information.</h4>
 
 <?php } ?>
-        
        <!-- start main content -->
        <?php print($content) ?>
        <!-- end main content -->
