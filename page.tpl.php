@@ -60,7 +60,7 @@ $path_as_class = current(explode("/", $node->path));
   <?php } ?>
 
   <link href="<?php print $theme_path; ?>/print.css" rel="stylesheet" media="print" type="text/css" />
-  <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="<?php print $theme_path ?>/style-ie.css" />
+  <!--[if lt IE 7]><link rel="stylesheet" type="text/css" media="screen" href="<?php print $theme_path ?>/style-ie.css" />
    <style type="text/css">
     img { behavior: url("<?php print $theme_path ?>/pngie.htc"); }
    </style>	
