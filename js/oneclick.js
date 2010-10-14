@@ -179,6 +179,10 @@ function oneClickProcess(e) {
 		queryString.recur = recurring;
 		queryString.amount = recurringAmount;
 		queryString.final_receipt = 76;
+	} else {
+		// final_receipt might get set if user selects a recurring option but changes
+		// their mind in the oneclick popup.
+		queryString.final_receipt = "";
 	}
 
 	if ($("#giftCheck:checked").val() == "yes") {
