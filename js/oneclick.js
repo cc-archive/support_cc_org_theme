@@ -178,6 +178,7 @@ function oneClickProcess(e) {
 	if (recurring) {
 		queryString.recur = recurring;
 		queryString.amount = recurringAmount;
+		queryString.final_receipt = 76;
 	}
 
 	if ($("#giftCheck:checked").val() == "yes") {
