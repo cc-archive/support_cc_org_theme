@@ -3,12 +3,13 @@ function bannerHtml() {
     banner[0][0] = "&utm_medium=sbanner_1"; banner[0][1] = "Help the world harness the power of Creative Commons.";
     banner[1][0] = "&utm_medium=sbanner_2"; banner[1][1] = "Help the world harness the amazing strength of Creative Commons!";
     banner[2][0] = "&utm_medium=sbanner_3"; banner[2][1] = "Creative Commons, saving the world from failed sharing!";
+	banner[3][0] = "&utm_medium=sbanner_3"; banner[3][1] = "Creative Commons is a nonprofit organization. We need your support, donate today!";
 	return banner;
 }
 function thundercats() {
     if (location.href.match(/creativecommons.net\/donate/) || location.href.match(/creativecommons.org\/donate/)) return;
 
-    var i = Math.floor(Math.random() * 3);
+    var i = Math.floor(Math.random() * 4);
     var banners = bannerHtml();
 
     var d = document.createElement("div");
