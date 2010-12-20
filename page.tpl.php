@@ -2,6 +2,10 @@
 if (strpos($node->field_css_body[0]['view'], "donate") !== false) {
 		$isDonatePage = true;
 }
+
+if ($title == 'Access denied' && !$logged_in) {
+  header( 'Location: /user?destination=' . substr ($_SERVER['REQUEST_URI'],1 ) ); 
+};
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -39,13 +43,13 @@ if (strpos($node->field_css_body[0]['view'], "donate") !== false) {
   <?php print $styles ?>
   <?php print $scripts;  ?>
   
-  <?php if ($isDonatePage || (strpos($_SERVER["REQUEST_URI"], "pcp"))) { ?>
+  <?php  /*if ($isDonatePage || (strpos($_SERVER["REQUEST_URI"], "pcp"))) { */?>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery-ui.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.ba-url.min.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/oneclick.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.marquee.js"></script>
-  <?php } 
+  <?php  
 //  if (strpos($_SERVER["REQUEST_URI"], "pcp")) { print $scripts; } 
   ?>
   <script type="text/javascript" src="<?php print $theme_path; ?>/support.js"></script>
@@ -67,6 +71,10 @@ if (strpos($node->field_css_body[0]['view'], "donate") !== false) {
    </style>	
   <![endif]-->
   <script type="text/javascript" src="<?php print $theme_path ?>/site.js"></script> 
+
+  <link about="/" rel="sioc_service:has_service" href="/r/lookup" />
+  <link about="/r/lookup" rel="sioc_service:service_protocol" href="http://wiki.creativecommons.org/work-lookup" />
+
 </head>
  <body class="yui-skin-sam <?php echo $node->field_css_body[0]['view']; ?>" <?php print theme("onload_attribute"); ?>>
    <div id="globalWrapper">
