@@ -1,10 +1,13 @@
+<div about="/" style="display:none">
+<span property="dct:title" >CC Network</span>
+</div>
 <div id="profile_header">
 
    <div id="title" class="block">
        <? theme('user_picture', $account, 'depiction'); ?>
        <? print $profile['user_picture'] ?>
 		   <div class="title-labels">
-         <h2><?= ($account->profile_name ? $account->profile_name : $account->name) ?></h2>
+         <h2 rel="sioc:member_of" property="foaf:nick sioc:name" resource="/"><?= ($account->profile_name ? $account->profile_name : $account->name) ?></h2>
         <? if($account->profile_location) { ?><h3><?= $account->profile_location ?></h3><? } ?>
         <? if($account->profile_homepage) { ?>
           <a href="<?= $account->profile_homepage ?>"><h3><?= $account->profile_homepage ?></h3></a>
@@ -12,24 +15,6 @@
        </div>
    </div>
 </div>
-
-<?php if ($user->uid == $account->uid) { ?>
-<div class="pcp" style="margin-bottom:25px;">
-	<h2>Superhero Fundraising Page</h2>
-<?php $pcpID = creativecommons_user_has_pcp($account->uid);
-if ($pcpID < 1) { ?> 
-	<a href="/civicrm/contribute/campaign?action=add&reset=1&pageId=26><img border="0" src="/sites/default/themes/cc/images/superhero/pcp.png" /></a>
-	<div class="pcpProfileBar">
-		<a class="start" href="/civicrm/contribute/campaign?action=add&reset=1&pageId=26"><span>Start your fundraising page</span></a>
-	</div>
-<?php } else { ?>
-	<div class="pcpProfileBar">
-		<h3><a href="/civicrm/contribute/pcp/info?reset=1&id=<?php echo $pcpID; ?>">Access your fundraising page &raquo;</a></h3> 
-	</div>
-<?php } ?>
-</div>
-
-<?php } ?>
 
 <div class="profile">
 
@@ -82,13 +67,16 @@ if ($pcpID < 1) { ?>
      <strong>Your story</strong>
      <p><? print nl2br($account->profile_story) ?></p>
    </fieldset></dd>
-     &raquo; <a href="/<?=$account->name?>/edit/Profile%20Information">Edit 'Profile Information'</a>
+     &raquo; <a href="/<?=slugify($account->name)?>/edit/Profile%20Information">Edit 'Profile Information'</a>
    
    <div class="divider">&nbsp;</div>
 
    <h2>Contact Information</h2>
      <small>This information is for the internal use of CC and will not be made public on your profile.</small>
-      <? print $account->content['Contact Information']['#children'] ?>
+      <? 
+print str_replace('<a href="/'.$account->name.'/edit',
+                  '<a href="/'.slugify($account->name).'/edit>',
+                  $account->content['Contact Information']['#children']) ?>	
 
    <div class="divider">&nbsp;</div>
 
