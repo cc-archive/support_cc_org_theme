@@ -185,6 +185,10 @@ function oneClickProcess(e) {
 		queryString.final_receipt = "";
 	}
 
+	// reset the premium data if it was set before
+	if (queryString.premium) queryString.premium = "";
+	if (queryString.size) queryString.size = "";
+
 	if ($("#giftCheck:checked").val() == "yes") {
 		// premiumId is defined in a <script> block at the top of the donate page
 		queryString.premium = premiumId;
@@ -192,7 +196,7 @@ function oneClickProcess(e) {
 		// Validation
 		// Can't continue if no shirt size is selected
 		var shirtSize = $(":input[name=size]").val();
-		if (shirtSize == "") {
+		if (shirtSize.length === 0) {
 			$("#shirtError").html("Please select a size!");
 			return null;
 		}
@@ -255,7 +259,8 @@ $(document).ready(function (){
 
 				e.href = jQuery.queryString(e.href, queryString);
 				//console.log(e.href);
-
+				//return;
+			
 				// Google Analytics
 				// Since we head directly to PayPal from here, we need to give GA a fake pageview
 				// else we get a page "exit" -- hard to determine if the user left or went to PayPal.
