@@ -1,7 +1,7 @@
 function bannerHtml() {
     var banner = new Array(3); for (i = 0; i < banner.length; ++i) banner[i] = new Array(5);
 	
-	banner[0][0] = "&utm_medium=sbanner_1_elizabeth"; banner[0][1] = "elizabeth-stark.jpg"; banner[0][2] = "Creative Commons exemplifies the potential<br/>for making knowledge available to the world."; banner[0][3] = "Elizabeth Stark, founder of the Open Video Alliance"; banner[0][4] = "elizabeth-stark";
+	banner[0][0] = "&utm_medium=sbanner_1_elizabeth"; banner[0][1] = "elizabeth-stark.jpg"; banner[0][2] = "Creative Commons exemplifies the potential<br/>for making knowledge available to the world."; banner[0][3] = "Elizabeth Stark, co-founder of the Open Video Alliance"; banner[0][4] = "elizabeth-stark";
 	
 	banner[1][0] = "&utm_medium=sbanner_1_neeru"; banner[1][1] = "neerukhosla.jpg"; banner[1][2] = "To make a difference in education, we have to ensure that all students<br/>have access to information that is relevant to them."; banner[1][3] = "Neeru Khosla, founder of CK12 Foundation"; banner[1][4] = "neeru-khosla";
 
@@ -11,7 +11,7 @@ function bannerHtml() {
 }   
 
 function thundercats() {
-    if (location.href.match(/creativecommons.net\/donate/)) return;
+    if (location.href.match(/creativecommons.net\/donate/) || navigator.userAgent.indexOf("MSIE 7") || navigator.userAgent.indexOf("MSIE 6")) return;
 
     var i = Math.floor(Math.random() * 3);
     var banners = bannerHtml();
@@ -26,11 +26,6 @@ function thundercats() {
     mainContent.parentNode.insertBefore(d, mainContent);
 }
 
-if (typeof window.addEventListener !== 'undefined') {
-    window.addEventListener('load', thundercats, false);
-} else {
-    window.attachEvent('onload', thundercats);
-}
 
 if (typeof YAHOO != "undefined") { 
 
