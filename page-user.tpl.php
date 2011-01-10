@@ -38,13 +38,13 @@ $path_as_class = current(explode("/", $node->path));
   <?php print $styles ?>
   <?php print $scripts;  ?>
   
-  <?php if (($node->nid == 50) || (strpos($_SERVER["REQUEST_URI"], "pcp"))) { ?>
+  <?php /*if (($node->nid == 50) || (strpos($_SERVER["REQUEST_URI"], "pcp"))) { */?>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery-ui.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.ba-url.min.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/oneclick.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.marquee.js"></script>
-  <?php } 
+  <?php
 //  if (strpos($_SERVER["REQUEST_URI"], "pcp")) { print $scripts; } 
   ?>
   <script type="text/javascript" src="<?php print $theme_path; ?>/support.js"></script>
@@ -65,6 +65,10 @@ $path_as_class = current(explode("/", $node->path));
     img { behavior: url("<?php print $theme_path ?>/pngie.htc"); }
    </style>	
   <![endif]-->
+  
+  <link about="/" rel="sioc_service:has_service" href="/r/lookup" />
+  <link about="/r/lookup" rel="sioc_service:service_protocol" href="http://wiki.creativecommons.org/work-lookup" />
+
   <script type="text/javascript" src="<?php print $theme_path ?>/site.js"></script> 
 </head>
  <body class="yui-skin-sam user <?php echo $path_as_class; ?>" <?php print theme("onload_attribute"); ?>>

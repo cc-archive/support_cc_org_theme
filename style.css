@@ -1407,7 +1407,7 @@ div.level {
 	-webkit-border-radius: 5px;
 	padding: 0;
 	padding-bottom: 1em;
-	margin: 0 0.825em 1em 0;
+	margin: 20px 0.825em 1em 0;
 	background: -moz-linear-gradient(center top, #fafafa 85%, #ddd 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.85, #fafafa), color-stop(1, #ddd));
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0.3, #F7F7F8), color-stop(0.58, #EDEDED), color-stop(0.95, #DADADA), to(#D7D7D7));
@@ -1705,10 +1705,10 @@ img.gifts {
 div#crm-container {
 	overflow: visible !important;
 }
-#pcp { position: relative; }
+#pcp { position: relative; overflow-y: auto; margin-bottom: 20px; padding-bottom:20px; border-bottom: 1px solid #ddd; }
 
 #thermometer {
-   padding-left: 175px;
+   text-align: center;
    padding-top: 25px;
    padding-bottom: 1em;
    margin-bottom: 2.5em;
@@ -1716,12 +1716,13 @@ div#crm-container {
    background: url(images/item-background.png) no-repeat 50% 100%;
  }
  #thermoDetails {
-   width: 400px;
+   display: inline-block;
+   width: 500px;
    text-align: center;
-   float: left;
    margin-left: 25px;
  }
  #thermoBar {
+   display: inline-block;
    width: 400px;
    height: 25px;
    border:1px solid #bbb;
@@ -1746,15 +1747,12 @@ div#crm-container {
  }
  
  #thermoGoal {
-   padding-left: 430px;
    padding-top: 4px;
    font-size: 1.25em;
  }
  
  #userSidebar {
-   position: absolute;
-   top: 0;
-   left: 0;
+   float: left;
    width: 165px;
    text-align: center;
  }
@@ -1836,7 +1834,7 @@ div#crm-container {
 
 #create {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 30px;
 }
 
 #create a {
@@ -1894,7 +1892,7 @@ div#crm-container {
 }
 
 /* PROGRESS METER */
-#campaign {
+/*#campaign {
 background-color: #ccc; 
 height: 46px;
 max-width: 640px;
@@ -1919,7 +1917,7 @@ margin-top: 2px;
 #campaign .title a {
 color: #280048;
 }
-
+/*
 #campaign .progress {
 position: relative;
 cursor:pointer; 
@@ -1960,24 +1958,6 @@ margin-left: 7px;
 #campaign .results a {
 	/*color: #131313;*/
 	color: #280048;
-}
-
-.content #campaign {
- /* background-color: transparent !important;
- */ padding: 5px;
-  text-align: left;
-  height: auto;
-  position: relative;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  background-color: #280048;
-}
-
-.content #campaign .progress {
-  margin-left: 0;
-  margin-top: 0;
-  width: 98%;
-  -moz-border-radius: 2px;
 }
 
 .content #campaign .results {
@@ -2611,6 +2591,7 @@ ul.analytics ol li {
 .donateButton {
 	display:inline-block;
 	margin: 0 auto;
+  margin-bottom: 10px;
 	width:165px;
 	text-align:center;
 	background:-webkit-gradient(linear, left bottom, left top, from(#c9eff9), to(#b0d2da));

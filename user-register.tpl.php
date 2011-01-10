@@ -5,10 +5,14 @@
    echo drupal_render($form['form_build_id']);
    echo drupal_render($form['form_id']);
 ?>
+
+
 <div class="field">
+    <? $form['account']['name']['#description'] = "2 or more characters; Spaces are not allowed; punctuation is not allowed except for periods, hyphens, and underscores." ?>
     <?= drupal_render($form['account']['name']); ?>
   </div>
   <div class="field">
+    <? $form['account']['mail']['#description'] = "If you've already made a donation to CC, use the same email that was used in the donation process in order to create a premium level account. Your account's email address can be changed to a different email address once your account has been created.";?>
     <?= drupal_render($form['account']['mail']); ?>
   </div>
   <div class="field">
