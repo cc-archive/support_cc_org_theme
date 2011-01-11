@@ -160,6 +160,8 @@ if ($title == 'Access denied' && !$logged_in) {
 <h3>The ability to register works on the CC Network is a feature only available to those with a paid account.</h3>
 <h4>To register your own works, please consult our <a href="/donate/?utm_source=join&utm_campaign=upsell">donate</a> page for more information.</h4>
 
+<h4>If you have recently made a donation to Creative Commons and are seeing this message, there may be an issue with your account. To verify that we have a correct record of your contribution history, please consult our <a href="/a/redeem">account renewal page</a>.</h4>
+
 <?php } ?>
        <!-- start main content -->
        <?php print($content) ?>
