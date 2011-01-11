@@ -1,0 +1,13 @@
+name = CC Support Theme 2010
+description = Theme for the CC Support site
+core = 6.x
+engine = phptemplate
+version = 1.0
+
+regions[left] = Left sidebar
+regions[right] = Right sidebar
+regions[content] = Content
+regions[header] = Header
+regions[footer] = Footer
+regions[special_content] = Special content
+regions[features] = Features
