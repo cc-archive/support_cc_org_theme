@@ -111,10 +111,9 @@ if ($title == 'Access denied' && !$logged_in) {
 					<h2><img src="<?php print $theme_path; ?>/images/superhero/cc-superhero-hero.png" alt="[CC]" border="0" /> <span>Superheroes</span></h2>
 				<?php } else { ?>
 				<div class="title-labels">
-					<h2><? if (strtolower($node->type) == "product") { echo current($node->taxonomy)->name . ":"; } ?> <?php print $title ?></h2>
+					<h1><? if (strtolower($node->type) == "product") { echo current($node->taxonomy)->name . ":"; } ?> <?php print $title ?></h1>
 				<?php } ?>
 				</div>
-				<h3 class="subtitle"><?php print $node->field_subtitle[0]['view'] ?></h3>
 			</div>
 		
 <?php if ($tabs != "") { ?>
