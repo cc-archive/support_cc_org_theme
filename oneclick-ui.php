@@ -23,8 +23,8 @@
 		</div>
 		<div id="premiums" style="display:block;">
 			<p style="float: right">
-                <img src="/sites/default/files/cc-shirt-superhero.png" alt="Superhero Campaign Shirt"/><br/>
-				<small style="font-size:10px; line-height:1.2">Superhero Campaign T-Shirt</small>
+                <img src="/sites/default/files/cc-shirt-ft.png" alt="CC Logo Shirt"/><br/>
+				<small style="font-size:10px; line-height:1.2">CC Logo T-Shirt</small>
 			</p>
 
 			<p>
