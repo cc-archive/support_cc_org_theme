@@ -791,6 +791,7 @@ ul.nav li:last-child {
 #title h1 {
 	font-size: 45px;
 	margin-bottom: 0;
+	line-height: 1;
 }
 
 #footer {
