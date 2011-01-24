@@ -1483,9 +1483,13 @@ ul.indexLinks {
 	list-style: none;
 	padding-left: 0;
 	margin-left: 0;
-	width: 46%;
 	display: inline-block;
 	vertical-align:top;
+}
+
+ul.indexLinks li {
+	padding-left: 0;
+	margin-left: 0;
 }
 
 /* End of index css */
