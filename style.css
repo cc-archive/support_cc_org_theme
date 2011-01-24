@@ -1972,6 +1972,7 @@ ul.other-ways, ul.other-ways ul {
 ul.other-ways li {
 	background: url(images/item-background.png) no-repeat 50% 100%;
 	padding: 25px 0;
+	margin-left: 0;
 }
 
 ul.other-ways ul li {
@@ -2326,13 +2327,13 @@ margin-left: 7px;
 
 
 /* SIDEBRA */
-#sidebar-right ul.menu,  
+#sidebar-right ul.menu,
 #features ul {
   list-style:  none;
   margin: 5px 0 0 0 !important;
   padding: 0;
 }
-#sidebar-right ul li, 
+#sidebar-right ul li,
 #features ul li {
   margin-bottom: 10px;
   margin-left: 0;
