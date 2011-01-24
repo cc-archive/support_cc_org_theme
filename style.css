@@ -892,7 +892,7 @@ h2.subhead {
 
 /* features sidebar */
 
-#mainContent .feature { 
+.feature { 
 	/*border-bottom:  1px solid #ddd;*/ 
 	padding-bottom:  30px; 
 	margin-bottom: 25px; 
@@ -916,7 +916,7 @@ h2.subhead {
 #page .block h4.meta { color: #aaa; margin-bottom: 7px; font-variant: normal; font-size: 105%; padding-left: 0 !important; }
 #page .block img { border: 0; }
 #page .block img.feature { display: block; }
-#page .block ul, #mainContent .block ol { margin-left: 0px; margin-bottom: 0px; }
+#page .block ul, .block ol { margin-left: 0px; margin-bottom: 0px; }
 #page .block ol ol { list-style-type: lower-roman; }
 #page .block .publish-pics { float: left; margin-right: 10px; margin-bottom: 25px; padding: 3px; border: 1px solid #ccc; }
 #page .block .excerpt { margin-left:  170px; }
@@ -1035,10 +1035,10 @@ ol.letters ol {
   font-size: 0.9em;
   font-weight: bold;
 }
-#mainContent .node .terms {
+.node .terms {
   display: none;
 }
-#mainContent .sticky { 
+.sticky { 
   border: 1px solid #eee;
   padding: 0.5em;
 }
