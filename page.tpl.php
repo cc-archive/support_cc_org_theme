@@ -126,7 +126,7 @@ if ($title == 'Access denied' && !$logged_in) {
 
 
 		<div class="container_16">
-			<div id="" class="block page <?php $colClass ?> grid_13">
+		<div id="" class="block page <?php $colClass ?> <?php if ($isDonatePage) { ?> prefix_1 <? }?> grid_13">
 				<?php if ($help != ""): ?>
 				<p id="help"><?php print $help ?></p>
 				<?php endif; ?>
