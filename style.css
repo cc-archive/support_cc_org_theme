@@ -2868,6 +2868,7 @@ ul.analytics ol li {
 }
 
 .superhero h2, .superhero h2 a {
+	font-size: 20px;
 	color: #fcee21;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
 }
