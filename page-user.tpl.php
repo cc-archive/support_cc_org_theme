@@ -204,7 +204,7 @@ $path_as_class = current(explode("/", $node->path));
 			<div class="grid_3 social alpha omega">
 				<dl class="social_links">
 					<dt><a href="https://creativecommons.net/civicrm/mailing/subscribe?reset=1&gid=121">Subscribe to Newsletter</a></li>
-					<dt class="fb"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcreativecommons.org&amp;layout=button_count&amp;show_faces=false&amp;width=150&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe></li>
+					<dt class="fb"><iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcreativecommons.org&amp;layout=button_count&amp;show_faces=false&amp;width=150&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe></li>
 					<dt><a href="http://twitter.com/creativecommons">Follow on Twitter</a></li>
 					<dt><a href="http://identi.ca/creativecommons">Follow on Identi.ca</a></li>
 				</dl>
