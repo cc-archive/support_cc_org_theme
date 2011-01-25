@@ -2596,7 +2596,7 @@ ul.other-analytics {
 ul.analytics-wide {
 	float: inherit;
 	width: 700px;
-	margin-bottom: 0 !important;
+	margin-bottom: 25px !important;
 }
 
 ul.analytics li a {
