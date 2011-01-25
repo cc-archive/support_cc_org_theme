@@ -25,7 +25,7 @@
 
        <div class="green-box">
          <h4>Your OpenID URL</h4>
-         <input onclick="this.select()" readonly="readonly" value="https://creativecommons.net/<?=$user->name?>/" type="text">
+         <input onclick="this.select()" readonly="readonly" value="<?=commoner_profiles_url($user->uid)?>" type="text">
 		<p>
 		  <small>
 		    Use this URL to log into OpenID enabled sites.
@@ -67,7 +67,7 @@
      <strong>Your story</strong>
      <p><? print nl2br($account->profile_story) ?></p>
    </fieldset></dd>
-     &raquo; <a href="/<?=slugify($account->name)?>/edit/Profile%20Information">Edit 'Profile Information'</a>
+     &raquo; <a href="<?=commoner_profiles_url($account->uid)?>edit/Profile%20Information">Edit 'Profile Information'</a>
    
    <div class="divider">&nbsp;</div>
 
@@ -75,7 +75,7 @@
      <small>This information is for the internal use of CC and will not be made public on your profile.</small>
       <? 
 print str_replace('<a href="/'.$account->name.'/edit',
-                  '<a href="/'.slugify($account->name).'/edit>',
+                  '<a href="'.commoner_profiles_url($account->uid).'edit',
                   $account->content['Contact Information']['#children']) ?>	
 
    <div class="divider">&nbsp;</div>
@@ -93,4 +93,3 @@ print str_replace('<a href="/'.$account->name.'/edit',
 
 <? } ?>
 </div>
-
