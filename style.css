@@ -2506,13 +2506,13 @@ table#store td, table#store th {
 
 /* SUPPORTERS */
 
-.supporters ul, .supporters li {
+.supporters .block ul, .supporters .block li {
 	list-style: none;
 	margin-left: 0;
 	padding-left: 0;
 }
 
-.supporters .100_latest {
+.supporters .latest_100 {
 	-webkit-column-count: 2;
 	-moz-column-count: 2;
 }
