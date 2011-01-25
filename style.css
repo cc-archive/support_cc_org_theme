@@ -2506,6 +2506,17 @@ table#store td, table#store th {
 
 /* SUPPORTERS */
 
+.supporters ul, .supporters li {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.supporters .100_latest {
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+}
+
 .block .col ul, .block .col ul li {
 	margin-left: 0;
 	padding-left: 0;
