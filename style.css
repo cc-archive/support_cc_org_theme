@@ -2912,11 +2912,7 @@ ul.analytics ol li {
 }
 
 #superheroBubble {
-  z-index: -1000;
-  position: absolute;
-  left: -20px;
-  top: 30px;
-  opacity: 0.45;
+	display: none;
 }
 
 .superheroContent, .superheroBubbleUser {
