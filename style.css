@@ -1509,6 +1509,7 @@ body.donate {
 	font-size: 1.35em;
 	font-weight: normal;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+	margin-bottom: 0;
 }
 
 h2.lede img { margin-right: 15px; }
