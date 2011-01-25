@@ -20,7 +20,7 @@ $path_as_class = current(explode("/", $node->path));
  <head>
   <title><?php print $head_title ?></title>
   <meta http-equiv="Content-Style-Type" content="text/css" />
-
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
 <?php /* removing YUI 
   <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.2/build/container/assets/skins/sam/container.css" /> 
   <script type="text/javascript" src="http://yui.yahooapis.com/2.5.2/build/yahoo-dom-event/yahoo-dom-event.js"></script> 
@@ -30,7 +30,7 @@ $path_as_class = current(explode("/", $node->path));
 
 	<?php /*<script type="text/javascript" charset="utf-8" src="<?php print $theme_path; ?>/site.js"></script>*/ ?>
   
-  <?php if (($node->nid == 50) || (strpos($_SERVER["REQUEST_URI"], "pcp"))) { ?>
+  <?php if ($isDonatePage || (strpos($_SERVER["REQUEST_URI"], "pcp"))) { ?>
   <link rel="stylesheet" href="<?php print $theme_path; ?>/css/ui-lightness/jquery-ui-1.7.2.custom.css" type="text/css" media="screen" title="no title" charset="utf-8" />
   <?php } ?>
 
@@ -38,13 +38,13 @@ $path_as_class = current(explode("/", $node->path));
   <?php print $styles ?>
   <?php print $scripts;  ?>
   
-  <?php /*if (($node->nid == 50) || (strpos($_SERVER["REQUEST_URI"], "pcp"))) { */?>
+  <?php  /*if ($isDonatePage || (strpos($_SERVER["REQUEST_URI"], "pcp"))) { */?>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery-ui.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.ba-url.min.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/oneclick.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.marquee.js"></script>
-  <?php
+  <?php  
 //  if (strpos($_SERVER["REQUEST_URI"], "pcp")) { print $scripts; } 
   ?>
   <script type="text/javascript" src="<?php print $theme_path; ?>/support.js"></script>
@@ -60,101 +60,164 @@ $path_as_class = current(explode("/", $node->path));
   <?php } ?>
 
   <link href="<?php print $theme_path; ?>/print.css" rel="stylesheet" media="print" type="text/css" />
-  <!--[if IE]><link rel="stylesheet" type="text/css" media="screen" href="<?php print $theme_path ?>/style-ie.css" />
+  <!--[if lt IE 7]><link rel="stylesheet" type="text/css" media="screen" href="<?php print $theme_path ?>/style-ie.css" />
    <style type="text/css">
     img { behavior: url("<?php print $theme_path ?>/pngie.htc"); }
    </style>	
   <![endif]-->
-  
+  <script type="text/javascript" src="<?php print $theme_path ?>/site.js"></script> 
+
   <link about="/" rel="sioc_service:has_service" href="/r/lookup" />
   <link about="/r/lookup" rel="sioc_service:service_protocol" href="http://wiki.creativecommons.org/work-lookup" />
 
-  <script type="text/javascript" src="<?php print $theme_path ?>/site.js"></script> 
 </head>
- <body class="yui-skin-sam user <?php echo $path_as_class; ?>" <?php print theme("onload_attribute"); ?>>
-   <div id="globalWrapper">
-     <div id="headerWrapper" class="box">
-       <div id="headerLogo">
-         <h1><a href="http://creativecommons.org/"><span>Creative Commons</span></a></h1>
-       </div>
-       <div id="headerNav">
-         <ul>
-           <!-- <li><em>Home</em></li> -->
-           <li><a href="http://creativecommons.org/about/">About</a></li>
-           <li><a href="http://creativecommons.org/weblog/">News</a></li>
-           <li><a href="https://support.creativecommons.org/">Donate</a></li>
-           <li><a href="http://creativecommons.org/faq">FAQ</a></li>
-           <li><a href="http://wiki.creativecommons.org/">Wiki</a></li>
-           <li><a href="http://creativecommons.org/projects/">Projects</a></li>
-           <li><a href="https://support.creativecommons.org/store">Store</a></li>
-           <li class="helpLink" id="international_list"><a href="http://creativecommons.org/international/">International</a></li>
-         </ul>
-      </div>
-     </div>
+ <body class="yui-skin-sam <?php echo $node->field_css_body[0]['view']; ?>" <?php print theme("onload_attribute"); ?>>
 
-     <div id="mainContent" class="box <?php $classary = explode(" ", $title); print strtolower($classary[0]); ?>">
-       <div id="contentPrimary">
+	<a id="top"></a>
+	<div id="header" class="container_16">
+		<div class="container_16">
+			<div class="grid_16 ">
+				<h1 id="logo"><a href="http://creativecommons.org/"><span>Creative Commons</span></a></h1>
 
-<? if( !(ereg("page-user-[0-9]+", $template_files[1])) ) { ?>
-   
- <div id="title" class="block">
-		   <?php if (strtolower($node->type) != "product") { ?>	
-		   <h3 class="category"><a href="/">Support CC</a></h3>
-		   <?php } else if ($node->uid == 13) { ?>
-			<h3 class="category"><a href="/store">Store</a></h3>
-		   <?php } ?>
-		   <div class="title-labels">
-			 <h2><? if (strtolower($node->type) == "product") { echo current($node->taxonomy)->name . ":"; } ?> <?php print $title ?></h2>
-           </div>
-		   <h3 class="subtitle"><?php print $node->field_subtitle[0]['view'] ?></h3>
-         </div>
-<? } ?>
-
-<?php if ($features != "") { 
-      $colClass = "sideContentSpace"; ?>
-      <div id="blocks">  
-<?php } ?>
-      <div id="" class="block page <?php $colClass ?>">
-<?php if ($tabs != ""): ?>
-          <?php print $tabs ?>
-<?php endif; ?>
-       <?php if ($help != ""): ?>
-       <p id="help"><?php print $help ?></p>
-       <?php endif; ?>
-        
-       <?php if ($messages != ""): ?>
-       <div id="message"><?php print $messages ?></div>
-       <?php endif; ?>
-
-       <!-- start main content -->
-       <?php print($content) ?>
-       <!-- end main content -->
-
-<?php if ($features != "") { ?>
-		  </div>
+				<ul class="nav">
+					<li><a href="http://creativecommons.org/about">About</a></li>
+					<li><a href="http://creativecommons.org/weblog/">Blog</a></li>
+					<li><a href="https://creativecommons.net/donate">Donate</a></li>
+					<li><a href="http://wiki.creativecommons.org/FAQ">FAQ</a></li>
+					<li><a href="http://wiki.creativecommons.org/">Wiki</a></li>
+					<li><a href="http://creativecommons.org/affiliates">International</a></li>
+				</ul>
+			</div>
 		</div>
-      <div id="sideContent" class="content-box"><?php print $features ?></div>
-<?php } else { ?>
-      </div>
-<?php } ?> 
 	</div>
-	<!-- mainContent --> 
-	   <?php #if ($sidebar_right != ""): ?>
-	   <?php if ($right != ""): ?>
-	 <div class="content-box" id="sidebar-right">
-		<?php print $right ?>
+
+	<div id="page">
+		<div id="title" class="container_16">
+			<div class="grid_16">
+				<?php if ($isSuperhero) {?>
+				<h3 class="category"><a href="/superheroes"><img src="<?php print $theme_path; ?>/images/superhero/cc-superhero-hero-small.png" alt="[CC]" border="0" /> <span>Superheroes</span></a></h3>
+				<?php } else if (strtolower($node->type) != "product") { ?>	
+				<h3 class="category"><a href="/">Support CC</a></h3>
+				<?php } else if ($node->uid == 13) { ?>
+				<h3 class="category"><a href="/store">Store</a></h3>
+				<?php } ?>
+				<?php if ($isSuperheroIndex) { ?>
+				<div class="title-labels superheroTitle">
+					<h2><img src="<?php print $theme_path; ?>/images/superhero/cc-superhero-hero.png" alt="[CC]" border="0" /> <span>Superheroes</span></h2>
+				<?php } else { ?>
+				<div class="title-labels">
+					<h1><? if (strtolower($node->type) == "product") { echo current($node->taxonomy)->name . ":"; } ?> <?php print $title ?></h1>
+				<?php } ?>
+				</div>
+			</div>
+		
+<?php if ($tabs != "") { ?>
+			<div class="grid_16">
+				<?php print $tabs ?>
+			</div>
+<?php } ?>
+		</div>
+
+
+
+		<div class="container_16">
+		<div id="" class="block page <?php $colClass ?> <?php if ($isDonatePage) { ?> prefix_1 <? }?> grid_13">
+				<?php if ($help != ""): ?>
+				<p id="help"><?php print $help ?></p>
+				<?php endif; ?>
+
+				<?php if ($messages != ""): ?>
+				<div id="message"><?php print $messages ?></div>
+				<?php endif; ?>
+
+				<?php if($title == "Access denied" && substr( $_SERVER['REQUEST_URI'], 'https://creativecommons.net/') == '/r/add/') { ?>
+
+				<h3>The ability to register works on the CC Network is a feature only available to those with a paid account.</h3>
+				<h4>To register your own works, please consult our <a href="/donate/?utm_source=join&utm_campaign=upsell">donate</a> page for more information.</h4>
+
+				<h4>If you have recently made a donation to Creative Commons and are seeing this message, there may be an issue with your account. To verify that we have a correct record of your contribution history, please consult our <a href="/a/redeem">account renewal page</a>.</h4>
+
+				<?php } ?>
+				
+				<!-- start main content -->
+				<?php print($content) ?>
+				<!-- end main content -->
+
+			</div>
+			
+			<?php if ($right != ""): ?>
+			<div class="grid_3" id="sidebar-right">
+				<?php print $right ?>
+			</div>
+			<?php endif; ?>
+		</div>
 	</div>
-     <?php endif; ?>
-  </div>
 
   <div id="footer">
-    <div id="footerContent" class="box">
-    <?php print $footer_message;?>
-    <?php print $footer; ?>
-    </div>
+		<div class="container_16">
+				<div class="grid_2 alpha" id="top_link"><a href="#top">&#8682;</a></div>
+			<div class="clear"></div>
+			<div class="grid_6">
+				<h4>Creative Commons</h4>
+				<dl class="grid_2 alpha">
+					<dt><a href="http://creativecommons.org/about">About</a></li>
+					<dt><a href="http://creativecommons.org/who-uses-cc">Who Uses CC?</a></li>
+					<dt><a href="http://creativecommons.org/culture">Culture</a></li>
+					<dt><a href="http://creativecommons.org/education">Education</a></li>
+					<dt><a href="http://creativecommons.org/science">Science</a></li>
+				</dl>
+				<dl class="grid_2">
+					<dt><a href="http://creativecommons.org/weblog">Blog</a></li>
+					<dt><a href="http://wiki.creativecommons.org/Case_Studies">Case Studies</a></li>
+					<dt><a href="http://creativecommons.org/interviews">CC Talks With...</a></li>
+					<dt><a href="http://creativecommons.org/newsletter">Newsletters</a></li>
+					<dt><a href="http://creativecommons.org/about/downloads">Downloads</a></li>
+				</dl>
+				<dl class="grid_2 omega">
+					<dt><a href="http://creativecommons.org/affiliates">International</a></li>
+					<dt><a href="http://wiki.creativecommons.org/Events">Events</a></li>
+					<dt><a href="http://creativecommons.org/about/people">People</a></li>
+					<dt><a href="http://creativecommons.org/about/press">Press Room</a></li>
+					<dt><a href="http://creativecommons.org/contact">Contact</a></li>
+				</dl>
+			</div>
+			<div class="grid_2 prefix_1">
+				<h4>Licensing</h4>
+				<dl class="grid_2 alpha omega">
+					<dt><a href="http://creativecommons.org/licenses">The Licenses</a></li>
+					<dt><a href="http://creativecommons.org/choose">Choose License</a></li>
+					<dt><a href="http://wiki.creativecommons.org/FAQ">FAQ</a></li>
+					<dt><a href="http://search.creativecommons.org/">Find Content</a></li>
+					<dt><a href="http://wiki.creativecommons.org/Developers">Developers</a></li>
+				</dl>
+			</div>
+			<div class="grid_2 prefix_1 suffix_1">
+				<h4>Supporting CC</h4>
+				<dl class="grid_2 alpha omega">
+					<dt><a href="https://creativecommons.net/donate">Donate</a></li>
+					<dt><a href="https://creativecommons.net/store">Store</a></li>
+					<dt><a href="https://creativecommons.net/supporters">Supporters</a></li>
+					<dt><a href="https://creativecommons.net/corporate">Corporate Giving</a></li>
+					<dt><a href="https://creativecommons.net/figures">Facts &amp; Figures</a></li>
+				</dl>
+			</div>
+			<div class="grid_3 social alpha omega">
+				<dl class="social_links">
+					<dt><a href="https://creativecommons.net/civicrm/mailing/subscribe?reset=1&gid=121">Subscribe to Newsletter</a></li>
+					<dt class="fb"><iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcreativecommons.org&amp;layout=button_count&amp;show_faces=false&amp;width=150&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe></li>
+					<dt><a href="http://twitter.com/creativecommons">Follow on Twitter</a></li>
+					<dt><a href="http://identi.ca/creativecommons">Follow on Identi.ca</a></li>
+				</dl>
+			</div>
+		</div>
+		<div class="container_16" id="footer_license">
+		  <?php print $footer_message;?>
+		  <?php print $footer; ?>
+		</div>
+  </div>
 <!-- footer -->
  <?php print $closure;?>
-  </div>
   <script type="text/javascript">var cj = jQuery.noConflict(); $ = cj;</script>
  </body>
 </html>
+
