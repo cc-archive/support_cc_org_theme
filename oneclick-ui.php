@@ -28,7 +28,7 @@
 			</p>
 
 			<p>
-				<input id="giftCheck" onchange="hidePremiums(this);" name="giftCheck" type="checkbox" checked value="yes" class="form-checkbox" />
+				<input id="giftCheck" name="giftCheck" type="checkbox" checked value="yes" class="form-checkbox" />
 				<label for="giftCheck">I would like to receive a gift for my donation.</label>
 			</p>
 			<div id="tshirtSize">
