@@ -779,6 +779,10 @@ ul.nav li:last-child {
 	margin-right: 0;
 }
 
+.noNav ul.nav {
+	display: none;
+}
+
 #page {
   position: relative;
 }
@@ -2505,6 +2509,17 @@ table#store td, table#store th {
 /* End of Store ubercart */
 
 /* SUPPORTERS */
+
+.supporters .block ul, .supporters .block li {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.supporters .latest_100 {
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+}
 
 .block .col ul, .block .col ul li {
 	margin-left: 0;
