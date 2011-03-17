@@ -135,7 +135,7 @@ if ($title == 'Access denied' && !$logged_in) {
 				<div id="message"><?php print $messages ?></div>
 				<?php endif; ?>
 
-				<?php if($title == "Access denied" && substr( $_SERVER['REQUEST_URI'], 'https://creativecommons.net/') == '/r/add/') { ?>
+				<?php if($title == "Access denied" && strstr( $_SERVER['REQUEST_URI'], 'https://creativecommons.net/') == '/r/add/') { ?>
 
 				<h3>The ability to catalogue works on the CC Network is a feature only available to those with a premium account.</h3>
 				<h4>To catalogue your own works, please consult our <a href="/donate/?utm_source=join&utm_campaign=upsell">donate</a> page for more information.</h4>
