@@ -47,7 +47,7 @@ if ($title == 'Access denied' && !$logged_in) {
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery-ui.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.ba-url.min.js"></script>
-  <script type="text/javascript" src="<?php print $theme_path; ?>/js/oneclick.js"></script>
+  <script type="text/javascript" src="<?php print $theme_path; ?>/js/oneclick.js?110126"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.marquee.js"></script>
   <?php  
 //  if (strpos($_SERVER["REQUEST_URI"], "pcp")) { print $scripts; } 
@@ -135,10 +135,10 @@ if ($title == 'Access denied' && !$logged_in) {
 				<div id="message"><?php print $messages ?></div>
 				<?php endif; ?>
 
-				<?php if($title == "Access denied" && substr( $_SERVER['REQUEST_URI'], 'https://creativecommons.net/') == '/r/add/') { ?>
+				<?php if($title == "Access denied" && strstr( $_SERVER['REQUEST_URI'], 'https://creativecommons.net/') == '/r/add/') { ?>
 
-				<h3>The ability to register works on the CC Network is a feature only available to those with a paid account.</h3>
-				<h4>To register your own works, please consult our <a href="/donate/?utm_source=join&utm_campaign=upsell">donate</a> page for more information.</h4>
+				<h3>The ability to catalogue works on the CC Network is a feature only available to those with a premium account.</h3>
+				<h4>To catalogue your own works, please consult our <a href="/donate/?utm_source=join&utm_campaign=upsell">donate</a> page for more information.</h4>
 
 				<h4>If you have recently made a donation to Creative Commons and are seeing this message, there may be an issue with your account. To verify that we have a correct record of your contribution history, please consult our <a href="/a/redeem">account renewal page</a>.</h4>
 

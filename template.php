@@ -21,12 +21,16 @@ function phptemplate_user_picture($account, $size = 'depiction') {
   }
 }
 
-function support2009_theme($existing, $type, $theme, $path) {
+function support2010_theme($existing, $type, $theme, $path) {
   return array(
     // tell Drupal what template to use for the user register form
     'user_register' => array(
       	'arguments' => array('form' => NULL),
       	'template' => 'user-register', // this is the name of the template
+    ),
+    'user_login' => array(
+      'template' => 'user-login',
+      'arguments' => array('form' => NULL),
     ),
     'user_login_block' => array (
 	    'template' => 'user-login-block',
