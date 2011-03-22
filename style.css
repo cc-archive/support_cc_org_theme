@@ -2604,6 +2604,11 @@ ul.analytics {
   vertical-align: top;
 }
 
+ul.donation-analytics {
+  width: auto;
+  padding-left: 5px;
+}
+
 ul.other-analytics {
   margin-left: 16px !important;
 }
@@ -2628,9 +2633,10 @@ ul.analytics li a:hover {
 
 ul.analytics li.stat {
 	display: inline-block;
+  vertical-align: top;
 	width: 330px;
 	position: relative;
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 	margin-right: 5px;
 	margin-left: 0;
 	padding: 10px;
