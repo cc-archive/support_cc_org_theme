@@ -92,7 +92,7 @@ OneClick.prototype = {
     // Log when the oneclick dialog gets opened, hopefully doesn't confuse GA 
 		if (typeof(_gat) == "object") {
 			var pageTracker = _gat._getTracker("UA-2010376-4");
-			pageTracker._trackPageview("/donate/oneclick/" + donation);
+			pageTracker._trackPageview("/donate/oneclick/" + this.donation);
 		}
 		
 		var oneclick = this;
