@@ -226,7 +226,8 @@ if ($title == 'Access denied' && !$logged_in) {
 
 <?php
   if ( ! (preg_match('/openid\/provider/', $_SERVER['REQUEST_URI']) ||
-       preg_match('/openid\/provider/', $_SERVER['HTTP_REFERER'])) ) {
+       preg_match('/openid\/provider/', $_SERVER['HTTP_REFERER']) ||
+       preg_match('/o/endpoint/', $_SERVER['REQUEST_URI'])) ) {
     $ga_code = <<<GACODE
   <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
