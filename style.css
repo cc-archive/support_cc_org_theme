@@ -1703,7 +1703,7 @@ ul#giftsList li img {
 #giftsList span {
 	display: inline-block;
 	background-color: #f0f0f0;
-	padding: 2px 4px;
+	padding: 2px;
 	margin-right: 0px;
  	font-size: 90%;
 	-moz-border-radius: 4px;
