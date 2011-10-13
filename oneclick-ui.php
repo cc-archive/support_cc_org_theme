@@ -6,10 +6,9 @@
 			<select name="customAmountSelection" id="customAmountSelection" onchange="donationSelection(this);" size="1">
 				<option value="">Choose your donation amount</option>
 				<option value="25">$25</option>
-				<option value="75">$75</option>
+				<option value="50">$50</option>
 				<option value="150">$150</option>
 				<option value="300">$300</option>
-				<option value="500">$500</option>
 				<option value="1000">$1000</option>
 				<option value="other">Other</option>
 			</select>

@@ -51,11 +51,11 @@ OneClick.prototype = {
 	},
 	
 	display: function() {
-		(this.donation < 75) ? $('#noPremiums').show() : $('#noPremiums').hide();
+		(this.donation < 50) ? $('#noPremiums').show() : $('#noPremiums').hide();
 
-		(this.donation >= 75) ? $('#premiums').show() : $('#premiums').hide();
-		(this.donation >= 75) ? $("#giftCheck").val(["yes"]) : $("#giftCheck").val(["no"]);
-		(this.donation >= 75) ? $('#tshirtSize').show() : $('#tshirtSize').hide();
+		(this.donation >= 50) ? $('#premiums').show() : $('#premiums').hide();
+		(this.donation >= 50) ? $("#giftCheck").val(["yes"]) : $("#giftCheck").val(["no"]);
+		(this.donation >= 50) ? $('#tshirtSize').show() : $('#tshirtSize').hide();
 
 		if (this.e.queryString.recur == 1) {
 			$("#recur_annual").attr("checked", "checked"); 
@@ -68,7 +68,7 @@ OneClick.prototype = {
 			$("#recur_none").attr("checked", "checked");
 		}
 
-		if (this.donation >= 100) {
+		if (this.donation >= 150) {
 			if (this.e.queryString.recur && !this.adventure) {
 				recurringAmount = this.e.queryString.amount;
 			} else {
