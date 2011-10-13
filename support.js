@@ -3,8 +3,8 @@ $(document).ready(function(){
 
 // jQuery rewrite of YUI event listener
 $("#donation").keyup(function() {
-	var levels = new Array(75, 150, 300, 500, 1000);
-	var custom_payments = 100; /* minimum $ amount for monthly payments */
+	var levels = new Array(25, 50, 150, 300, 1000);
+	var custom_payments = 150; /* minimum $ amount for monthly payments */
 	var value = this.value;
 	var split_custom = $("#split-custom");
 	
