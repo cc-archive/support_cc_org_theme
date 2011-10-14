@@ -21,14 +21,8 @@ $path_as_class = current(explode("/", $node->path));
   <title><?php print $head_title ?></title>
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
-<?php /* removing YUI 
-  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.2/build/container/assets/skins/sam/container.css" /> 
-  <script type="text/javascript" src="http://yui.yahooapis.com/2.5.2/build/yahoo-dom-event/yahoo-dom-event.js"></script> 
-  <script type="text/javascript" src="http://yui.yahooapis.com/2.5.2/build/animation/animation-min.js"></script> 
-  <script type="text/javascript" src="http://yui.yahooapis.com/2.5.2/build/container/container-min.js"></script> 
-*/ ?>
 
-	<?php /*<script type="text/javascript" charset="utf-8" src="<?php print $theme_path; ?>/site.js"></script>*/ ?>
+  <?php include 'page-head-adapter.php'; ?>
   
   <?php if ($isDonatePage || (strpos($_SERVER["REQUEST_URI"], "pcp"))) { ?>
   <link rel="stylesheet" href="<?php print $theme_path; ?>/css/ui-lightness/jquery-ui-1.7.2.custom.css" type="text/css" media="screen" title="no title" charset="utf-8" />
@@ -73,23 +67,7 @@ $path_as_class = current(explode("/", $node->path));
 </head>
  <body class="yui-skin-sam <?php echo $node->field_css_body[0]['view']; ?>" <?php print theme("onload_attribute"); ?>>
 
-	<a id="top"></a>
-	<div id="header" class="container_16">
-		<div class="container_16">
-			<div class="grid_16 ">
-				<h1 id="logo"><a href="http://creativecommons.org/"><span>Creative Commons</span></a></h1>
-
-				<ul class="nav">
-					<li><a href="http://creativecommons.org/about">About</a></li>
-					<li><a href="http://creativecommons.org/weblog/">Blog</a></li>
-					<li><a href="https://creativecommons.net/donate">Donate</a></li>
-					<li><a href="http://wiki.creativecommons.org/FAQ">FAQ</a></li>
-					<li><a href="http://wiki.creativecommons.org/">Wiki</a></li>
-					<li><a href="http://creativecommons.org/affiliates">International</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+    <?php include 'page-header.php'; ?>
 
 	<div id="page">
 		<div id="title" class="container_16">
@@ -153,69 +131,8 @@ $path_as_class = current(explode("/", $node->path));
 		</div>
 	</div>
 
-  <div id="footer">
-		<div class="container_16">
-				<div class="grid_2 alpha" id="top_link"><a href="#top">&#8682;</a></div>
-			<div class="clear"></div>
-			<div class="grid_6">
-				<h4>Creative Commons</h4>
-				<dl class="grid_2 alpha">
-					<dt><a href="http://creativecommons.org/about">About</a></li>
-					<dt><a href="http://creativecommons.org/who-uses-cc">Who Uses CC?</a></li>
-					<dt><a href="http://creativecommons.org/culture">Culture</a></li>
-					<dt><a href="http://creativecommons.org/education">Education</a></li>
-					<dt><a href="http://creativecommons.org/science">Science</a></li>
-				</dl>
-				<dl class="grid_2">
-					<dt><a href="http://creativecommons.org/weblog">Blog</a></li>
-					<dt><a href="http://wiki.creativecommons.org/Case_Studies">Case Studies</a></li>
-					<dt><a href="http://creativecommons.org/interviews">CC Talks With...</a></li>
-					<dt><a href="http://creativecommons.org/newsletter">Newsletters</a></li>
-					<dt><a href="http://creativecommons.org/about/downloads">Downloads</a></li>
-				</dl>
-				<dl class="grid_2 omega">
-					<dt><a href="http://creativecommons.org/affiliates">International</a></li>
-					<dt><a href="http://wiki.creativecommons.org/Events">Events</a></li>
-					<dt><a href="http://creativecommons.org/about/people">People</a></li>
-					<dt><a href="http://creativecommons.org/about/press">Press Room</a></li>
-					<dt><a href="http://creativecommons.org/contact">Contact</a></li>
-				</dl>
-			</div>
-			<div class="grid_2 prefix_1">
-				<h4>Licensing</h4>
-				<dl class="grid_2 alpha omega">
-					<dt><a href="http://creativecommons.org/licenses">The Licenses</a></li>
-					<dt><a href="http://creativecommons.org/choose">Choose License</a></li>
-					<dt><a href="http://wiki.creativecommons.org/FAQ">FAQ</a></li>
-					<dt><a href="http://search.creativecommons.org/">Find Content</a></li>
-					<dt><a href="http://wiki.creativecommons.org/Developers">Developers</a></li>
-				</dl>
-			</div>
-			<div class="grid_2 prefix_1 suffix_1">
-				<h4>Supporting CC</h4>
-				<dl class="grid_2 alpha omega">
-					<dt><a href="https://creativecommons.net/donate">Donate</a></li>
-					<dt><a href="https://creativecommons.net/store">Store</a></li>
-					<dt><a href="https://creativecommons.net/supporters">Supporters</a></li>
-					<dt><a href="https://creativecommons.net/corporate">Corporate Giving</a></li>
-					<dt><a href="https://creativecommons.net/figures">Facts &amp; Figures</a></li>
-				</dl>
-			</div>
-			<div class="grid_3 social alpha omega">
-				<dl class="social_links">
-					<dt><a href="https://creativecommons.net/civicrm/mailing/subscribe?reset=1&gid=121">Subscribe to Newsletter</a></li>
-					<dt class="fb"><iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcreativecommons.org&amp;layout=button_count&amp;show_faces=false&amp;width=150&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe></li>
-					<dt><a href="http://twitter.com/creativecommons">Follow on Twitter</a></li>
-					<dt><a href="http://identi.ca/creativecommons">Follow on Identi.ca</a></li>
-				</dl>
-			</div>
-		</div>
-		<div class="container_16" id="footer_license">
-		  <?php print $footer_message;?>
-		  <?php print $footer; ?>
-		</div>
-  </div>
-<!-- footer -->
+
+ <?php include 'page-footer.php'; ?>
  <?php print $closure;?>
   <script type="text/javascript">var cj = jQuery.noConflict(); $ = cj;</script>
  </body>
