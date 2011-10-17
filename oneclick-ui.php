@@ -34,7 +34,9 @@
 				<h5>Tshirt Size</h5>
 				<select name="size">
 					<option value="">-- Select Size --</option>
+					<option value="Womens Small">Women's Small</option>
 					<option value="Womens Medium">Women's Medium</option>
+					<option value="Womens Large">Women's Large</option>
 					<option value="Adult Small">Adult Small</option>
 					<option value="Adult Medium">Adult Medium</option>
 					<option value="Adult Large">Adult Large</option>
