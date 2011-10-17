@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php include 'page-head-adapter.php'; ?>
+<?php include 'cc-wp/header-doctype.php'; ?>
 <?php global $base_url; $theme_path = $base_url .'/'. path_to_theme(); ?>
 <?php 
 // extract path, remove naything after the first slash so we can use the toplevel 
@@ -21,8 +21,7 @@ $path_as_class = current(explode("/", $node->path));
   <title><?php print $head_title ?></title>
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
-
-  <?php include 'page-head-adapter.php'; ?>
+  <?php include 'cc-wp/header-common.php'; ?>
   
   <?php if ($isDonatePage || (strpos($_SERVER["REQUEST_URI"], "pcp"))) { ?>
   <link rel="stylesheet" href="<?php print $theme_path; ?>/css/ui-lightness/jquery-ui-1.7.2.custom.css" type="text/css" media="screen" title="no title" charset="utf-8" />
@@ -32,15 +31,11 @@ $path_as_class = current(explode("/", $node->path));
   <?php print $styles ?>
   <?php print $scripts;  ?>
   
-  <?php  /*if ($isDonatePage || (strpos($_SERVER["REQUEST_URI"], "pcp"))) { */?>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery-ui.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.ba-url.min.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/oneclick.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.marquee.js"></script>
-  <?php  
-//  if (strpos($_SERVER["REQUEST_URI"], "pcp")) { print $scripts; } 
-  ?>
   <script type="text/javascript" src="<?php print $theme_path; ?>/support.js"></script>
   
   <!-- Fancybox - http://fancybox.net -->
@@ -66,12 +61,14 @@ $path_as_class = current(explode("/", $node->path));
 
 </head>
  <body class="yui-skin-sam <?php echo $node->field_css_body[0]['view']; ?>" <?php print theme("onload_attribute"); ?>>
+	<div id="container">
 
     <?php include 'page-header.php'; ?>
+        <div id="main" role="main">
+            <div class="container">
+                <div class="sixteen columns">
 
-	<div id="page">
-		<div id="title" class="container_16">
-			<div class="grid_16">
+		        <div class="first row">
 				<?php if ($isSuperhero) {?>
 				<h3 class="category"><a href="/superheroes"><img src="<?php print $theme_path; ?>/images/superhero/cc-superhero-hero-small.png" alt="[CC]" border="0" /> <span>Superheroes</span></a></h3>
 				<?php } else if (strtolower($node->type) != "product") { ?>	
@@ -87,19 +84,16 @@ $path_as_class = current(explode("/", $node->path));
 					<h1><? if (strtolower($node->type) == "product") { echo current($node->taxonomy)->name . ":"; } ?> <?php print $title ?></h1>
 				<?php } ?>
 				</div>
-			</div>
+			    </div>
 		
 <?php if ($tabs != "") { ?>
-			<div class="grid_16">
+			<div class="row">
 				<?php print $tabs ?>
 			</div>
 <?php } ?>
-		</div>
 
-
-
-		<div class="container_16">
-		<div id="" class="block page <?php $colClass ?> <?php if ($isDonatePage) { ?> prefix_1 <? }?> grid_13">
+		<div class="row">
+		<div id="" class="thirteen columns alpha block page <?php $colClass ?> <?php if ($isDonatePage) { ?> prefix_1 <? }?>">
 				<?php if ($help != ""): ?>
 				<p id="help"><?php print $help ?></p>
 				<?php endif; ?>
@@ -124,17 +118,15 @@ $path_as_class = current(explode("/", $node->path));
 			</div>
 			
 			<?php if ($right != ""): ?>
-			<div class="grid_3" id="sidebar-right">
+			<div class="three columns omega" id="sidebar-right">
 				<?php print $right ?>
 			</div>
 			<?php endif; ?>
 		</div>
 	</div>
-
-
- <?php include 'page-footer.php'; ?>
- <?php print $closure;?>
-  <script type="text/javascript">var cj = jQuery.noConflict(); $ = cj;</script>
- </body>
+</div>
+</div>
+<?php include 'page-footer.php'; ?>
+</body>
 </html>
 

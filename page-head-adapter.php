@@ -1,2 +1,12 @@
-    <link rel="stylesheet" href="<?php print $theme_path; ?>/cc-wp/css/style.css">
-    <script src="<?php print $theme_path; ?>/cc-wp/js/libs/modernizr-2.0.6.min.js"></script>
+<?php
+    if ( ! function_exists('bloginfo') ) {
+        function bloginfo ($param) {
+            if ( $param == 'home' )
+                print 'http://creativecommons.org';
+            if ( $param == 'stylesheet_directory' ) {
+                // print $theme_path . '/cc-wp';
+                print '/sites/default/themes/cc/cc-wp';
+            }
+        }
+    }
+?>
