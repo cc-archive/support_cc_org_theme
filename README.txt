@@ -1,3 +1,12 @@
+UPDATE 2011-10-18
+
+The theme here now uses the new cc wordpress theme as its backbone. What needs
+to happen to make this theme fully functional after git clone is to run this
+from the root directory of the cc drupal theme:
+
+svn checkout \
+http://code.creativecommons.org/svnroot/themes/creativecommons.org/trunk \
+cc-wp
 
 box_grey theme for phptemplate on Drupal
 ----------------------------------------
