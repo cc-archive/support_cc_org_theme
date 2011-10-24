@@ -246,9 +246,24 @@ code {
 .x-content-box { float: left;/* padding-top: 1.5em; border-top: 1px solid #ddd;*/ margin-right: 1%; overflow: hidden; }
 .x-content-box-right { float: right; /*padding-top: 1.5em; border-top: 1px solid #ddd;*/ margin-left: 1%; overflow: hidden; }
 
+.feature .grid_6 {
+    width: 340px;
+    margin-right: 10px;
+    display: inline;
+}
+
+.feature .grid_4 {
+    width: 220px;
+    margin-right: 10px;
+    display: inline;
+}
+
 .col {
 	float: left;
 	width: 49%;
+}
+.alpha {
+    margin-left: 0;
 }
 
 #s.inactive {
@@ -496,10 +511,8 @@ h2.subhead {
 /* features sidebar */
 
 .feature { 
-	/*border-bottom:  1px solid #ddd;*/ 
-	padding-bottom:  30px; 
-	margin-bottom: 25px; 
-    margin-bottom: 30px;
+	padding-bottom: 40px; 
+    margin-bottom: 40px;
     background: url(images/item-background.png) no-repeat 50% 100%;
 	overflow-y: auto;
 }
@@ -693,9 +706,15 @@ fieldset legend {
   margin: 3px 0;
   padding: 0.3em 0;
 }
+
 .form-radio, .form-checkbox {
   background: transparent;
   border: 0;
+  float: auto;
+}
+#moreOptions label {
+    float: none;
+    display: inline;
 }
 .mainContent .box .content .form-item textarea {
   width: auto;
@@ -718,6 +737,11 @@ input, textarea {
 form input.buy-button { border: none !important; }
 form input.form-text-item { border: 1px solid #666 !important; }
 
+#user-login-form .form-item label { 
+    text-align: left; 
+    float: auto;
+}
+#user-login-form label { text-align: left; }
 #user-login-form { text-align:left; padding-bottom:0px; }
 #user-login-form > div > div.item-list > ul { padding-left:0px !important; padding-top:10px; border-top:1px #e0e0e0 solid; margin-bottom:0px; }
 #user-login-form > div > div.item-list > ul > li { margin-left:0px !important; padding-left:0px !important; }
@@ -1522,6 +1546,18 @@ ul.custom-gifts li {
 	margin-bottom: 0 !important; 
 	margin-top: 1em !important; }
 
+/* input#cc_widget_donation_amount */
+
+#cc_widget input, 
+#cc_widget textarea,
+#cc_widget select,
+#widget_copy_paste,
+form div input {
+    width: auto;
+}
+
+
+
 #moreOptions p { margin-top: 0 !important; }
 
 #premiums { margin-bottom: 0.25em; }
@@ -1533,22 +1569,32 @@ ul.custom-gifts li {
 }
 
 .ui-dialog button.paypal {
-	background: url("images/paypalCheckout.gif") no-repeat scroll 0 0 transparent;
 	border: none;
 	height: 42px;
 	width: 145px;
 }
 
 .ui-dialog button.gc {
-	background: url("images/googleCheckout.gif") no-repeat scroll 0 0 transparent;
 	border: none;
 	height: 43px;
 	width: 160px;
 }
+
+.ui-dialog button.paypal:hover,
+.ui-dialog button.gc:hover {
+    color: white
+    background-color: #1C94C4;
+    font-weight: bold;
+}
+
 .ui-dialog button.cancel {
 	font-weight: normal;
 	float: right;
 	color: #444;
+}
+
+.ui-dialog button.cancel:hover {
+    color: white;
 }
 
 .ui-dialog button span { display: none; }
