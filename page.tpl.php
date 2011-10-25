@@ -34,14 +34,18 @@ if ($title == 'Access denied' && !$logged_in) {
   <?php print $head ?>
   <?php print $styles ?>
   <?php print $scripts;  ?>
-  
+  <script type="text/javascript">
+  var jc = $.noConflict(true);
+  </script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.js"></script>
+  <script type="text/javascript">
+  var cj = $.noConflict();
+  </script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery-ui.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.ba-url.min.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/oneclick.js?110126"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.marquee.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/support.js"></script>
-  
   <!-- Fancybox - http://fancybox.net -->
   <script type="text/javascript" src="<?php print $theme_path; ?>/fancybox/jquery.fancybox-1.2.1.CC.pack.js"></script> 
   <script type="text/javascript" src="<?php print $theme_path; ?>/fancybox/fancybox-go.js"></script>

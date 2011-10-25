@@ -707,6 +707,26 @@ fieldset legend {
   padding: 0.3em 0;
 }
 
+.form-item label {
+    display: block;
+    text-align: left;
+    float: none;
+    width: auto;
+}
+.form-item input {
+    width: 400px;
+}
+
+.field label {
+
+    text-align: left;
+    float: none;
+    width: auto;
+}
+
+
+
+
 .form-radio, .form-checkbox {
   background: transparent;
   border: 0;
@@ -865,7 +885,7 @@ ul.primary { margin:10px 0px 20px 0px !important; }
 ul.primary li a { 
   background:#eee;
   color:#333;
-  padding:5px 10px 3px 10px;
+  padding: 0 3px;
   -moz-border-radius-topleft:4px;
   -moz-border-radius-topright:4px;
   border-top-left-radius:4px;
@@ -876,6 +896,10 @@ ul.primary li a {
   color: #ccc;
   background: #fff;
 }
+
+.tabs > li.active > a {
+}
+
 
 ul.secondary { margin:10px 0px !important; }
 ul.secondary li { padding:0 15px 0px 15px; }

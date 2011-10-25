@@ -1,5 +1,7 @@
-<?php include 'page-head-adapter.php'; ?>
-<?php include 'cc-wp/header-doctype.php'; ?>
+<?php 
+    include 'page-head-adapter.php';    
+    include 'cc-wp/header-doctype.php';
+?>
 <?php global $base_url; $theme_path = $base_url .'/'. path_to_theme(); ?>
 <?php 
 // extract path, remove naything after the first slash so we can use the toplevel 
@@ -17,7 +19,7 @@ $path_as_class = current(explode("/", $node->path));
   xmlns:sioc_service="http://rdfs.org/sioc/services#"
   xmlns:powder="http://www.w3.org/2007/05/powder#"
   lang="<?php print $language->language ?>" xml:lang="<?php print $language->language ?>">
- <head>
+ <head profile="http://gmpg.org/xfn/11">
   <title><?php print $head_title ?></title>
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
@@ -30,8 +32,14 @@ $path_as_class = current(explode("/", $node->path));
   <?php print $head ?>
   <?php print $styles ?>
   <?php print $scripts;  ?>
+  <script type="text/javascript">
+  var jc = $.noConflict(true);
+  </script>
   
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.js"></script>
+  <script type="text/javascript">
+  var cj = $.noConflict();
+  </script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery-ui.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.ba-url.min.js"></script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/oneclick.js"></script>

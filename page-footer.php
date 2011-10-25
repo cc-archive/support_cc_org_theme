@@ -1,7 +1,7 @@
     <?php include 'cc-wp/page-footer.php'; ?>
     <?php include 'cc-wp/footer-codes.php'; ?>
     <?php print $closure;?>
-  <script type="text/javascript">var cj = jQuery.noConflict(); $ = cj;</script>
+  <!-- <script type="text/javascript">var cj = jQuery.noConflict(); $ = cj;</script> -->
 <?php
   if ( ! (preg_match('/openid\/provider/', $_SERVER['REQUEST_URI']) ||
        preg_match('/openid\/provider/', $_SERVER['HTTP_REFERER']) ||
