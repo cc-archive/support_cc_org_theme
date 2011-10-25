@@ -215,6 +215,10 @@ td {
   vertical-align: top;
 }
 
+#cart-form-products table th, #cart-form-products table td {
+    padding: 2px;
+}
+
 img { border: 0 !important; }
 
 form {
