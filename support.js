@@ -1,12 +1,12 @@
 
-$(document).ready(function(){
+cj(document).ready(function(){
 
 // jQuery rewrite of YUI event listener
-$("#donation").keyup(function() {
+cj("#donation").keyup(function() {
 	var levels = new Array(25, 50, 150, 300, 1000);
 	var custom_payments = 150; /* minimum $ amount for monthly payments */
 	var value = this.value;
-	var split_custom = $("#split-custom");
+	var split_custom = cj("#split-custom");
 	
 	if (value >= custom_payments) {
 		split_custom.attr('disabled', '');
@@ -18,9 +18,9 @@ $("#donation").keyup(function() {
 
 	for (var i = 0; i < levels.length; i++) {
 		if (value >= levels[i]) {
-			$("#" + levels[i]).fadeTo('fast', 1);
+			cj("#" + levels[i]).fadeTo('fast', 1);
 		} else {
-			$("#" + levels[i]).fadeTo('fast', 0.25);
+			cj("#" + levels[i]).fadeTo('fast', 0.25);
 		}
 	}
 });
@@ -29,11 +29,11 @@ $("#donation").keyup(function() {
 // Show an error message and disable Donate button if the value is too low
 function check_minimum(e) {
     if (e.value < 5.0) {
-        $('#customError').html("Donations must be at least <strong>$5</strong>.").show();
-		//$('#joinButton').attr('disabled', true).addClass('disabled');
+        cj('#customError').html("Donations must be at least <strong>$5</strong>.").show();
+		//cj('#joinButton').attr('disabled', true).addClass('disabled');
     } else {
-        $('#customError').hide();
-		//$('#joinButton').attr('disabled', false).removeClass('disabled');
+        cj('#customError').hide();
+		//cj('#joinButton').attr('disabled', false).removeClass('disabled');
     }
 }
 
@@ -42,12 +42,12 @@ var hideTimeout = null;
 function showDialog(dialog) {
 	if (hideTimeout) clearTimeout(hideTimeout);
 
-	$(".help_dialog").each(function () { 
-		if ($(this) != $(dialog)) {			
-			$(this).dialog('close'); 
+	cj(".help_dialog").each(function () { 
+		if (cj(this) != cj(dialog)) {			
+			cj(this).dialog('close'); 
 		}
 	});
-	$(dialog).dialog('open');
+	cj(dialog).dialog('open');
 }
 
 function hideDialog(dialog) {
@@ -55,15 +55,15 @@ function hideDialog(dialog) {
 
 	hideTimeout = setTimeout(function() {
 		hideTimeout = null;	
-		$(dialog).dialog('close');
+		cj(dialog).dialog('close');
 	}, hideDelay);
 }
 
 // Gift hover popups
-$(".help_dialog").each(function() { 
-	var header = $(this).find(".hd");
+cj(".help_dialog").each(function() { 
+	var header = cj(this).find(".hd");
 
-	$(this).dialog({
+	cj(this).dialog({
 		title: header.text(),
 		position: 'center',
 		resizable: false,
@@ -76,13 +76,13 @@ $(".help_dialog").each(function() {
 	// Hide the header text div
 	header.hide();
 
-	$(this).dialog().mouseover(function() { showDialog("#" + this.id) });
-	$(this).dialog().mouseout(function() { hideDialog("#" + this.id) });
+	cj(this).dialog().mouseover(function() { showDialog("#" + this.id) });
+	cj(this).dialog().mouseout(function() { hideDialog("#" + this.id) });
 });
 
-$(".helpLink").each(function() {
-	$(this).mouseover(function() { showDialog("#" + this.id + "_help") });
-	$(this).mouseout(function () { hideDialog("#" + this.id + "_help") });
+cj(".helpLink").each(function() {
+	cj(this).mouseover(function() { showDialog("#" + this.id + "_help") });
+	cj(this).mouseout(function () { hideDialog("#" + this.id + "_help") });
 });
 
 // end of jQuery
