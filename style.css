@@ -1598,12 +1598,15 @@ form div input {
 }
 
 .ui-dialog button.paypal {
+    background:url('/sites/default/themes/cc/images/paypalCheckout.gif') no-repeat scroll 0 0 transparent;
 	border: none;
 	height: 42px;
 	width: 145px;
 }
 
 .ui-dialog button.gc {
+
+    background:url('/sites/default/themes/cc/images/googleCheckout.gif') no-repeat scroll 0 0 transparent;
 	border: none;
 	height: 43px;
 	width: 160px;
