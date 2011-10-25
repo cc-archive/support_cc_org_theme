@@ -1,7 +1,7 @@
 /* Script that drives the fancybox */
 
-$(document).ready(function() {
-	$("a.fancybox").fancybox({
+cj(document).ready(function() {
+	cj("a.fancybox").fancybox({
 		'hideOnContentClick': false
 	});
 });
