@@ -25,7 +25,7 @@
      </div>
   </div>
   <div class="field">
-      <input type="checkbox" name="kapeesh" id="kapeesh" onclick="$('#edit-submit').toggleClass('disabled')" />
+      <input type="checkbox" name="kapeesh" id="kapeesh" />
       <label for="kapeesh">By agreeing to the Terms of Use you affirm you are at least 13 years of age. If you are between 13 years old and the age of majority in your jurisdiction, you affirm that you have obtained your parent's or legal guardian's express permission to create an account as required by CC.</label>
   </div>
   <div class="field">
@@ -35,7 +35,8 @@
   print drupal_render($form['submit']); 
 ?>
 <script>
-$(document).ready(function() {
+jQuery.noConflict();
+jQuery(document).ready(function() {
         $('#kapeesh').click(function() {
                 $('#edit-submit').toggleClass('submit-disabled');
                 $('#edit-submit').attr('disabled', !($('#edit-submit').attr('disabled')));
