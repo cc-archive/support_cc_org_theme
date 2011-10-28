@@ -35,7 +35,8 @@ if ($title == 'Access denied' && !$logged_in) {
   <?php print $styles ?>
   <?php print $scripts;  ?>
   <script type="text/javascript">
-  var jc = $.noConflict(true);
+  var jc = $.noConflict();
+  $ = jc;
   </script>
   <script type="text/javascript" src="<?php print $theme_path; ?>/js/jquery.js"></script>
   <script type="text/javascript">

@@ -9,4 +9,9 @@
             }
         }
     }
+    if ( ! function_exists('get_http_security') ) {
+        function get_http_security () {
+            echo 'https';
+        }
+    }
 ?>
