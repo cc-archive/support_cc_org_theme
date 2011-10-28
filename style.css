@@ -905,9 +905,16 @@ ul.primary li a {
 .tabs > li.active > a {
 }
 
+.tabs > li > a {
+    line-height: 25px;
+}
 
-ul.secondary { margin:10px 0px !important; }
-ul.secondary li { padding:0 15px 0px 15px; }
+
+ul.secondary { 
+    margin:10px 0px !important; 
+    padding: 0;
+}
+ul.secondary li { padding:0 10px; border: none;}
 ul.secondary li .active { color:#333; font-weight:bold; border-bottom:none; }
 
 .calendar td, .calendar th { border-color: #eee; }
