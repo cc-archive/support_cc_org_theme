@@ -737,9 +737,12 @@ fieldset legend {
   border: 0;
   float: auto;
 }
+
+#cc_widget_dialog label,
 #moreOptions label {
     float: none;
     display: inline;
+    padding-left: 4px;
 }
 .mainContent .box .content .form-item textarea {
   width: auto;
