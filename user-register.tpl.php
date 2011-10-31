@@ -37,13 +37,13 @@
 <script>
 jQuery.noConflict();
 jQuery(document).ready(function() {
-        $('#kapeesh').click(function() {
-                $('#edit-submit').toggleClass('submit-disabled');
-                $('#edit-submit').attr('disabled', !($('#edit-submit').attr('disabled')));
+        jQuery('#kapeesh').click(function() {
+                jQuery('#edit-submit').toggleClass('submit-disabled');
+                jQuery('#edit-submit').attr('disabled', !(jQuery('#edit-submit').attr('disabled')));
             });
-        if($('#kapeesh:checked').val()) {
-            $('#edit-submit').toggleClass('submit-disabled');
-            $('#edit-submit').attr('disabled', false);
+        if(jQuery('#kapeesh:checked').val()) {
+            jQuery('#edit-submit').toggleClass('submit-disabled');
+            jQuery('#edit-submit').attr('disabled', false);
         }            
     });
 </script>
