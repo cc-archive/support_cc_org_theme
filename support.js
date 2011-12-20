@@ -12,6 +12,7 @@ cj("#donation").keyup(function() {
 		split_custom.attr('disabled', '');
 		split_custom.parent().fadeTo('fast', 1);
 	} else {
+		split_custom.removeAttr('checked');
 		split_custom.attr('disabled', 'true');
 		split_custom.parent().fadeTo('fast', 0.5);
 	}
