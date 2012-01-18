@@ -718,8 +718,9 @@ fieldset legend {
     float: none;
     width: auto;
 }
+
 .form-item input {
-    width: 400px;
+    /*width: 400px;*/
 }
 
 .field label {
