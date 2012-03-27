@@ -155,7 +155,9 @@ OneClick.prototype = {
 // Instantiate a OneClick model object, configure the dialog view, and display
 function OneClickController(element) {
 	try {
-		var oneclick = new OneClick(element);		
+		// Define oneclick in the global scope to get around later
+		// scoping and closure issues.
+		window.oneclick = new OneClick(element);		
 	} catch(error) {
 		alert(error);
 		return false;
