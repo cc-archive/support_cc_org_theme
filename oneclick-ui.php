@@ -32,6 +32,9 @@
 			</p>
 			<div id="tshirtSize">
 				<h5>Tshirt Size</h5>
+				<div style="font-size: x-small">
+					<strong>Note:</strong> the shirt you receive may be different from the one pictured.
+				</div>
 				<select name="size">
 					<option value="">-- Select Size --</option>
 					<option value="Womens Small">Women's Small</option>
