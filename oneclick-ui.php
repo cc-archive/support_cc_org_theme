@@ -18,7 +18,7 @@
 			<p id="pcpError"></p>
 		</div>
 		<div id="noPremiums" style="display:block;">
-			<p><strong>Note:</strong> You will not receive any premiums, including the campaign t-shirt, at this donation&nbsp;level.</p>
+			<p><strong>Note:</strong> You will not receive any premiums, including the t-shirt, at this donation&nbsp;level.</p>
 		</div>
 		<div id="premiums" style="display:block;">
 			<p style="float: right">
