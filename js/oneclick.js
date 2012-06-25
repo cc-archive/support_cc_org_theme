@@ -199,7 +199,7 @@ function OneClickController(element) {
 				location.href = e.href;
 				
 			}, buttonClass: "paypal"}, 
-			"<span>Donate with Google Checkout</span>": { click: function() {
+			"<span>Donate with Google Wallet</span>": { click: function() {
 				//
 				// Google Checkout
 				//
