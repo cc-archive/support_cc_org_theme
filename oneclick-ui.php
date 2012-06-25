@@ -18,7 +18,7 @@
 			<p id="pcpError"></p>
 		</div>
 		<div id="noPremiums" style="display:block;">
-			<p><strong>Note:</strong> You will not receive any premiums, including the campaign t-shirt, at this donation&nbsp;level.</p>
+			<p><strong>Note:</strong> You will not receive any premiums, including the t-shirt, at this donation&nbsp;level.</p>
 		</div>
 		<div id="premiums" style="display:block;">
 			<p style="float: right">
@@ -32,6 +32,9 @@
 			</p>
 			<div id="tshirtSize">
 				<h5>Tshirt Size</h5>
+				<div style="font-size: x-small">
+					<strong>Note:</strong> the shirt you receive may be different from the one pictured.
+				</div>
 				<select name="size">
 					<option value="">-- Select Size --</option>
 					<option value="Womens Small">Women's Small</option>
