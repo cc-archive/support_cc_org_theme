@@ -22,8 +22,8 @@
 		</div>
 		<div id="premiums" style="display:block;">
 			<p style="float: right">
-                <img src="/sites/default/files/cc-shirt-tvol.jpg" alt="I Love to Share"/><br/>
-				<small style="font-size:10px; line-height:1.2">I Love to Share</small>
+                <img src="/sites/default/files/cc_logo_tshirt.jpg" alt="CC logo t-shirt"/><br/>
+				<small style="font-size:10px; line-height:1.2">CC logo t-shirt</small>
 			</p>
 
 			<p>
