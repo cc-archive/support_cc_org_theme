@@ -234,7 +234,7 @@ function OneClickController(element) {
 
 // Hook up the donate page links to fire off a controller instance
 cj(function() {
-	cj(".donationInfo a, #joinButton").click(function(e) { 
+	cj(".donationInfo a, #joinButton, #donate_button").click(function(e) { 
 		new OneClickController(this); 
 		e.preventDefault(); 
 	});	
