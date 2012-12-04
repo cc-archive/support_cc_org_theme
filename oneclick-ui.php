@@ -18,26 +18,25 @@
 			<p id="pcpError"></p>
 		</div>
 		<div id="noPremiums" style="display:block;">
-			<p><strong>Note:</strong> You will not receive any premiums, including the t-shirt, at this donation&nbsp;level.</p>
+			<p><strong>Note:</strong> You will not receive a t-shirt at this donation level.</p>
 		</div>
 		<div id="premiums" style="display:block;">
 			<p style="float: right">
-                <img src="/sites/default/files/cc_logo_tshirt.jpg" alt="CC logo t-shirt"/><br/>
+                <img src="/sites/default/themes/cc/images/donate_page/tshirt.png" alt="CC logo t-shirt"/><br/>
 				<small style="font-size:10px; line-height:1.2">CC logo t-shirt</small>
 			</p>
 
 			<p>
 				<input id="giftCheck" name="giftCheck" type="checkbox" checked value="yes" class="form-checkbox" />
-				<label for="giftCheck">I would like to receive a gift for my donation.</label>
+				<label for="giftCheck">I would like to receive a t-shirt for my donation.</label>
 			</p>
 			<div id="tshirtSize">
-				<h5>Tshirt Size</h5>
+				<h5>T-shirt Size</h5>
 				<div style="font-size: x-small">
-					<strong>Note:</strong> the shirt you receive may be different from the one pictured.
+					Please note that women's sizes run small.
 				</div>
 				<select name="size">
 					<option value="">-- Select Size --</option>
-					<option value="Womens Small">Women's Small</option>
 					<option value="Womens Medium">Women's Medium</option>
 					<option value="Womens Large">Women's Large</option>
 					<option value="Adult Small">Adult Small</option>
@@ -75,7 +74,7 @@
 			<h5>Payment Options</h5>
 			<ul>
 				<li><strong>PayPal</strong> &mdash; Use your credit card or PayPal account.</li>
-				<li><strong>Google Checkout</strong> &mdash; Requires a Checkout account.</li>
+				<li><strong>Google Wallet</strong> &mdash; Requires a Wallet account.</li>
 			</ul>
 		</div>
 	</form>

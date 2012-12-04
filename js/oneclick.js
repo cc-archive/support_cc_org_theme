@@ -7,16 +7,24 @@ function OneClick(element) {
 	this.adventure = false;
 	this.queryString = "";
 	this.e = element;
-
+	var amount = '';
+	
 	// Handle "Choose your own amount"
 	if (this.e.type == "submit") {
-		var amount = parseFloat(cj(':input[name=amount]').val());
+		if (cj(':input[name=donate_amount]:checked').val() == "choose") {
+			amount = parseFloat(cj(':input[name=choose_amount]').val());
+		} else if (!isNaN(cj(':input[name=donate_amount]:checked').val())) {
+			amount = parseFloat(cj(':input[name=donate_amount]:checked').val());
+		} else {
+			amount = parseFloat(cj(':input[name=amount]').val());
+		}
+
 		this.e = new Object();
 
 		// No donations below $5.00
 		if (amount < 5.0 || isNaN(amount)) throw "Donation amount must be over $5";
 
-		this.e.href = cj('#customForm').attr('action') + "amount=" + amount;
+		this.e.href = cj('#customForm, #donate_form').attr('action') + "amount=" + amount;
 		this.e.queryString = cj.queryString(this.e.href);
 		this.adventure = true;
 
@@ -68,7 +76,7 @@ OneClick.prototype = {
 			cj("#recur_none").attr("checked", "checked");
 		}
 
-		if (this.donation >= 150) {
+		if (this.donation >= 100) {
 			if (this.e.queryString.recur && !this.adventure) {
 				recurringAmount = this.e.queryString.amount;
 			} else {
@@ -224,9 +232,9 @@ function OneClickController(element) {
 
 				cj(this).dialog("close"); 
 				location.href = e.href;				
-				
-			}, buttonClass: "gc"},
-			"I've changed my mind": { click: function() { cj(this).dialog("close"); }, buttonClass: "cancel" } }
+
+			}, buttonClass: "gc"} }
+
 		});	
 		
 		oneclick.display();

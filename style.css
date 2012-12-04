@@ -1617,7 +1617,8 @@ form div input {
 
 .ui-dialog button.gc {
 
-    background:url('/sites/default/themes/cc/images/googleCheckout.gif') no-repeat scroll 0 0 transparent;
+    /*background:url('/sites/default/themes/cc/images/googleCheckout.gif') no-repeat scroll 0 0 transparent;*/
+    background:url('https://checkout.google.com/buttons/checkout.gif?merchant_id=&w=160&h=43&style=trans&variant=text&loc=en_US') no-repeat scroll 0 0 transparent;
 	border: none;
 	height: 43px;
 	width: 160px;

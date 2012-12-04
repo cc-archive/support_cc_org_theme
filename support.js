@@ -1,20 +1,51 @@
 
 cj(document).ready(function(){
 
-// jQuery rewrite of YUI event listener
-cj("#donation").keyup(function() {
-	var levels = new Array(25, 50, 150, 300, 1000);
-	var custom_payments = 150; /* minimum $ amount for monthly payments */
-	var value = this.value;
-	var split_custom = cj("#split-custom");
-	
-	if (value >= custom_payments) {
-		split_custom.attr('disabled', '');
-		split_custom.parent().fadeTo('fast', 1);
+// Select the radio button on the donate page if someone click anywhere in the
+// div
+cj(".amount_box").click(function() {
+	cj(this).children("input").attr('checked', 'checked');
+	cj(this).children("input").trigger('change');
+
+});
+
+// Enable or disable split/recur payments depending on amount
+cj("input:radio[name=donate_amount]").change(function () {
+	var recur_min = 100;
+	var enable_recur = true;
+	if (this.value == "choose") {
+		if (!(cj("#choose_amount").val() >= recur_min)) {
+			enable_recur = false;
+		}
 	} else {
-		split_custom.removeAttr('checked');
-		split_custom.attr('disabled', 'true');
-		split_custom.parent().fadeTo('fast', 0.5);
+		if (!(cj("input:radio[name=donate_amount]:checked").val() >= recur_min)) {
+			enable_recur = false;
+		}
+	}
+	if (enable_recur) {
+		cj("#recur").attr('disabled', '');
+		cj("#recur").parent().fadeTo('fast', 1);
+	} else {
+		cj("#recur").attr('disabled', 'true');
+		cj("#recur").removeAttr('checked');
+		cj("#recur").parent().fadeTo('fast', 0.4);
+	}
+});
+
+// jQuery rewrite of YUI event listener
+cj("#choose_amount").keyup(function() {
+	var levels = new Array(25, 50, 100, 250, 500);
+	var recur_min = 100; /* minimum $ amount for monthly payments */
+	var value = this.value;
+	var recur = cj("#recur");
+	
+	if (value >= recur_min) {
+		recur.attr('disabled', '');
+		recur.parent().fadeTo('fast', 1);
+	} else {
+		recur.removeAttr('checked');
+		recur.attr('disabled', 'true');
+		//recur.parent().fadeTo('fast', 0.4);
 	}
 
 	for (var i = 0; i < levels.length; i++) {
