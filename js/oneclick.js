@@ -11,11 +11,12 @@ function OneClick(element) {
 	
 	// Handle "Choose your own amount"
 	if (this.e.type == "submit") {
-		if (cj(':input[name=donate_amount]:checked').val() == "choose") {
-			amount = parseFloat(cj(':input[name=choose_amount]').val());
-		} else if (!isNaN(cj(':input[name=donate_amount]:checked').val())) {
-			amount = parseFloat(cj(':input[name=donate_amount]:checked').val());
+		if (cj(':input:radio[name=amount]:checked').val() == "choose") {
+			amount = parseFloat(cj(':input:text[name=choose_amount]').val());
+		} else if (cj(':input:radio[name=amount]:checked').val()) {
+			amount = parseFloat(cj(':input:radio[name=amount]:checked').val());
 		} else {
+			// This is legacy for the old donate form (unused)
 			amount = parseFloat(cj(':input[name=amount]').val());
 		}
 
@@ -31,7 +32,7 @@ function OneClick(element) {
 		// Check if we're splitting, recurring forever, and the donation was >=75
 		// split: recur=1
 		// perm_recur: recur=2
-		if ((cj(':input[name=recur]').attr('checked') || cj(':input[name=perm_recur]').attr('checked')) && this.e.queryString.amount >= 75) {
+		if ((cj(':input[name=recur]').attr('checked') || cj(':input[name=perm_recur]').attr('checked')) && this.e.queryString.amount >= 100) {
 			if (cj(':input[name=recur]').attr('checked')) {
 				this.e.queryString.recur = 1;
 			} 
