@@ -1,6 +1,18 @@
 
 cj(document).ready(function(){
 
+cj("#tshirt_big").dialog({
+	title: 'T-shirt', 
+        position:'center', 
+	resizable: false,
+	autoOpen: false,
+	modal: true,
+	width: 600
+});
+cj("#tshirt").click( function(){cj("#tshirt_big").dialog('open')} );
+cj("#tshirt_big").click( function(){cj("#tshirt_big").dialog('close')} );
+
+
 // Select the radio button on the donate page if someone click anywhere in the
 // div
 cj(".amount_box").click(function() {
