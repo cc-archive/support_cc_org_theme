@@ -35,12 +35,12 @@ cj("input:radio[name=amount]").change(function () {
 		}
 	}
 	if (enable_recur) {
-		cj("#recur").attr('disabled', '');
-		cj("#recur").parent().fadeTo('fast', 1);
+		cj("#split").attr('disabled', '');
+		cj("#split").parent().fadeTo('fast', 1);
 	} else {
-		cj("#recur").attr('disabled', 'true');
-		cj("#recur").removeAttr('checked');
-		cj("#recur").parent().fadeTo('fast', 0.4);
+		cj("#split").attr('disabled', 'true');
+		cj("#split").removeAttr('checked');
+		cj("#split").parent().fadeTo('fast', 0.4);
 	}
 });
 
@@ -48,7 +48,7 @@ cj("input:radio[name=amount]").change(function () {
 cj("#choose_amount").keyup(function() {
 	var recur_min = 100; /* minimum $ amount for monthly payments */
 	var value = this.value;
-	var recur = cj("#recur");
+	var recur = cj("#split");
 	
 	if (value >= recur_min) {
 		recur.attr('disabled', '');

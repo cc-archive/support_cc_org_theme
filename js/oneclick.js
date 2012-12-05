@@ -32,11 +32,11 @@ function OneClick(element) {
 		// Check if we're splitting, recurring forever, and the donation was >=75
 		// split: recur=1
 		// perm_recur: recur=2
-		if ((cj(':input[name=recur]').attr('checked') || cj(':input[name=perm_recur]').attr('checked')) && this.e.queryString.amount >= 100) {
-			if (cj(':input[name=recur]').attr('checked')) {
+		if ((cj(':input[name=split]').attr('checked') || cj(':input[name=perm_recur]').attr('checked')) && this.e.queryString.amount >= 100) {
+			if (cj('input[name=split]').attr('checked')) {
 				this.e.queryString.recur = 1;
 			} 
-			if (cj(':input[name=perm_recur]').attr('checked')) { 
+			if (cj('input[name=perm_recur]').attr('checked')) { 
 				this.e.queryString.recur = 2;
 			}
 		}
