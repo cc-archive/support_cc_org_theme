@@ -23,7 +23,7 @@ function OneClick(element) {
 		this.e = new Object();
 
 		// No donations below $5.00
-		if (amount < 5.0 || isNaN(amount)) throw "Donation amount must be over $5";
+		if (amount < 5.0 || isNaN(amount)) throw "The minimum donation is $5.";
 
 		this.e.href = cj('#customForm, #donate_form').attr('action') + "amount=" + amount;
 		this.e.queryString = cj.queryString(this.e.href);
